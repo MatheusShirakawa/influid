@@ -2,5 +2,14 @@
 	"Home":{
 		"title": "Home",
 		"description": "Bem-vindo à página inicial do nosso aplicativo. Aqui você pode encontrar vários recursos e informações."
+	},
+	"Header":{
+		"about":"sobre nós.",
+		"projects":"nossos projetos.",
+		"services":"nossos serviços.",
+		"contact":"fale conosco."
+	},
+	"Layout": {
+		"title": "next-intl exemplo"
 	}
 }

@@ -2,5 +2,14 @@
 	"Home":{
 		"title": "Home",
 		"description": "Welcome to the home page of our application. Here you can find various features and information."
+	},
+	"Header":{
+		"about":"about us.",
+		"projects":"our projects.",
+		"services":"our services.",
+		"contact":"contact us."
+	},
+	"Layout": {
+		"title": "next-intl example"
 	}
 }
