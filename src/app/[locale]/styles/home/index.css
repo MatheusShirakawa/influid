@@ -1,0 +1,27 @@
+main{
+	/* background: linear-gradient(130deg,rgba(0, 96, 255, 1) 0%, rgba(0, 23, 88, 1) 30%); */
+	background: linear-gradient(130deg,rgba(0, 23, 88, 1) 0%, rgba(0, 9, 30,1) 30%);
+	/* background-size: 100% 100%; */
+}
+
+main .main-content{
+	@apply max-w-[1137px] mx-auto mt-[218px];
+}
+
+.split{
+	@apply relative w-full;
+	/* @apply pb-[220px]; */
+}
+
+.split .content-split{
+	@apply pb-[180px];
+}
+
+.split:before{
+	content: '';
+	background: linear-gradient(130deg,rgba(0, 255, 153, 1) 0%, rgba(0, 96, 255, 1) 100%);
+	@apply absolute top-0 right-0 left-[10%] bottom-0 mx-auto w-[2px] h-[100%] z-[1] opacity-30;
+}
+
+
+
