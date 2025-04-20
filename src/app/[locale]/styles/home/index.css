@@ -24,4 +24,51 @@ main .main-content{
 }
 
 
+.bottom{
+	background: url('/bg-bottom.png') no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
 
+.bottom .our-clients{
+	@apply relative pt-[120px] pb-[140px];
+}
+
+.bottom .our-clients .list-clients img{
+	@apply opacity-40 ease-in-out duration-300 block mx-auto;
+}
+
+.bottom .our-clients .list-clients img:hover{
+	@apply opacity-100;
+}
+
+.bottom .our-clients:before{
+	content: '';
+	background: linear-gradient(130deg,rgba(0, 255, 153, 1) 0%, rgba(0, 96, 255, 1) 100%);
+	@apply absolute bottom-0 left-0 mr-auto w-[93%] h-[2px] opacity-30;
+}
+
+.bottom .contact label{
+	@apply w-full block ;
+}
+
+.bottom .contact label input{
+	outline: 0;
+	border:0;
+	@apply h-[44px] leading-[44px] pr-4 border-b border-b-[rgba(255,255,255,0.4)] block w-full;
+}
+
+.bottom .contact button{
+	@apply w-full block rounded-lg bg-[#00FF99] text-[#001758] text-base font-bold h-16 leading-16 hover:bg-[#001758] hover:text-[#00FF99] ease-in-out duration-300 cursor-pointer;
+}
+
+.footer{
+	@apply pt-8 pb-[100px] relative;
+}
+
+.footer:before{
+	content: '';
+	background: linear-gradient(130deg,rgba(0, 255, 153, 1) 0%, rgba(0, 96, 255, 1) 100%);
+	@apply absolute top-0 right-0 ml-auto w-[93%] h-[2px] opacity-30;
+}
