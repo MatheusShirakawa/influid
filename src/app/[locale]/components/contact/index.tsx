@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import ArrowDownRight from '/public/icons/arrow-down-right.svg'
+
 export default function Contact(){
 	return(
 		<div className='contact max-w-[830px] mx-auto mb-[115px] pt-[120px]'>
@@ -20,7 +23,15 @@ export default function Contact(){
 					<label>
 						<input type="text" placeholder='text your message'/>
 					</label>
-					<button type='submit' className='mt-6'>send</button>
+					<button type='submit' className=''>
+						<span>send</span>
+						<Image
+							width={20}
+							height={20}
+							src={ArrowDownRight}
+							alt='Arrow right icon'
+						/>
+					</button>
 				</form>
 			</div>
 		</div>
