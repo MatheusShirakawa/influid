@@ -1,8 +1,9 @@
 "use client"
 
+
 export default function Parallax(){
 	return(
-		<div className='parallax'>
+		<>
 			<div className='item websites'>
 				<div className='left'>
 					<span>01.</span>
@@ -30,6 +31,6 @@ export default function Parallax(){
 					Powerful branding solutions that make your business stand out and build trust.We create strong, consistent brand identities with logos, color palettes, and visual guidelines that communicate your company’s values and establish trust.
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }

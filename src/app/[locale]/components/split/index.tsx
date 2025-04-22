@@ -54,7 +54,7 @@ export default function Split() {
 				</div>
 				<div className='right w-[45%] pl-14 text-base mt-6'>
 					<p>We develop unique solutions for each project we deliver, but at the same, we have a quality standard we always ensure. That's our signature.</p>
-					<Link href={''} className='items-center text-center flex flex-row gap-2 text-[#0060FF] border border-[#0060FF] rounded-lg font-bold text-base leading-16 h-16 px-6 max-w-[202px] hover:bg-[#0060FF] hover:text-white ease-in-out duration-300 mt-6'>
+					<Link href={''} className='items-center text-center flex flex-row gap-2 text-[#0060FF] border border-[#0060FF] rounded-lg font-bold text-base leading-16 h-16 justify-center max-w-[202px] hover:bg-[#0060FF] hover:text-white ease-in-out duration-300 mt-6'>
 						<span>see our projects</span>
 						<ArrowDown className="w-5 h-5 font-bold"/>
 					</Link>

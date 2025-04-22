@@ -2,7 +2,7 @@
 
 	main{
 		/* background: linear-gradient(130deg,rgba(0, 96, 255, 1) 0%, rgba(0, 23, 88, 1) 30%); */
-		background: linear-gradient(130deg,rgba(0, 23, 88, 1) 0%, rgba(0, 9, 30,1) 30%);
+		background: linear-gradient(134deg,#0060ff4d,#00ff991a 9.76%,#03f2f200 24.46%),linear-gradient(167deg,transparent -40.18%,#000 91.72%),linear-gradient(0deg,#001758e6,#001758e6),linear-gradient(0deg,#0060ff33,#0060ff33);
 		/* background-size: 100% 100%; */
 	}
 
@@ -70,7 +70,7 @@
 	.split:before{
 		content: '';
 		background: linear-gradient(130deg,rgba(0, 255, 153, 1) 0%, rgba(0, 96, 255, 1) 100%);
-		@apply absolute top-0 right-0 left-[10%] bottom-0 mx-auto w-[2px] h-[100%] z-[1] opacity-30;
+		@apply absolute top-[8px] right-0 left-[10%] bottom-0 mx-auto w-[2px] h-[100%] z-[1] opacity-30;
 	}
 /* split */
 
@@ -81,7 +81,7 @@
 	}
 
 	.our-projects .develop .number-absolute{
-		@apply text-[#BACAF5] absolute m-auto top-[-35px] left-[-30px] z-[1] text-[300px] leading-normal font-extrabold opacity-40;
+		@apply text-[#BACAF5] absolute m-auto top-[-35px] left-[-30px] z-[1] text-[300px] leading-normal font-bold opacity-40;
 	}
 
 	.our-projects .develop{
@@ -117,35 +117,39 @@
 		@apply relative w-full;
 	}
 
-	.parallax .item{
+	.parallax > .item{
 		@apply sticky pl-[95px] pr-[105px] pt-[62px] flex flex-row items-start justify-between;
 	}
 
-	.parallax .item .right{
+	.parallax .our-clients{
+		@apply sticky top-0 w-full;
+	}
+
+	.parallax > .item .right{
 		@apply text-[#EBFBFF] text-base font-normal leading-normal max-w-[478px];
 	}
 
-	.parallax .item .left{
+	.parallax > .item .left{
 		@apply flex items-start flex-row;
 	}
 
-	.parallax .item span{
+	.parallax > .item span{
 		@apply text-2xl font-bold text-[#004D2E] text-left block;
 	}
 
-	.parallax .item.applications span{
+	.parallax > .item.applications span{
 		@apply text-[#004D2EB2];
 	}
 
-	.parallax .item.applications .right{
+	.parallax > .item.applications .right{
 		@apply text-[#000000B2];
 	}
 
-	.parallax .item.applications h2{
+	.parallax > .item.applications h2{
 		@apply text-[#000000B2];
 	}
 
-	.parallax .item.branding span{
+	.parallax > .item.branding span{
 		@apply text-[#AFFFDF];
 	}
 
@@ -153,27 +157,27 @@
 		@apply text-[#AFFFDF];
 	}
 
-	.parallax .item.branding .right{
+	.parallax > .item.branding .right{
 		@apply text-[#AFFFDF];
 	}
 
-	.parallax .item h2{
+	.parallax > .item h2{
 		@apply text-[154px] font-bold text-white text-left pl-10 block leading-[initial] mt-[-29px];
 	}
 
-	.parallax .item.websites{
+	.parallax > .item.websites{
 		@apply top-0 h-screen bg-[#0060FF];
 	}
 
-	.parallax .item.applications{
+	.parallax > .item.applications{
 		/* h-[969px] */
 		@apply top-[240px] h-screen bg-[#00FF99];
 	}
 
-	.parallax .item.branding{
+	.parallax > .item.branding{
 		/* 419px */
 		/* h-[756px] */
-		@apply top-[0] h-screen bg-[#021078];
+		@apply top-[520px] h-[400px] bg-[#021078];
 	}
 
 /* parallax */
@@ -183,12 +187,14 @@
 	.bottom{
 		background: url('/bg-bottom.png') no-repeat center;
 		background-size: cover;
+		z-index: 10;
 		width: 100%;
 		height: 100%;
+		position: relative;
 	}
 
 	.bottom .our-clients{
-		@apply relative pt-[120px] pb-[140px];
+		@apply relative pt-[120px] pb-[140px] ;
 	}
 
 	.bottom .our-clients .list-clients img{

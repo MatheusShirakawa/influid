@@ -6,7 +6,7 @@ import { ArrowDownRight } from '@phosphor-icons/react'
 
 export default function Contact(){
 	return(
-		<div className='contact max-w-[830px] mx-auto mb-[115px] pt-[120px]'>
+		<div className='contact max-w-[850px] mx-auto mb-[115px] pt-[120px]'>
 			<h2 className='title text-[128px] text-[#00FF99] font-bold text-center'>
 				make it <span className='text-white'>flow</span>.
 			</h2>

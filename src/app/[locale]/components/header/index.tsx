@@ -15,7 +15,7 @@ export default function Header(){
 	return(
 		<header className="header pt-[47px]">
 			<div className="header-content relative mx-auto">
-				<ul className='flex flex-row justify-center items-center gap-[54px] text-[#03f2f2]'>
+				<ul className='flex flex-row justify-center items-center gap-[71px] text-[#03f2f2]'>
 					<li>
 						<Link href={'#'}>
 							{t('about')}

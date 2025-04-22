@@ -36,7 +36,6 @@ export default async function Layout({ children, params }: Props) {
 
 	return (
 		<html className="h-full" lang={locale}>
-			<link rel="icon" href="/favicon.png" />
 			<body>
 				<NextIntlClientProvider>
 					{children}

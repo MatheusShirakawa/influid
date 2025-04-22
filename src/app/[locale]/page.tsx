@@ -43,12 +43,13 @@ export default function Home({ params }: Props) {
 
 			<WhatWeAre/>
 			<OurProjects/>
-			<Parallax/>
-
-			<div className='bottom'>
-				<OurClients/>
-				<Contact/>
-				<Footer/>
+			<div className='parallax'>
+				<Parallax/>
+				<div className='bottom'>
+					<OurClients/>
+					<Contact/>
+					<Footer/>
+				</div>
 			</div>
 		</div>
 	)
