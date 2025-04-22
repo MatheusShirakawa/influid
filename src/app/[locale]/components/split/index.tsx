@@ -10,30 +10,30 @@ import Link from 'next/link'
 
 export default function Split() {
 	return(
-		<div className='split'>
+		<div className='split relative z-10'>
 			<div className='content-split flex justify-center relative items-start'>
 				<div className='left w-[55%] px-14'>
 					<div className='line-numbers flex flex-row justify-between'>
 						<div className='line'>
 							<div className='flex flex-row gap-2 font-bold'>
 								<span className='plus text-[#00FF99] text-2xl mt-4'>+</span>
-								<span className='number text-[54px]'>10</span>
+								<span className='number text-[54px] text-white'>10</span>
 							</div>
 							<p className='text-xs text-[#BACAF5] max-w-[90px] text-right'>years creating amazing digital experiencies</p>
 						</div>
 						<div className='line'>
 							<div className='flex flex-row gap-2 font-bold'>
 								<span className='plus text-[#1890FF] text-2xl mt-4'>+</span>
-								<span className='number text-[54px]'>100</span>
+								<span className='number text-[54px] text-white'>100</span>
 							</div>
 							<p className='text-xs text-[#BACAF5] max-w-[90px] text-right'>customers from different markets and countries</p>
 						</div>
 						<div className='line'>
 							<div className='flex flex-row gap-2 font-bold'>
 								<span className='plus text-[#03F2F2] text-2xl mt-4'>+</span>
-								<span className='number text-[54px]'>80</span>
+								<span className='number text-[54px] text-white'>80</span>
 							</div>
-							<p className='text-xs text-[#BACAF5] max-w-[80px] text-right'>full brands great projects developed</p>
+							<p className='text-xs !text-[#BACAF5] max-w-[80px] text-right '>full brands great projects developed</p>
 						</div>
 					</div>
 				</div>

@@ -10,6 +10,82 @@
 		@apply max-w-[1137px] mx-auto mt-[218px];
 	}
 
+	.typewrite > .wrap{
+		@apply relative;
+		/* @apply border-r-6 border-r-white;
+		animation: cursor .4s step-end infinite alternate; */
+	}
+
+	.typewrite > .wrap::after{
+		content: '';
+		@apply w-full h-[80%] m-auto border-r-6 border-r-white block absolute top-0 bottom-0 right-[-4px];
+		animation: cursor .4s step-end infinite alternate;
+	}
+
+	/* main .first-content-page .dinamic-texts > span{
+		@apply relative text-right top-0 mx-auto;
+		animation: slide 12s steps(4) infinite;
+	} */
+
+	/* main .first-content-page .dinamic-texts > span:nth-child(1){
+		width: 588px;
+	} */
+/*
+	main .first-content-page .dinamic-texts > span:nth-child(2){
+		width: 440px;
+	}
+
+	main .first-content-page .dinamic-texts > span:nth-child(3){
+		width: 473px;
+	}
+
+	main .first-content-page .dinamic-texts > span:nth-child(4){
+		width: 588px;
+	} */
+
+	/* main .first-content-page .dinamic-texts > span::before{
+		content: '';
+		@apply w-full h-full border-r-6 border-r-white block absolute top-0 bottom-0;
+		animation: cursor .5s steps(10) infinite
+	} */
+
+	@keyframes typing{
+		0%{
+			width: 0;
+		}
+		50%{
+			width: 100%;
+		}
+		100%{
+			width: 0;
+		}
+	}
+
+	@keyframes cursor{
+		50%{
+			border-color:transparent
+		}
+	}
+
+	/* @keyframes slide {
+		100%{
+			top: -720px;
+		}
+		50%{
+			border-color:transparent
+		}
+	}
+
+	@keyframes blink {
+		40%,
+		60%{
+			left:calc(100% + 30px);
+		}
+		100% {
+			left:0;
+		}
+	} */
+
 /* main */
 
 /* what we are */
