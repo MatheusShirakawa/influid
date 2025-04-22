@@ -1,14 +1,16 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 
-import WhatsappLogo from  '/public/icons/whatsapp-logo.svg'
-import MapPin from '/public/icons/map-pin.svg'
-import Envelope from '/public/icons/envelope.svg'
 import LogoInfluid from '/public/logo-influid.svg'
 
-import Instagram from '/public/icons/instagram.svg'
+import {
+	WhatsappLogo,
+	MapPin,
+	InstagramLogo,
+	Envelope
+} from '@phosphor-icons/react'
 import Linkedin from '/public/icons/linkedin.svg'
-import Whatsapp from '/public/icons/whatsapp.svg'
 
 export default function Footer(){
 	return(
@@ -29,12 +31,7 @@ export default function Footer(){
 
 					<div className='item max-w-[200px] flex flex-col gap-2'>
 						<div className='flex flex-row gap-2 items-center text-[#00FF99]'>
-							<Image
-								width={16}
-								height={16}
-								src={Envelope}
-								alt='Envelope Icon'
-							/>
+							<Envelope className="w-6 h-6"/>
 							<span className='font-bold'>contact@influid.co</span>
 						</div>
 						<span className='text-[#BACAF5] block opacity-40'>Check our social media</span>
@@ -42,32 +39,24 @@ export default function Footer(){
 							<ul className='flex flex-row gap-4'>
 								<li>
 									<Link href={''}>
-										<Image
-											width={16}
-											height={16}
-											src={Instagram}
-											alt='Instagram icon'
-										/>
+										<InstagramLogo className="w-6 h-6 text-[#03F2F2]"/>
 									</Link>
 								</li>
 								<li>
 									<Link href={''}>
+										{/* <LinkedinLogo className="w-6 h-6 text-[#03F2F2]"/> */}
 										<Image
-											width={16}
-											height={16}
 											src={Linkedin}
-											alt='Linkedin icon'
+											alt='Linkedin Logo'
+											width={20}
+											height={20}
+											className="w-5 h-5 text-[#03F2F2]"
 										/>
 									</Link>
 								</li>
 								<li>
 									<Link href={''}>
-										<Image
-											width={16}
-											height={16}
-											src={Whatsapp}
-											alt='Whatsapp icon'
-										/>
+										<WhatsappLogo className="w-6 h-6 text-[#03F2F2]"/>
 									</Link>
 								</li>
 							</ul>
@@ -75,12 +64,7 @@ export default function Footer(){
 					</div>
 
 					<div className='item max-w-[200px] flex flex-col gap-4'>
-						<Image
-							width={16}
-							height={16}
-							src={MapPin}
-							alt='Map Pin Icon'
-						/>
+						<MapPin className="w-5 h-5 text-[#00FF99]"/>
 						<div>
 							<div>
 								<p className='text-[#BACAF5] block'>
@@ -94,23 +78,13 @@ export default function Footer(){
 							</div>
 						</div>
 						<div className='flex flex-row gap-2 items-center'>
-							<Image
-								width={16}
-								height={16}
-								src={WhatsappLogo}
-								alt='Whatsapp Logo'
-							/>
+							<WhatsappLogo className="w-5 h-5 text-[#00FF99]"/>
 							<span className='text-[#BACAF5]'>+1 (224) 742 0208</span>
 						</div>
 					</div>
 
 					<div className='item max-w-[200px] flex flex-col gap-4'>
-						<Image
-							width={16}
-							height={16}
-							src={MapPin}
-							alt='Map Pin Icon'
-						/>
+						<MapPin className="w-5 h-5 text-[#00FF99]"/>
 						<div>
 							<p className='text-[#BACAF5] block'>
 								<span className='block'>BR Location</span>
@@ -122,12 +96,7 @@ export default function Footer(){
 							</p>
 						</div>
 						<div className='flex flex-row gap-2 items-center'>
-							<Image
-								width={16}
-								height={16}
-								src={WhatsappLogo}
-								alt='Whatsapp Logo'
-							/>
+							<WhatsappLogo className="w-5 h-5 text-[#00FF99]"/>
 							<span className='text-[#BACAF5]'>+55 (11) 96313 0862</span>
 						</div>
 					</div>

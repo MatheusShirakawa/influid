@@ -1,5 +1,8 @@
-import Image from 'next/image'
-import ArrowDownRight from '/public/icons/arrow-down-right.svg'
+"use client"
+// import Image from 'next/image'
+// import ArrowDownRight from '/public/icons/arrow-down-right.svg'
+
+import { ArrowDownRight } from '@phosphor-icons/react'
 
 export default function Contact(){
 	return(
@@ -25,12 +28,7 @@ export default function Contact(){
 					</label>
 					<button type='submit' className=''>
 						<span>send</span>
-						<Image
-							width={20}
-							height={20}
-							src={ArrowDownRight}
-							alt='Arrow right icon'
-						/>
+						<ArrowDownRight className='w-5 h-5' />
 					</button>
 				</form>
 			</div>

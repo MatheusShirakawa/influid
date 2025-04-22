@@ -1,6 +1,10 @@
+"use client"
+
 import Link from "next/link"
-import Image from "next/image"
-import ArrowDown from '/public/icons/arrow-down.svg'
+
+import {
+	ArrowDown
+} from '@phosphor-icons/react'
 
 export default function FirstContent(){
 	return(
@@ -18,13 +22,7 @@ export default function FirstContent(){
 
 			<div className='mx-auto'>
 				<Link href={''} className='rounded-full bg-[#0060FF] cursor-pointer flex justify-center items-center w-[36px] h-[36px] mx-auto mt-[80px] mb-[150px]'>
-					<Image
-						className='block'
-						src={ArrowDown}
-						width={16}
-						height={16}
-						alt='Arrow down icon'
-					/>
+					<ArrowDown className="text-white w-5 h-5"/>
 				</Link>
 			</div>
 		</div>
