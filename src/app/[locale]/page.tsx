@@ -43,6 +43,7 @@ export default function Home({ params }: Props) {
 
 			<WhatWeAre/>
 			<OurProjects/>
+
 			<div className='parallax'>
 				<Parallax/>
 				<div className='bottom'>

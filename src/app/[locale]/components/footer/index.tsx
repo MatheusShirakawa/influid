@@ -14,7 +14,7 @@ import Linkedin from '/public/icons/linkedin.svg'
 
 export default function Footer(){
 	return(
-		<footer className='footer'>
+		<footer id="footer" className='footer'>
 			<div className='container-footer max-w-[1452px] mx-auto px-4'>
 				<div className='footer-content flex items-start justify-between'>
 					<div className='item max-w-[200px]'>

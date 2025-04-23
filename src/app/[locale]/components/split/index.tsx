@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 export default function Split() {
 	return(
-		<div className='split relative z-10'>
+		<div id="split" className='split relative z-10'>
 			<div className='content-split flex justify-center relative items-start'>
 				<div className='left w-[55%] px-14'>
 					<div className='line-numbers flex flex-row justify-between'>
@@ -44,8 +44,8 @@ export default function Split() {
 			</div>
 
 			<div className='content-split flex flex-row justify-center items-start'>
-				<div className='left w-[55%] pr-14'>
-					{/* 02 */}
+				<div className='left w-[55%] pr-14 relative'>
+					<span className='number-absolute'>02</span>
 					<h2 className='title text-[64px] font-bold leading-tight text-right'>
 						<span className="text-[#0060FF] block">we create</span>
 						<span className='text-white block'>interaction, fluity</span>
