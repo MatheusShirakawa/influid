@@ -1,7 +1,7 @@
 "use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
-
 import LogoInfluid from '/public/logo-influid.svg'
 
 import {
@@ -10,9 +10,15 @@ import {
 	InstagramLogo,
 	Envelope
 } from '@phosphor-icons/react'
+
 import Linkedin from '/public/icons/linkedin.svg'
 
+import { useTranslations } from 'next-intl'
+
 export default function Footer(){
+
+	const t = useTranslations('Footer')
+
 	return(
 		<footer id="footer" className='footer'>
 			<div className='container-footer max-w-[1452px] mx-auto px-4'>
@@ -26,15 +32,15 @@ export default function Footer(){
 								alt='Influid Logo'
 							/>
 						</Link>
-						<p className='text-[#BACAF5] block opacity-40 mt-8'>Influid is a design studio focused on create amazing digital products.</p>
+						<p className='text-[#BACAF5] block opacity-40 mt-8'>{t('what-is')}</p>
 					</div>
 
 					<div className='item max-w-[200px] flex flex-col gap-2'>
-						<div className='flex flex-row gap-2 items-center text-[#00FF99]'>
+						<Link href={'mailto:contact@influid.co'} className='flex flex-row gap-2 items-center text-[#00FF99]'>
 							<Envelope className="w-6 h-6"/>
-							<span className='font-bold'>contact@influid.co</span>
-						</div>
-						<span className='text-[#BACAF5] block opacity-40'>Check our social media</span>
+							<span className='font-semibold'>contact@influid.co</span>
+						</Link>
+						<span className='text-[#BACAF5] block opacity-40'>{t('social-title')}</span>
 						<div>
 							<ul className='flex flex-row gap-4'>
 								<li>
@@ -68,7 +74,7 @@ export default function Footer(){
 						<div>
 							<div>
 								<p className='text-[#BACAF5] block'>
-									<span className='block'>US Location</span>
+									<span className='block'>{t('us-address')}</span>
 									<span className='opacity-40'>
 										633 West Fifth Street <br/>
 										Los Angeles <br/>
@@ -87,7 +93,7 @@ export default function Footer(){
 						<MapPin className="w-5 h-5 text-[#00FF99]"/>
 						<div>
 							<p className='text-[#BACAF5] block'>
-								<span className='block'>BR Location</span>
+								<span className='block'>{t('br-address')}</span>
 								<span className='opacity-40'>
 									Rua Cayowaá 1742<br/>
 									Perdizes SP<br/>

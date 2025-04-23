@@ -1,5 +1,5 @@
-// components/TypewriterText.js
-import { useEffect, useRef, useState } from 'react';
+
+import { useEffect, useRef, useState } from 'react'
 
 const Typewriter = ({ toRotate = [] as string[], period = 2000 }) => {
 	const [text, setText] = useState('');

@@ -1,33 +1,43 @@
 "use client"
-// import Image from 'next/image'
-// import ArrowDownRight from '/public/icons/arrow-down-right.svg'
 
 import { ArrowDownRight } from '@phosphor-icons/react'
+import { useTranslations } from 'next-intl'
 
 export default function Contact(){
+
+	const t = useTranslations('Contact')
+
 	return(
 		<div className='contact max-w-[850px] mx-auto mb-[115px] pt-[120px]'>
-			<h2 className='title text-[128px] text-[#00FF99] font-bold text-center'>
-				make it <span className='text-white'>flow</span>.
-			</h2>
+			<div className='relative'>
+				<span className='number-absolute'>05</span>
+				<h2 className='title text-[128px] text-[#00FF99] font-bold text-center relative z-10'>
+					{t("title-one")} <span className='text-white'>{t("title-two")}</span>.
+				</h2>
+			</div>
 			<div className='contact-form max-w-[648px] mx-auto'>
 				<form action="" className='flex flex-col gap-12'>
-					<p className='text-[#EBFBFF] block text-base'>Fill the form bellow to send us a message, we will be glad to answer you as soon as possible.</p>
+					<p className='text-[#EBFBFF] block text-base'>{t("description")}</p>
 					<label>
 						<input
 							type="text"
-							placeholder='your name'
-
+							placeholder={t("form.name")}
 						/>
 					</label>
 					<label>
-						<input type="email" placeholder='your best e-mail'/>
+						<input
+							type="email"
+							placeholder={t("form.email")}
+						/>
 					</label>
 					<label>
-						<input type="text" placeholder='text your message'/>
+						<input
+							type="text"
+							placeholder={t("form.message")}
+						/>
 					</label>
 					<button type='submit' className=''>
-						<span>send</span>
+						<span>{t("form.send")}</span>
 						<ArrowDownRight className='w-5 h-5' />
 					</button>
 				</form>

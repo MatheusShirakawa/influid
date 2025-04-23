@@ -17,8 +17,12 @@ import RightThreeIcon from '/public/icons/3/right.svg'
 import LeftThreeIcon from '/public/icons/3/left.svg'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 export default function WhatWeAre(){
+
+	const t = useTranslations('WhatWeAre')
+
 	return(
 		<div className='what-we-are'>
 			<div className='item first'>
@@ -46,7 +50,7 @@ export default function WhatWeAre(){
 						className='left'
 					/>
 				</div>
-				<p>All digital products are made to provide an interaction between users and information, making possible the accomplishment of the users wishes or needs through the company` services or products.</p>
+				<p>{t("description-one")}</p>
 			</div>
 
 			<div className='item second'>
@@ -95,7 +99,7 @@ export default function WhatWeAre(){
 						className='ball'
 					/>
 				</div>
-				<p>This connection must have a good fluity, it should happen smoothly, because the main goal of a digital experience is always to make the users life easier and happier.</p>
+				<p>{t("description-two")}</p>
 			</div>
 			<div className='item third'>
 				<span className="number">03.</span>
@@ -129,7 +133,7 @@ export default function WhatWeAre(){
 						className='bottom'
 					/>
 				</div>
-				<p>And all this process must represent your identity. Your digital product should have your fingerprint, to promote an affectual relation between your public and your brand.</p>
+				<p>{t("description-three")}</p>
 			</div>
 		</div>
 	)

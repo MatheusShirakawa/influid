@@ -1,34 +1,38 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 
 export default function Parallax(){
+
+	const t = useTranslations('Parallax')
+
 	return(
 		<>
 			<div className='item websites'>
 				<div className='left'>
 					<span>01.</span>
-					<h2 className="title">websites</h2>
+					<h2 className="title">{t("websites")}</h2>
 				</div>
 				<div className='right'>
-					Custom websites that combine design and functionality to elevate your online presence.We create digital experiences that reflect your brand’s values and mission, ensuring your site is visually appealing and effective in driving engagement and conversions.
+					{t("websites-description")}
 				</div>
 			</div>
 			<div className='item applications'>
 				<div className='left'>
 					<span>02.</span>
-					<h2 className="title">applications</h2>
+					<h2 className="title">{t("applications")}</h2>
 				</div>
 				<div className='right'>
-					Intuitive apps designed to enhance user experience and meet your business goals. We develop apps that simplify processes and provide a seamless user experience, making your app an essential tool for your audience.
+					{t("applications-description")}
 				</div>
 			</div>
 			<div className='item branding'>
 				<div className='left'>
 					<span>03.</span>
-					<h2 className="title">branding</h2>
+					<h2 className="title">{t("branding")}</h2>
 				</div>
 				<div className='right'>
-					Powerful branding solutions that make your business stand out and build trust.We create strong, consistent brand identities with logos, color palettes, and visual guidelines that communicate your company’s values and establish trust.
+					{t("branding-description")}
 				</div>
 			</div>
 		</>

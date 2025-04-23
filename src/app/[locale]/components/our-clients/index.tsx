@@ -1,6 +1,4 @@
 import Image from "next/image"
-
-
 import DbGroup from '/public/icons/brands/db1-group.svg'
 import Moderna from '/public/icons/brands/moderna.svg'
 import Mol from '/public/icons/brands/mol.svg'
@@ -8,11 +6,16 @@ import Poliedro from '/public/icons/brands/poliedro.svg'
 import Sm from '/public/icons/brands/sm.svg'
 import Stanleys from '/public/icons/brands/stanleys.svg'
 
+import { useTranslations } from "next-intl"
+
 export default function OurClients(){
+
+	const t = useTranslations('OurClients')
+
 	return(
 		<div className='our-clients'>
 			<h2 className='title text-[64px] text-center font-bold text-[#03F2F2]'>
-				our <span className='text-white'>clients</span>.
+				{t('title-one')} <span className='text-white'>{t('title-two')}</span>.
 			</h2>
 			<div className='list-clients mt-10 flex gap-14 flex-row justify-between items-center'>
 				<Image

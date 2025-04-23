@@ -5,19 +5,18 @@ import Typewriter from "../typewriter"
 import {
 	ArrowDown
 } from '@phosphor-icons/react'
-
 import { scrollDown } from "../../utils/helpers"
-
+import { useTranslations } from "next-intl"
 
 export default function FirstContent(){
-
-	// const scrollDown = () => {
-	// 	if (document.getElementById('split')) {
-	// 		document.getElementById('split')?.scrollIntoView({ behavior: 'smooth' });
-	// 	}
-	// }
-
-	const strings = ['websites', 'clients', 'brands', 'systems', 'experiences']
+	const t = useTranslations('FirstContent')
+	const strings = [
+		t("strings.websites"),
+		t("strings.apps"),
+		t("strings.brands"),
+		t("strings.systems"),
+		t("strings.experiences")
+	]
 
 	return(
 		<div className='first-content-page'>
@@ -27,7 +26,7 @@ export default function FirstContent(){
 
 			<h1 className='justify-center items-center text-center text-[128px] leading-normal font-bold relative'>
 				<span className='number-absolute'>01</span>
-				<span className='text-[#00ff99] block relative z-10'>we design great</span>
+				<span className='text-[#00ff99] block relative z-10'>{t("title")}</span>
 				<div className='mt-[-40px] flex justify-center flex-row items-end'>
 					<div className="dinamic-texts text-center text-white">
 						<Typewriter toRotate={strings} period={1000} />

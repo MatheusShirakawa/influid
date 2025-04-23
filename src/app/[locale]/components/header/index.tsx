@@ -1,15 +1,13 @@
 'use client'
 
-// import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
 
+import Link from 'next/link'
 import Logo from '/public/logo.svg'
 import Image from 'next/image'
 
 export default function Header(){
 
-	// const [language, setLanguage] = useState('en')
 	const t = useTranslations('Header')
 
 	return(

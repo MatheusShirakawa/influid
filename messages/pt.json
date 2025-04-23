@@ -1,8 +1,4 @@
 {
-	"Home":{
-		"title": "Home",
-		"description": "Bem-vindo à página inicial do nosso aplicativo. Aqui você pode encontrar vários recursos e informações."
-	},
 	"Header":{
 		"about":"sobre nós.",
 		"projects":"nossos projetos.",
@@ -10,6 +6,78 @@
 		"contact":"fale conosco."
 	},
 	"Layout": {
-		"title": "Influid"
+		"title": "Influid - Experiências Digitais que Fluem"
+	},
+	"FirstContent":{
+		"title":"a gente cria",
+		"strings":{
+			"websites":"sites",
+			"apps":"aplicativos",
+			"brands":"marcas",
+			"systems":"design systems",
+			"experiences":"experiências"
+		}
+	},
+	"Split":{
+		"years":"anos criando experiências digitais incríveis",
+		"customers":"clientes de diferentes mercados e países",
+		"brands":"marcas completas grandes projetos desenvolvidos",
+		"description":"é um estúdio de design digital focado na criação de sites, aplicativos, sistemas e experiências interativas que realmente fluem.",
+		"info-one":"nós criamos",
+		"info-two":"interação, fluidez",
+		"info-three":"e identidade",
+		"solutions":"Desenvolvemos soluções únicas para cada projeto que entregamos, mas, ao mesmo tempo, mantemos um padrão de qualidade que sempre garantimos. Essa é a nossa assinatura.",
+		"see-our-projects":"veja nossos projetos"
+	},
+	"WhatWeAre":{
+		"description-one":"Todos os produtos digitais são feitos para proporcionar uma interação entre os usuários e as informações, tornando possível a realização dos desejos ou necessidades dos usuários por meio dos serviços ou produtos da empresa.",
+		"description-two":"Essa conexão deve ter uma boa fluência, deve acontecer sem problemas, pois o principal objetivo de uma experiência digital é sempre tornar a vida do usuário mais fácil e feliz.",
+		"description-three":"E todo esse processo deve representar a sua identidade. Seu produto digital deve ter a sua impressão digital, para promover uma relação afetiva entre seu público e sua marca."
+	},
+	"OurProjects":{
+		"develop":{
+			"title-one":"nós desenvolvemos experiências",
+			"title-two":"em branding e tecnologia",
+			"link":"contate-nos",
+			"description":"Criamos soluções inovadoras com criatividade e tecnologia. Nossos serviços se concentram em sites, aplicativos e branding, transformando ideias em plataformas impressionantes e identidades poderosas que inspiram, engajam e elevam seus negócios."
+		},
+		"projects":{
+			"title":"projetos",
+			"info-one":"interação",
+			"info-two":"fluidez",
+			"info-three":"identidade"
+		}
+	},
+	"Parallax":{
+		"websites":"sites",
+		"websites-description":"Sites personalizados que combinam design e funcionalidade para elevar sua presença online. Criamos experiências digitais que refletem os valores e a missão da sua marca, garantindo que seu site seja visualmente atraente e eficaz para gerar engajamento e conversões.",
+		"applications":"aplicações",
+		"applications-description":"Aplicativos intuitivos projetados para aprimorar a experiência do usuário e atingir seus objetivos de negócios. Desenvolvemos aplicativos que simplificam processos e proporcionam uma experiência de usuário fluida, tornando seu aplicativo uma ferramenta essencial para o seu público.",
+		"branding":"marca",
+		"branding-description":"Soluções de branding poderosas que fazem sua empresa se destacar e geram confiança. Criamos identidades de marca fortes e consistentes com logotipos, paletas de cores e diretrizes visuais que comunicam os valores da sua empresa e estabelecem confiança."
+	},
+	"OurClients":{
+		"title-one":"nossos",
+		"title-two":"clientes"
+	},
+	"Contact":{
+		"title-one":"faça",
+		"title-two":"fluir",
+		"description":"Preencha o formulário abaixo para nos enviar uma mensagem, teremos prazer em responder o mais breve possível.",
+		"form":{
+			"name":"seu nome",
+			"email":"seu melhor e-mail",
+			"message":"digite sua mensagem",
+			"send":"enviar"
+		},
+		"success":"Sua mensagem foi enviada com sucesso, entraremos em contato o mais breve possível.",
+		"error":"Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+		"empty":"Por favor, preencha todos os campos."
+	},
+	"Footer":{
+		"what-is":"Influid é um estúdio de design focado em criar produtos digitais incríveis.",
+		"social-title":"Confira nossas mídias sociais",
+		"us-address":"Localização nos EUA",
+		"br-address":"Localização BR"
 	}
 }
