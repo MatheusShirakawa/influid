@@ -28,30 +28,34 @@ export default function Home({ params }: Props) {
 	// Enable static rendering
 	setRequestLocale(locale)
 
-	// const t = useTranslations('Home')
-	{/* {t("title")}
-	{t("description")} */}
 	return (
 		<div className="bg-[#020717]">
 			<main>
-				<Header/>
-				<div className='main-content'>
-					<FirstContent/>
-					<Split/>
+				<div className='relative'>
+					<video autoPlay muted loop playsInline controls={false} className="absolute bottom-0 left-0 right-0 top-0 z-[0] h-[calc(200dvh)] w-screen object-cover" poster='/video.mp4'>
+						<source src="/video.mp4" type='video/mp4'/>
+					</video>
+					<div className='main-block'>
+						<Header locale={locale}/>
+						<div className='main-content'>
+							<FirstContent/>
+							<Split/>
+						</div>
+					</div>
+				</div>
+
+				<WhatWeAre/>
+				<OurProjects locale={locale}/>
+
+				<div className='parallax'>
+					<Parallax/>
+					<div className='bottom'>
+						<OurClients/>
+						<Contact/>
+						<Footer/>
+					</div>
 				</div>
 			</main>
-
-			<WhatWeAre/>
-			<OurProjects/>
-
-			<div className='parallax'>
-				<Parallax/>
-				<div className='bottom'>
-					<OurClients/>
-					<Contact/>
-					<Footer/>
-				</div>
-			</div>
 		</div>
 	)
 }

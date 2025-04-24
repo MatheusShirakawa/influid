@@ -1,8 +1,91 @@
+/* toggle */
+.toggle {
+	position: relative;
+  }
+  .toggle input[type="checkbox"] {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	opacity: 0;
+  }
+  .toggle label {
+	position: relative;
+	display: flex;
+	align-items: center;
+  }
+  .toggle label:before {
+	content: attr(data-off);
+	text-align: right;
+	font-size: 12px;
+	padding: 0 8px;
+	line-height:19px;
+	color:#0060ff;
+	width: 52px;
+	height: 24px;
+	background: transparent;
+	position: relative;
+	display: inline-block;
+	border-radius: 46px;
+	transition: 0.2s ease-in;
+	border: 2px solid #021078;
+  }
+  .toggle label:after {
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	left: 0;
+	top: 0px;
+	z-index: 2;
+	background: #1D39DA;
+	box-shadow: 0 0 10px #0003, -4px 1px 12px #0002;
+	transition: 0.3s ease-in-out;
+  }
+  .toggle input[type="checkbox"]:hover + label:after  {
+	  box-shadow: 0 2px 15px #0005, 0 3px 8px #0002;
+  }
+  .toggle input[type="checkbox"]:checked + label:before {
+	content: attr(data-on);
+	text-align: left;
+  }
+  .toggle input[type="checkbox"]:checked + label:after {
+	left: 28px;
+  }
+/* .toggle input[type="checkbox"]:checked + label:before {
+
+}
+
+.toggle input[type="checkbox"]:not(:checked) + label:before {
+	content: attr(data-off)
+} */
+
+
+/* toggle */
+
+/* header */
+
+	.header .change-lang{
+		@apply absolute top-0 right-0 bottom-0 m-auto h-6;
+	}
+
+/* header */
+
 /* main */
 
 	main{
+		@apply relative;
+	}
+
+	.main-block{
 		/* background: linear-gradient(130deg,rgba(0, 96, 255, 1) 0%, rgba(0, 23, 88, 1) 30%); */
 		background: linear-gradient(134deg,#0060ff4d,#00ff991a 9.76%,#03f2f200 24.46%),linear-gradient(167deg,transparent -40.18%,#000 91.72%),linear-gradient(0deg,#001758e6,#001758e6),linear-gradient(0deg,#0060ff33,#0060ff33);
+		position: relative;
+		z-index: 1;
 		/* background-size: 100% 100%; */
 	}
 
@@ -57,7 +140,7 @@
 /* what we are */
 
 	.what-we-are{
-		@apply bg-white text-[#1B1F26B8] flex flex-row ;
+		@apply bg-white text-[#1B1F26B8] flex flex-row relative z-[1];
 	}
 
 	.what-we-are > div{
@@ -212,6 +295,10 @@
 	.our-projects .title{
 		@apply text-[280px] text-[#0060FF] font-bold block left-[-70px] relative z-10;
 		line-height: 120%;
+	}
+
+	.our-projects .title[data-language="pt"]{
+		@apply left-0;
 	}
 
 	.our-projects .line-banners{

@@ -1,18 +1,48 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+// import { useParams } from 'next/navigation';
+import { useTransition} from 'react';
+import { usePathname, useRouter} from '@/i18n/navigation';
+// import { Locale } from 'next-intl';
 
 import Link from 'next/link'
 import Logo from '/public/logo.svg'
 import Image from 'next/image'
 
-export default function Header(){
+export default function Header({ locale }: { locale: string }) {
 
+	const router = useRouter()
+	const [isPending, startTransition] = useTransition()
+	const pathname = usePathname()
+	// const params = useParams()
 	const t = useTranslations('Header')
+
+
+	function handleChangeLanguage(e: React.ChangeEvent<HTMLInputElement>){
+		const { checked } = e.target
+		if (checked) {
+			startTransition(() => {
+				router.replace(
+				  { pathname },
+				  { locale: 'en'}
+				)
+			  })
+		}
+		else {
+			startTransition(() => {
+				router.replace(
+				  { pathname },
+				  { locale: 'pt'}
+				)
+			  })
+			// setLanguage('EN')
+		}
+	}
 
 	return(
 		<header className="header pt-[47px]">
-			<div className="header-content relative mx-auto">
+			<div className="header-content relative mx-auto max-w-[1388px]">
 				<ul className='flex flex-row justify-center items-center gap-[71px] text-[#03f2f2]'>
 					<li>
 						<Link href={'#'}>
@@ -46,11 +76,12 @@ export default function Header(){
 					</li>
 				</ul>
 
-				{/* <div className='change-lang'> */}
-					{/* language */}
-					{/* setLanguage('EN') */}
-					{/* EN/PT */}
-				{/* </div> */}
+				<div className='change-lang' data-pending={isPending}>
+					<div className="toggle" data-on={'EN'} data-off={'PT'}>
+						<input type="checkbox" checked={locale == 'en' ? true : false } onChange={(e) => handleChangeLanguage(e)}/>
+						<label data-on={'EN'} data-off={'PT'}></label>
+					</div>
+				</div>
 			</div>
 		</header>
 	)

@@ -2,10 +2,11 @@
 
 import Link from "next/link"
 import Banner from "../banner"
+
 import { ArrowDown } from "@phosphor-icons/react"
 import { useTranslations } from "next-intl"
 
-export default function OurProjects(){
+export default function OurProjects({ locale }: { locale: string }) {
 
 	const t = useTranslations('OurProjects')
 
@@ -19,7 +20,7 @@ export default function OurProjects(){
 				</div>
 
 				<span className="number-absolute">03</span>
-				<h2 className='title'>{t("projects.title")}</h2>
+				<h2 className='title' data-language={locale}>{t("projects.title")}</h2>
 
 				<div className='line-banners'>
 					<Banner
