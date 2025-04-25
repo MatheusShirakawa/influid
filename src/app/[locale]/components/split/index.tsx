@@ -51,7 +51,7 @@ export default function Split() {
 				</div>
 				<div className='right w-[45%] pl-14 text-base mt-6'>
 					<p>{t("solutions")}</p>
-					<a onClick={() => scrollDown('our-projects')} className='items-center text-center flex flex-row gap-2 text-[#0060FF] border border-[#0060FF] rounded-lg font-bold text-base leading-16 h-16 justify-center max-w-[222px] hover:bg-[#0060FF] hover:text-white ease-in-out duration-300 mt-6'>
+					<a onClick={() => scrollDown('our-projects')} className='items-center text-center flex flex-row gap-2 text-[#0060FF] cursor-pointer border border-[#0060FF] rounded-lg font-bold text-base leading-16 h-16 justify-center max-w-[222px] hover:bg-[#0060FF] hover:text-white ease-in-out duration-300 mt-6'>
 						<span>{t("see-our-projects")}</span>
 						<ArrowDown className="w-5 h-5 font-bold"/>
 					</a>

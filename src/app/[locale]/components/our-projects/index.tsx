@@ -6,12 +6,21 @@ import Banner from "../banner"
 import { ArrowDown } from "@phosphor-icons/react"
 import { useTranslations } from "next-intl"
 
+import { A11y, Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import 'swiper/css/autoplay'
+
 export default function OurProjects({ locale }: { locale: string }) {
 
 	const t = useTranslations('OurProjects')
 
 	return(
-		<div id="our-projects" className='our-projects'>
+		<div id="our-projects" className='our-projects relative z-[1]'>
 			<div className="content-slide">
 				<div className='line-info'>
 					<span>{t("projects.info-one")}</span>
@@ -23,22 +32,52 @@ export default function OurProjects({ locale }: { locale: string }) {
 				<h2 className='title' data-language={locale}>{t("projects.title")}</h2>
 
 				<div className='line-banners'>
-					<Banner
-						src={'/iphone1.png'}
-						name='Project 1'
-					/>
-					<Banner
-						src={'/iphone2.png'}
-						name='Project 2'
-					/>
-					<Banner
-						src={'/iphone3.png'}
-						name='Project 3'
-					/>
-					<Banner
-						src={'/iphone1.png'}
-						name='Project 1'
-					/>
+					<Swiper
+						modules={[A11y, Autoplay]}
+						spaceBetween={24}
+						slidesPerView={4}
+						autoplay={{ delay: 2500, disableOnInteraction: true }}
+						loop={true}
+						// navigation={true}
+						// pagination={{ clickable: true }}
+						centeredSlides={false}>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone1.png'}
+									name='Project 1'
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone2.png'}
+									name='Project 2'
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone3.png'}
+									name='Project 3'
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone2.png'}
+									name='Project 2'
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone1.png'}
+									name='Project 2'
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone3.png'}
+									name='Project 3'
+								/>
+							</SwiperSlide>
+					</Swiper>
 				</div>
 			</div>
 
