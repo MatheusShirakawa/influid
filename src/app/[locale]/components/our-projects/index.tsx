@@ -115,11 +115,11 @@ export default function OurProjects({ locale }: { locale: string }) {
 			<div className='develop'>
 				<div className='left relative'>
 					<span className="number-absolute">04</span>
-					<h2 className="title relative z-10">
+					<h2 className="title relative z-[1]">
 						{t("develop.title-one")} <br/>
 						<span>{t("develop.title-two")}</span>.
 					</h2>
-					<a onClick={() => scrollDown('contact')} className="">
+					<a onClick={() => scrollDown('contact')} className="custom-hover">
 						<span>{t("develop.link")}</span>
 						<ArrowDown className="w-5 h-5"/>
 					</a>

@@ -73,6 +73,10 @@
 		transition: 0.3s ease-in-out;
 	}
 
+	.toggle:hover label:after {
+		background:#021078;
+	}
+
 	.toggle input[type="checkbox"]:hover + label:after {
 		box-shadow: 0 2px 15px #0005, 0 3px 8px #0002;
 	}
@@ -391,7 +395,7 @@ main .split .number-absolute {
 }
 
 .our-projects .line-banners .banner .info-image-top{
-	@apply absolute top-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4;
+	@apply absolute top-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4 z-[1];
 }
 
 .our-projects .line-banners .banner .info-image-top span{
@@ -399,7 +403,7 @@ main .split .number-absolute {
 }
 
 .our-projects .line-banners .banner .info-image-bottom{
-	@apply absolute bottom-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4;
+	@apply absolute bottom-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4 z-[1];
 }
 
 .our-projects .line-banners .banner .info-image-bottom span{
@@ -415,8 +419,16 @@ main .split .number-absolute {
 	@apply top-[-93px] right-[84px];
 }
 
+.our-projects .line-banners .banner .image{
+	@apply overflow-hidden relative z-[0];
+}
+
 .our-projects .line-banners .banner .image img {
-	@apply block w-full;
+	@apply block w-full ease-in-out duration-330 ;
+}
+
+.our-projects .line-banners .banner .image:hover img {
+	@apply scale-125;
 }
 
 .our-projects .develop .number-absolute {
@@ -432,8 +444,29 @@ main .split .number-absolute {
 }
 
 .our-projects .develop a {
-	@apply text-[#0060FF] border-2 border-[#0060FF] rounded-lg font-bold flex items-center max-w-[180px] ml-auto h-16 leading-16 text-center gap-2 justify-center ease-in-out duration-300 cursor-pointer hover:bg-[#0060FF] hover:text-white;
+	@apply text-[#0060FF] border-2 border-[#0060FF] rounded-lg font-bold flex items-center max-w-[180px] ml-auto h-16 leading-16 text-center gap-2 justify-center ease-in-out duration-300 cursor-pointer z-[2] relative hover:bg-[#0060FF] hover:border-[#0060FF] hover:text-white;
 }
+
+/* .custom-hover{
+	place-content: center;
+	--c: #0060FF;
+	background:
+	  linear-gradient(90deg,#fff 50%,var(--c) 0) calc(100% - var(--_p,0%))/200% 100%,
+	  linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100% no-repeat;
+	-webkit-background-clip: text,padding-box;
+			background-clip: text,padding-box;
+	transition: 0.5s;
+}
+
+.custom-hover:hover{
+	--_p: 120%;
+	color: #fff !important;
+} */
+
+
+
+
+
 
 .our-projects .develop .title span {
 	@apply text-[#253C77];
@@ -462,7 +495,7 @@ main .split .number-absolute {
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-[-14%] right-[34%] m-auto block w-[1px] h-full z-[2];
+	@apply absolute top-[-13%] right-[34%] m-auto block w-[1px] h-full z-[2];
 }
 
 .parallax > .item {
