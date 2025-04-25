@@ -14,6 +14,9 @@ import {
 import Linkedin from '/public/icons/linkedin.svg'
 
 import { useTranslations } from 'next-intl'
+import { scrollDown } from '../../utils/helpers'
+
+import { ArrowUp } from '@phosphor-icons/react'
 
 export default function Footer(){
 
@@ -21,7 +24,10 @@ export default function Footer(){
 
 	return(
 		<footer id="footer" className='footer'>
-			<div className='container-footer max-w-[1452px] mx-auto px-4'>
+			<div className='container-footer relative max-w-[1452px] mx-auto px-4'>
+				<div className='arrow-up' onClick={() => scrollDown('header')}>
+					<ArrowUp className="w-5 h-5 text-white"/>
+				</div>
 				<div className='footer-content flex items-start justify-between'>
 					<div className='item max-w-[200px]'>
 						<Link href={''}>

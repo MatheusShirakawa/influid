@@ -3,11 +3,18 @@ import Image from "next/image"
 interface BannerProps {
   src: string;
   name: string;
+  infoTop: string[];
+  infoBottom: string[];
 }
 
-export default function Banner({ src, name }: BannerProps) {
+export default function Banner({ src, name, infoTop , infoBottom }: BannerProps) {
 	return(
 		<div className='banner'>
+			<div className="info-image-top">
+				{infoTop.map((info, index) => (
+					<span key={index}>{info}</span>
+				))}
+			</div>
 			<div className="image">
 				<Image
 					src={src}
@@ -17,11 +24,10 @@ export default function Banner({ src, name }: BannerProps) {
 					className='img'
 				/>
 			</div>
-			<div className='info-image'>
-				<span>app</span>
-				<span>web app</span>
-				<span>B2B</span>
-				<span>genAI</span>
+			<div className='info-image-bottom'>
+				{infoBottom.map((info, index) => (
+					<span key={index}>{info}</span>
+				))}
 			</div>
 		</div>
 	)

@@ -14,21 +14,24 @@ export default function Split() {
 						<div className='line'>
 							<div className='flex flex-row gap-2 font-bold'>
 								<span className='plus text-[#00FF99] text-2xl mt-4'>+</span>
-								<span className='number text-[54px] text-white'>10</span>
+								<span
+									className='counter number text-[54px] text-white'
+									style={{ '--from': 0, '--to': 10, '--time': '6s' } as React.CSSProperties}>
+							</span>
 							</div>
 							<p className='text-xs text-[#BACAF5] max-w-[90px] text-right'>{t("years")}</p>
 						</div>
 						<div className='line'>
 							<div className='flex flex-row gap-2 font-bold'>
 								<span className='plus text-[#1890FF] text-2xl mt-4'>+</span>
-								<span className='number text-[54px] text-white'>100</span>
+								<span className='counter number text-[54px] text-white' style={{ '--from': 0, '--to': 100, '--time': '6s' } as React.CSSProperties}></span>
 							</div>
 							<p className='text-xs text-[#BACAF5] max-w-[90px] text-right'>{t("customers")}</p>
 						</div>
 						<div className='line'>
 							<div className='flex flex-row gap-2 font-bold'>
 								<span className='plus text-[#03F2F2] text-2xl mt-4'>+</span>
-								<span className='number text-[54px] text-white'>80</span>
+								<span className='counter number text-[54px] text-white' style={{ '--from': 0, '--to': 80, '--time': '6s' } as React.CSSProperties}></span>
 							</div>
 							<p className='text-xs !text-[#BACAF5] max-w-[80px] text-right '>{t("brands")}</p>
 						</div>

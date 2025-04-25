@@ -1,19 +1,22 @@
 "use client"
 
-import Link from "next/link"
 import Banner from "../banner"
 
 import { ArrowDown } from "@phosphor-icons/react"
 import { useTranslations } from "next-intl"
 
-import { A11y, Autoplay } from 'swiper/modules'
+import { A11y, Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+
+import { ArrowRight, ArrowLeft } from "@phosphor-icons/react"
+import { scrollDown } from "../../utils/helpers"
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/autoplay'
+// import { useCallback, useRef } from "react"
 
 export default function OurProjects({ locale }: { locale: string }) {
 
@@ -31,13 +34,29 @@ export default function OurProjects({ locale }: { locale: string }) {
 				<span className="number-absolute">03</span>
 				<h2 className='title' data-language={locale}>{t("projects.title")}</h2>
 
+				<div className="arrow-right-content">
+					<div className="arrows">
+						<div className="arrow-left">
+							<ArrowLeft className="w-5 h-5"/>
+						</div>
+						<div className="arrow-right">
+							<ArrowRight className="w-5 h-5"/>
+						</div>
+					</div>
+				</div>
+
 				<div className='line-banners'>
 					<Swiper
-						modules={[A11y, Autoplay]}
+						modules={[A11y, Autoplay, Navigation]}
+						// modules={[A11y, Navigation]}
 						spaceBetween={24}
 						slidesPerView={4}
 						autoplay={{ delay: 2500, disableOnInteraction: true }}
 						loop={true}
+						navigation={{
+							nextEl: '.arrow-right',
+							prevEl: '.arrow-left',
+						}}
 						// navigation={true}
 						// pagination={{ clickable: true }}
 						centeredSlides={false}>
@@ -45,36 +64,48 @@ export default function OurProjects({ locale }: { locale: string }) {
 								<Banner
 									src={'/iphone1.png'}
 									name='Project 1'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app','genAI']}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
 									src={'/iphone2.png'}
 									name='Project 2'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'B2B', 'genAI']}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
 									src={'/iphone3.png'}
 									name='Project 3'
+									infoTop={['en-us']}
+									infoBottom={['app', 'web app', 'B2B', 'genAI']}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
 									src={'/iphone2.png'}
 									name='Project 2'
+									infoTop={['pt-br']}
+									infoBottom={['app', 'web app']}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
 									src={'/iphone1.png'}
 									name='Project 2'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app', 'B2B']}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
 									src={'/iphone3.png'}
 									name='Project 3'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app', 'B2B', 'genAI']}
 								/>
 							</SwiperSlide>
 					</Swiper>
@@ -88,10 +119,10 @@ export default function OurProjects({ locale }: { locale: string }) {
 						{t("develop.title-one")} <br/>
 						<span>{t("develop.title-two")}</span>.
 					</h2>
-					<Link href={''} className="">
+					<a onClick={() => scrollDown('contact')} className="">
 						<span>{t("develop.link")}</span>
 						<ArrowDown className="w-5 h-5"/>
-					</Link>
+					</a>
 				</div>
 				<div className='right'>
 					<p>{t("develop.description")}</p>

@@ -5,6 +5,7 @@ import { useTransition} from 'react'
 import { usePathname, useRouter} from '@/i18n/navigation'
 // import { useParams } from 'next/navigation'
 // import { Locale } from 'next-intl'
+import { scrollDown } from '../../utils/helpers'
 
 import Link from 'next/link'
 import Logo from '/public/logo.svg'
@@ -34,19 +35,19 @@ export default function Header({ locale }: { locale: string }) {
 	}
 
 	return(
-		<header className="header pt-[47px]">
+		<header id="header" className="header pt-[47px]">
 			<div className="header-content relative mx-auto max-w-[1388px]">
 				<nav>
 					<ul className='flex flex-row justify-center items-center gap-[71px]'>
 						<li>
-							<Link href={'#'}>
+							<a onClick={() => scrollDown('about-us')}>
 								{t('about')}
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link href={'#'}>
+							<a onClick={() => scrollDown('our-projects')}>
 								{t('projects')}
-							</Link>
+							</a>
 						</li>
 						<li className='logo'>
 							<Link href={'#'} >
@@ -59,14 +60,14 @@ export default function Header({ locale }: { locale: string }) {
 							</Link>
 						</li>
 						<li>
-							<Link href={'#'}>
+							<a onClick={() => scrollDown('parallax')}>
 								{t('services')}
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link href={'#'}>
+							<a onClick={() => scrollDown('contact')}>
 								{t('contact')}
-							</Link>
+							</a>
 						</li>
 					</ul>
 				</nav>

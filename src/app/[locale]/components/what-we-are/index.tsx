@@ -24,7 +24,7 @@ export default function WhatWeAre(){
 	const t = useTranslations('WhatWeAre')
 
 	return(
-		<div className='what-we-are'>
+		<div id="about-us" className='what-we-are'>
 			<div className='item first'>
 				<span className="number">01.</span>
 				<div className="icons">

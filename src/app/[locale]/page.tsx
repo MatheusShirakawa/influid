@@ -47,7 +47,7 @@ export default function Home({ params }: Props) {
 				<WhatWeAre/>
 				<OurProjects locale={locale}/>
 
-				<div className='parallax'>
+				<div id="parallax" className='parallax'>
 					<Parallax/>
 					<div className='bottom'>
 						<OurClients/>

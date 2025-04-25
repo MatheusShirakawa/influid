@@ -1,3 +1,25 @@
+@property --from {
+	syntax: '<integer>';
+	initial-value: 0;
+	inherits: false;
+  }
+  .counter {
+	transition: --from 1s;
+	counter-reset: int var(--from);
+	animation: counter var(--time, 1000) infinite ease-in-out;
+  }
+
+  .counter::after {
+	content: counter(int);
+  }
+
+  @keyframes counter {
+	to {
+	  --from: var(--to, 100);
+	}
+  }
+
+
 /* toggle */
 	.toggle {
 		position: relative;
@@ -294,6 +316,37 @@ main .split .number-absolute {
 .our-projects {
 	padding: 68px 0 0 0;
 	background: linear-gradient(177deg, #010d20 71.06%, #0060ff 157.64%);
+	overflow: hidden
+}
+
+.our-projects .arrow-right-content{
+	@apply  ml-auto w-[768px] relative;
+}
+
+.our-projects .arrow-right-content .arrows{
+	@apply flex flex-row items-center justify-start gap-8 bg-[#040c1f] w-[144px] relative z-[1] pr-10;
+}
+
+.our-projects .arrow-right-content::before{
+	content: '';
+	background: linear-gradient(130deg, rgba(0, 255, 153, 1) 0%, rgba(0, 96, 255, 1) 100%);
+	@apply absolute top-0 left-0 right-0 bottom-0 m-auto w-full h-[2px] z-[1] opacity-30;
+}
+
+.our-projects .arrow-right-content .arrows > div{
+	@apply w-9 h-9 rounded-full flex items-center ease-in-out duration-300 justify-center font-bold text-[#001758] cursor-pointer relative z-10;
+}
+
+.our-projects .arrow-right-content .arrows > div svg{
+	@apply cursor-pointer;
+}
+
+.our-projects .arrow-right-content .arrow-left{
+	@apply bg-[#03F2F2] hover:bg-[#0060FF];
+}
+
+.our-projects .arrow-right-content .arrow-right{
+	@apply bg-[#00FF99] hover:bg-[#0060FF];
 }
 
 .our-projects .content-slide {
@@ -321,7 +374,7 @@ main .split .number-absolute {
 }
 
 .our-projects .title {
-	@apply text-[280px] text-[#0060FF] font-bold block left-[-70px] relative z-10;
+	@apply text-[280px] text-[#0060FF] font-bold block left-[-70px] relative z-[1];
 	line-height: 120%;
 }
 
@@ -330,7 +383,27 @@ main .split .number-absolute {
 }
 
 .our-projects .line-banners {
-	@apply flex flex-row items-center gap-8 relative z-10 pl-[100px] pt-[90px];
+	@apply flex flex-row items-center gap-8 relative z-10 left-[100px] pt-[90px] overflow-hidden;
+}
+
+.our-projects .line-banners .banner{
+	@apply relative;
+}
+
+.our-projects .line-banners .banner .info-image-top{
+	@apply absolute top-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4;
+}
+
+.our-projects .line-banners .banner .info-image-top span{
+	@apply rounded-full px-6 py-2 text-[#8FFFFF] border border-[#8FFFFF];
+}
+
+.our-projects .line-banners .banner .info-image-bottom{
+	@apply absolute bottom-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4;
+}
+
+.our-projects .line-banners .banner .info-image-bottom span{
+	@apply rounded-full px-6 py-2 text-[#EBFBFF] border border-[#EBFBFF] opacity-40;
 }
 
 /* .our-projects .line-banners::before{
@@ -380,6 +453,16 @@ main .split .number-absolute {
 
 .parallax {
 	@apply relative w-full;
+}
+
+.parallax::before{
+	content: '';
+	background: linear-gradient(
+		130deg,
+		rgba(0, 255, 153, 1) 0%,
+		rgba(0, 96, 255, 1) 100%
+	);
+	@apply absolute top-[-14%] right-[34%] m-auto block w-[1px] h-full z-[2];
 }
 
 .parallax > .item {
@@ -463,7 +546,11 @@ main .split .number-absolute {
 }
 
 .parallax .bottom .our-clients {
-	@apply relative pt-[120px] pb-[140px];
+	@apply relative pt-[200px] pb-6;
+}
+
+.parallax .bottom .our-clients .arrow-right-client{
+	@apply flex cursor-pointer bg-[#0060FF] w-9 h-9 rounded-full items-center mt-[140px] justify-center ml-[91.5%] ease-in-out duration-300 hover:bg-[#021078] text-white;
 }
 
 .parallax .bottom .our-clients .list-clients img {
@@ -508,6 +595,10 @@ main .split .number-absolute {
 
 .footer {
 	@apply pt-8 pb-[100px] relative;
+}
+
+.footer .arrow-up{
+	@apply absolute top-[-85px] left-[-85px] flex cursor-pointer bg-[#0060FF] w-9 h-9 rounded-full items-center justify-center ease-in-out duration-300 text-white hover:bg-[#021078];
 }
 
 .footer:before {

@@ -8,9 +8,11 @@ import Poliedro from '/public/icons/brands/poliedro.svg'
 import Sm from '/public/icons/brands/sm.svg'
 import Stanleys from '/public/icons/brands/stanleys.svg'
 
+import { ArrowRight } from "@phosphor-icons/react"
+
 import { useTranslations } from "next-intl"
 
-import { A11y, Autoplay } from 'swiper/modules'
+import { A11y, Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css';
@@ -29,16 +31,19 @@ export default function OurClients(){
 			<h2 className='title text-[64px] text-center font-bold text-[#03F2F2]'>
 				{t('title-one')} <span className='text-white'>{t('title-two')}</span>.
 			</h2>
-			<div className='list-clients mt-[112px] flex gap-14 flex-row justify-between items-center'>
+			<div className='list-clients mt-[100px] flex gap-14 flex-row justify-between items-center'>
 				<Swiper
-						modules={[Autoplay,A11y]}
-						spaceBetween={60}
-						slidesPerView={6}
-						autoplay={{ delay: 500, disableOnInteraction: false }}
-						loop={true}
-						// navigation={true}
-						// pagination={{ clickable: true }}
-						centeredSlides={false}>
+					modules={[Autoplay, A11y, Navigation ]}
+					spaceBetween={60}
+					slidesPerView={6}
+					autoplay={{ delay: 2500, disableOnInteraction: true }}
+					loop={true}
+					navigation={{
+						nextEl: '.arrow-right-client',
+					}}
+					// navigation={true}
+					// pagination={{ clickable: true }}
+					centeredSlides={false}>
 						<SwiperSlide>
 							<Image
 								width={200}
@@ -128,6 +133,9 @@ export default function OurClients(){
 							/>
 						</SwiperSlide>
 				</Swiper>
+			</div>
+			<div className="arrow-right-client">
+				<ArrowRight className=" text-white w-5 h-5"/>
 			</div>
 		</div>
 	)

@@ -8,7 +8,7 @@ export default function Contact(){
 	const t = useTranslations('Contact')
 
 	return(
-		<div className='contact max-w-[850px] mx-auto mb-[115px] pt-[120px]'>
+		<div id="contact" className='contact max-w-[850px] mx-auto mb-[115px] pt-[120px]'>
 			<div className='relative'>
 				<span className='number-absolute'>05</span>
 				<h2 className='title text-[128px] text-[#00FF99] font-bold text-center relative z-10'>
