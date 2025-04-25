@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useTransition} from 'react'
 import { usePathname, useRouter} from '@/i18n/navigation'
@@ -14,10 +15,17 @@ import Image from 'next/image'
 export default function Header({ locale }: { locale: string }) {
 
 	const router = useRouter()
+	const [showHeader, setShowHeader] = useState(false)
 	const [isPending, startTransition] = useTransition()
 	const pathname = usePathname()
 	// const params = useParams()
 	const t = useTranslations('Header')
+
+	useEffect(() => {
+		setTimeout(() => {
+			setShowHeader(true)
+		},3000)
+	},[])
 
 
 	function handleChangeLanguage(e: React.ChangeEvent<HTMLInputElement>){
@@ -36,7 +44,7 @@ export default function Header({ locale }: { locale: string }) {
 
 	return(
 		<header id="header" className="header pt-[47px]">
-			<div className="header-content relative mx-auto max-w-[1388px]">
+			<div className="header-content relative mx-auto max-w-[1388px]" data-show={showHeader}>
 				<nav>
 					<ul className='flex flex-row justify-center items-center gap-[71px]'>
 						<li>

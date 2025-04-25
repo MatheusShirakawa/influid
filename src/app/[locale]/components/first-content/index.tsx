@@ -35,8 +35,8 @@ export default function FirstContent(){
 				</div>
 			</h1>
 
-			<div className='mx-auto'>
-				<a onClick={() => scrollDown('split')} className='rounded-full bg-[#0060FF] text-white cursor-pointer flex justify-center items-center w-[36px] h-[36px] mx-auto mt-[80px] mb-[150px] duration-300 ease-in-out hover:bg-[#021078]'>
+			<div className='block-scroll-down mx-auto'>
+				<a onClick={() => scrollDown('split')} className='scroll-down'>
 					<ArrowDown className="w-5 h-5"/>
 				</a>
 			</div>

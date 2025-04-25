@@ -25,8 +25,11 @@ export default function Footer(){
 	return(
 		<footer id="footer" className='footer'>
 			<div className='container-footer relative max-w-[1452px] mx-auto px-4'>
-				<div className='arrow-up' onClick={() => scrollDown('header')}>
-					<ArrowUp className="w-5 h-5 text-white"/>
+
+				<div className='block-arrow-up'>
+					<div className='arrow-up' onClick={() => scrollDown('header')}>
+						<ArrowUp className="w-5 h-5 text-white"/>
+					</div>
 				</div>
 				<div className='footer-content flex items-start justify-between'>
 					<div className='item max-w-[200px]'>

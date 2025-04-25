@@ -134,8 +134,10 @@ export default function OurClients(){
 						</SwiperSlide>
 				</Swiper>
 			</div>
-			<div className="arrow-right-client">
-				<ArrowRight className=" text-white w-5 h-5"/>
+			<div className="block-arrow-right-client">
+				<div className="arrow-right-client">
+					<ArrowRight className=" text-white w-5 h-5"/>
+				</div>
 			</div>
 		</div>
 	)

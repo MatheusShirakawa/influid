@@ -94,18 +94,16 @@
 
 /* header */
 
+	.header .header-content[data-show="true"] nav ul li{
+		@apply opacity-100;
+	}
+
+	.header nav ul li:not(.logo){
+		@apply ease-in-out duration-300 opacity-0;
+	}
+
 	.header nav ul li a{
-		@apply relative text-[#03f2f2] hover:text-[#0060ff] ease-in-out duration-300 cursor-pointer;
-	}
-
-	.header nav ul li a::before{
-		content: "";
-		/* background: linear-gradient(130deg, rgb(0, 255, 153) 0%, rgb(0, 96, 255) 100%); */
-		@apply absolute bg-[#0060ff] bottom-[-10px] left-0 right-0 w-0 block ease-in-out duration-300 h-[2px] m-auto;
-	}
-
-	.header nav ul li a:hover::before{
-		@apply w-full;
+		@apply relative text-[#03f2f2] hover:font-bold font-normal ease-in-out duration-300 cursor-pointer;
 	}
 
 	/* .header nav ul li a:hover {
@@ -140,6 +138,21 @@ main {
 	/* background-size: 100% 100%; */
 }
 
+
+main .first-content-page .block-scroll-down{
+	@apply relative h-[96px] mt-[80px] mb-[150px];
+}
+
+main .first-content-page a.scroll-down{
+	@apply absolute inset-0 rounded-full bg-[#0060FF] text-white cursor-pointer flex justify-center items-center w-[36px] max-h-[36px] hover:pt-[50px] pt-[15px] pb-[15px] mx-auto;
+	transition: padding 0.3s ease-in-out;
+}
+
+main .first-content-page a.scroll-down svg{
+	stroke:#fff;
+	stroke-width: 10px;
+}
+
 main .first-content-page h1 {
 	@apply relative;
 }
@@ -155,11 +168,16 @@ main .first-content-page h1::after {
 }
 
 main .main-content {
-	@apply max-w-[1137px] mx-auto mt-[218px];
+	/* max-w-[1137px] */
+	@apply max-w-[1250px] mx-auto mt-[218px];
 }
 
 .number-absolute {
 	@apply text-[#234394] absolute top-[-189px] bottom-[initial] right-[-78px] z-[1] text-[300px] leading-normal font-bold opacity-10 m-auto;
+}
+
+main .split {
+	@apply relative z-[2]
 }
 
 main .split .left {
@@ -167,8 +185,85 @@ main .split .left {
 }
 
 main .split .number-absolute {
-	@apply top-[-225px] left-[40px] bottom-[52px] right-[initial] text-[300px];
+	@apply top-[-225px] left-[40px] bottom-[52px] right-[initial] text-[300px] z-[0];
 }
+
+main .split .content-split {
+	@apply flex justify-center relative items-center
+}
+
+main .split .content-split .left{
+	@apply w-[50%] px-14;
+}
+
+main .split .content-split .right{
+	@apply w-[50%] px-14 text-base mt-6;
+}
+
+main .split .content-split .left .line-numbers{
+	@apply flex flex-row justify-between items-center;
+}
+
+main .split .content-split .left .line-numbers .line{
+	@apply flex flex-col justify-end items-end  max-w-[105px];
+}
+
+main .split .content-split .left .line-numbers .line:nth-child(3){
+	@apply max-w-[99px];
+}
+
+main .split .content-split-last{
+	@apply flex flex-row justify-center items-start;
+}
+
+main .split .content-split-last .left{
+	@apply w-[50%] pr-14 relative;
+}
+
+main .split .content-split-last .right{
+	@apply w-[50%] pl-14 text-base mt-6;
+}
+
+main .split .content-split-last .scroll-down{
+	@apply items-center text-center flex flex-row gap-2 text-[#0060FF] cursor-pointer border border-[#0060FF] rounded-lg font-bold text-base leading-16 h-16 justify-center max-w-[222px] hover:bg-[#0060FF] hover:text-white ease-in-out duration-300 mt-6;
+}
+
+main .split .content-split-last .scroll-down svg{
+	stroke:#0060FF;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold duration-300 ease-in-out;
+}
+
+main .split .content-split-last .scroll-down:hover svg{
+	stroke:#fff;
+	@apply rotate-45;
+}
+
+
+
+
+
+
+
+/* main .split .content-split .left .line-numbers .line:nth-child(1){
+	@apply min-w-[118px];
+} */
+/*
+
+main .split .content-split .left .line-numbers .line:nth-child(3){
+	@apply min-w-[118px];
+} */
+
+main .split .content-split .left .line-numbers .line p{
+	@apply text-xs text-[#BACAF5] text-right;
+}
+
+main .split .content-split .left .line-numbers .content-number{
+	@apply  flex flex-row gap-2 font-bold justify-end;
+}
+
+
+
 
 .typewrite > .wrap {
 	@apply relative h-[179px];
@@ -300,7 +395,8 @@ main .split .number-absolute {
 	/* @apply pb-[220px]; */
 }
 
-.split .content-split {
+.split .content-split,
+.split .content-split-last{
 	@apply pb-[180px];
 }
 
@@ -311,7 +407,7 @@ main .split .number-absolute {
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-0 right-0 left-[10%] bottom-0 mx-auto w-[2px] h-[100%] z-[1] opacity-30;
+	@apply absolute top-0 right-0 left-0 bottom-0 mx-auto w-[2px] h-[100%] z-[1] opacity-30;
 }
 /* split */
 
@@ -324,11 +420,11 @@ main .split .number-absolute {
 }
 
 .our-projects .arrow-right-content{
-	@apply  ml-auto w-[768px] relative;
+	@apply  ml-auto w-[850px] relative;
 }
 
 .our-projects .arrow-right-content .arrows{
-	@apply flex flex-row items-center justify-start gap-8 bg-[#040c1f] w-[144px] relative z-[1] pr-10;
+	@apply flex flex-row items-end justify-end gap-8 bg-[#040c1f] max-w-[150px] relative z-[1] pr-10 pb-[36px];
 }
 
 .our-projects .arrow-right-content::before{
@@ -338,20 +434,42 @@ main .split .number-absolute {
 }
 
 .our-projects .arrow-right-content .arrows > div{
-	@apply w-9 h-9 rounded-full flex items-center ease-in-out duration-300 justify-center font-bold text-[#001758] cursor-pointer relative z-10;
+	@apply w-9 h-9 rounded-full flex items-center ease-in-out duration-300 justify-center font-bold text-[#001758] cursor-pointer absolute top-0 bottom-0 m-auto z-[2];
 }
 
 .our-projects .arrow-right-content .arrows > div svg{
-	@apply cursor-pointer;
+	stroke-width: 10px;
+	stroke:#001758;
+	position: absolute;
+}
+
+.our-projects .arrow-right-content .arrow-left svg{
+	right: 9px;
 }
 
 .our-projects .arrow-right-content .arrow-left{
-	@apply bg-[#03F2F2] hover:bg-[#0060FF];
+	@apply bg-[#03F2F2] left-0;
+}
+
+.our-projects .arrow-right-content .arrow-left:hover{
+	@apply pr-[80px];
 }
 
 .our-projects .arrow-right-content .arrow-right{
-	@apply bg-[#00FF99] hover:bg-[#0060FF];
+	@apply bg-[#00FF99] right-[20px];
 }
+
+.our-projects .arrow-right-content .arrow-right svg{
+	left: 9px;
+}
+
+.our-projects .arrow-right-content .arrow-right:hover{
+	@apply pl-[80px] ;
+}
+
+
+
+
 
 .our-projects .content-slide {
 	@apply h-[950px] relative;
@@ -447,6 +565,17 @@ main .split .number-absolute {
 	@apply text-[#0060FF] border-2 border-[#0060FF] rounded-lg font-bold flex items-center max-w-[180px] ml-auto h-16 leading-16 text-center gap-2 justify-center ease-in-out duration-300 cursor-pointer z-[2] relative hover:bg-[#0060FF] hover:border-[#0060FF] hover:text-white;
 }
 
+.our-projects .develop a svg{
+	stroke: #0060FF;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold duration-300 ease-in-out;
+}
+
+.our-projects .develop a:hover svg{
+	stroke:#fff;
+	@apply rotate-45;
+}
+
 /* .custom-hover{
 	place-content: center;
 	--c: #0060FF;
@@ -455,11 +584,11 @@ main .split .number-absolute {
 	  linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100% no-repeat;
 	-webkit-background-clip: text,padding-box;
 			background-clip: text,padding-box;
-	transition: 0.5s;
+	transition: 0.7s;
 }
 
 .custom-hover:hover{
-	--_p: 120%;
+	--_p: 100%;
 	color: #fff !important;
 } */
 
@@ -582,9 +711,29 @@ main .split .number-absolute {
 	@apply relative pt-[200px] pb-6;
 }
 
-.parallax .bottom .our-clients .arrow-right-client{
-	@apply flex cursor-pointer bg-[#0060FF] w-9 h-9 rounded-full items-center mt-[140px] justify-center ml-[91.5%] ease-in-out duration-300 hover:bg-[#021078] text-white;
+.parallax .bottom .our-clients .block-arrow-right-client{
+	@apply relative;
 }
+
+.parallax .bottom .our-clients .arrow-right-client{
+	@apply flex cursor-pointer bg-[#0060FF] w-9 h-9 px-4 rounded-full items-center mt-[140px] justify-center ml-auto mr-[133px] ease-in-out duration-300 relative text-white m-auto;
+}
+
+
+.parallax .bottom .our-clients .arrow-right-client svg{
+	stroke:#fff;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold duration-300 ease-in-out absolute inset-0 m-auto z-10;
+}
+
+.parallax .bottom .our-clients .arrow-right-client:hover{
+	@apply pl-[60px];
+}
+
+.parallax .bottom .our-clients .arrow-right-client:hover svg{
+	@apply left-[initial] right-[9px];
+}
+
 
 .parallax .bottom .our-clients .list-clients img {
 	@apply opacity-40 ease-in-out duration-300 block mx-auto;
@@ -619,7 +768,17 @@ main .split .number-absolute {
 }
 
 .parallax .bottom .contact button {
-	@apply w-full rounded-lg bg-[#00FF99] text-[#001758] text-base items-center font-bold h-16 leading-16 hover:bg-[#001758] hover:text-[#00FF99] ease-in-out duration-300 cursor-pointer mt-6 flex flex-row justify-center gap-2;
+	@apply w-full rounded-lg bg-[#00FF99] text-[#001758] text-base items-center font-bold h-16 leading-16 hover:bg-[#03F2F2] ease-in-out duration-300 cursor-pointer mt-6 flex flex-row justify-center gap-2;
+}
+
+.parallax .bottom .contact button svg{
+	stroke: #001758;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold duration-300 ease-in-out;
+}
+
+.parallax .bottom .contact button:hover svg{
+	@apply rotate-[-45deg];
 }
 
 /* bottom */
@@ -630,8 +789,22 @@ main .split .number-absolute {
 	@apply pt-8 pb-[100px] relative;
 }
 
+.footer .block-arrow-up{
+	@apply absolute top-[-85px] left-[-85px] duration-300 ease-in-out ;
+}
+
 .footer .arrow-up{
-	@apply absolute top-[-85px] left-[-85px] flex cursor-pointer bg-[#0060FF] w-9 h-9 rounded-full items-center justify-center ease-in-out duration-300 text-white hover:bg-[#021078];
+	stroke:#fff;
+	stroke-width: 10px;
+	@apply flex cursor-pointer bg-[#0060FF] w-9 max-h-9 py-4 rounded-full items-center justify-center ease-in-out duration-300 text-white;
+}
+
+.footer .block-arrow-up:hover{
+	@apply top-[-120px];
+}
+
+.footer .block-arrow-up:hover .arrow-up{
+	@apply pb-[60px];
 }
 
 .footer:before {
