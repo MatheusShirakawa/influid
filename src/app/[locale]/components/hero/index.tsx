@@ -22,11 +22,17 @@ export default function Hero(props:HeroProps){
 			whileInView={props.whileInView}
 			transition={props.transition}
 			viewport={props.viewport}
-			className='relative'
-		>
-			<video autoPlay muted loop playsInline controls={false} className="absolute bottom-0 left-0 right-0 top-0 z-[0] h-[calc(200dvh)] w-screen object-cover" poster='/video.mp4'>
-				<source src="/video.mp4" type='video/mp4'/>
-			</video>
+			className='relative'>
+				<video
+					autoPlay
+					muted
+					loop
+					playsInline
+					controls={false}
+					className="absolute bottom-0 left-0 right-0 top-0 z-[0] h-[calc(200dvh)] w-screen object-cover"
+					poster='/video.mp4'>
+					<source src="/video.mp4" type='video/mp4'/>
+				</video>
 			<div className='main-block'>
 				<Header locale={props.locale}/>
 				<div className='main-content'>
