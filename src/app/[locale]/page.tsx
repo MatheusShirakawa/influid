@@ -1,5 +1,3 @@
-// 'use client'
-
 import { Locale } from 'next-intl'
 // import { Locale, useTranslations } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
@@ -8,15 +6,14 @@ import { use } from 'react'
 // import ArrowDownBlue from '/public/icons/arrow-down-blue.svg'
 // import ArrowDownBlue from 'public/icons/arrow-down-blue.svg'
 
-import Header from './components/header'
+import Hero from './components/hero'
 import Footer from './components/footer'
 import Contact from './components/contact'
 import OurClients from './components/our-clients'
 import Parallax from './components/parallax'
 import OurProjects from './components/our-projects'
 import WhatWeAre from './components/what-we-are'
-import Split from './components/split'
-import FirstContent from './components/first-content'
+
 
 type Props = {
 	params: Promise<{ locale: Locale }>
@@ -24,28 +21,40 @@ type Props = {
 
 export default function Home({ params }: Props) {
 	const { locale } = use(params)
+	console.log(navigator.language)
 
 	// Enable static rendering
 	setRequestLocale(locale)
 
+	const initial 		= { opacity:0, y:100 }
+	const whileInView 	= { opacity:1, y:0 }
+	const transition 	= { duration:1, ease:"easeOut" }
+	const viewport 		= { once:true }
+
 	return (
 		<div className="bg-[#020717]">
 			<main>
-				<div className='relative'>
-					<video autoPlay muted loop playsInline controls={false} className="absolute bottom-0 left-0 right-0 top-0 z-[0] h-[calc(200dvh)] w-screen object-cover" poster='/video.mp4'>
-						<source src="/video.mp4" type='video/mp4'/>
-					</video>
-					<div className='main-block'>
-						<Header locale={locale}/>
-						<div className='main-content'>
-							<FirstContent/>
-							<Split/>
-						</div>
-					</div>
-				</div>
+				<Hero
+					initial={initial}
+					whileInView={whileInView}
+					transition={transition}
+					viewport={viewport}
+				/>
 
-				<WhatWeAre/>
-				<OurProjects locale={locale}/>
+				<WhatWeAre
+					initial={initial}
+					whileInView={whileInView}
+					transition={transition}
+					viewport={viewport}
+				/>
+
+				<OurProjects
+					locale={locale}
+					initial={initial}
+					whileInView={whileInView}
+					transition={transition}
+					viewport={viewport}
+				/>
 
 				<div id="parallax" className='parallax'>
 					<Parallax/>

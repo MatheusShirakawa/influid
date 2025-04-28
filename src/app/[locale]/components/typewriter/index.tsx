@@ -27,7 +27,7 @@ const Typewriter = ({ toRotate = [] as string[], period = 2000 }) => {
 			if (isDeleting) {
 				updatedDelta = 40; // super rápido
 			} else {
-				updatedDelta = 60; // rápido para digitar
+				updatedDelta = 90; // rápido para digitar
 			}
 
 			if (!isDeleting && text === fullText) {

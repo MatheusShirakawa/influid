@@ -2,6 +2,9 @@
 
 import Banner from "../banner"
 
+import { motion } from "framer-motion"
+import { TargetAndTransition, VariantLabels } from 'framer-motion';
+
 import { ArrowDown } from "@phosphor-icons/react"
 import { useTranslations } from "next-intl"
 
@@ -16,14 +19,32 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/autoplay'
+
+
 // import { useCallback, useRef } from "react"
 
-export default function OurProjects({ locale }: { locale: string }) {
+interface OurProjectsProps {
+	locale?: string | undefined;
+	initial?: TargetAndTransition | undefined;
+	whileInView?: TargetAndTransition | VariantLabels | undefined;
+	transition?: TargetAndTransition | undefined;
+	viewport?: object | undefined;
+}
+
+export default function OurProjects(props: OurProjectsProps) {
 
 	const t = useTranslations('OurProjects')
 
 	return(
-		<div id="our-projects" className='our-projects relative z-[1]'>
+
+		<motion.div
+			id="our-projects"
+			className="our-projects relative z-[1]"
+			initial={props.initial}
+			whileInView={props.whileInView}
+			transition={props.transition}
+			viewport={props.viewport}
+		>
 			<div className="content-slide">
 				<div className='line-info'>
 					<span>{t("projects.info-one")}</span>
@@ -32,7 +53,7 @@ export default function OurProjects({ locale }: { locale: string }) {
 				</div>
 
 				<span className="number-absolute">03</span>
-				<h2 className='title' data-language={locale}>{t("projects.title")}</h2>
+				<h2 className='title' data-language={props.locale}>{t("projects.title")}</h2>
 
 				<div className="arrow-right-content">
 					<div className="arrows">
@@ -128,6 +149,6 @@ export default function OurProjects({ locale }: { locale: string }) {
 					<p>{t("develop.description")}</p>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }

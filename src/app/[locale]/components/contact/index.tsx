@@ -19,18 +19,21 @@ export default function Contact(){
 				<form action="" className='flex flex-col gap-12'>
 					<p className='text-[#EBFBFF] block text-base'>{t("description")}</p>
 					<label>
+						<span className='absolute-placeholder'>{t("form.name")}</span>
 						<input
 							type="text"
 							placeholder={t("form.name")}
 						/>
 					</label>
 					<label>
+						<span className='absolute-placeholder'>{t("form.email")}</span>
 						<input
 							type="email"
 							placeholder={t("form.email")}
 						/>
 					</label>
 					<label>
+						<span className='absolute-placeholder'>{t("form.message")}</span>
 						<input
 							type="text"
 							placeholder={t("form.message")}

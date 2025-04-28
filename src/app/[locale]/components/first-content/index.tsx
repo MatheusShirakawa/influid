@@ -20,6 +20,7 @@ export default function FirstContent(){
 
 	return(
 		<div className='first-content-page'>
+			<div className="line-absolute"></div>
 			<span className='rounded-full border border-[#1890ff] max-w-[212px] mx-auto text-[#1890ff] text-center px-6 py-[5px] block'>
 				influid design studio
 			</span>

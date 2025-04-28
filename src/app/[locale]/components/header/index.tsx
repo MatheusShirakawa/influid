@@ -12,7 +12,7 @@ import Link from 'next/link'
 import Logo from '/public/logo.svg'
 import Image from 'next/image'
 
-export default function Header({ locale }: { locale: string }) {
+export default function Header({ locale }: { locale: string | undefined }) {
 
 	const router = useRouter()
 	const [showHeader, setShowHeader] = useState(false)

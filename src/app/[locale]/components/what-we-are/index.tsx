@@ -1,5 +1,7 @@
+"use client"
 
 import { useTranslations } from 'next-intl'
+import { motion } from 'framer-motion'
 
 import BallTwoIcon from '../../../../../public/icons/2/ballTwo'
 import LeftTwoIcon2 from '../../../../../public/icons/2/leftTwo2'
@@ -13,19 +15,32 @@ import LeftThreeIcon from '../../../../../public/icons/3/leftThree'
 import RightThreeIcon from '../../../../../public/icons/3/rightThree'
 import BottomThreeIcon from '../../../../../public/icons/3/bottomThree'
 
-
-
 import BallOneIcon from '../../../../../public/icons/1/ballOne'
 import LeftOneIcon from '../../../../../public/icons/1/leftOne'
 import RightOneIcon from '../../../../../public/icons/1/rightOne'
 
+import { TargetAndTransition, VariantLabels } from 'framer-motion';
 
-export default function WhatWeAre(){
+interface WhatWeAreProps {
+	initial?: TargetAndTransition | undefined;
+	whileInView?: TargetAndTransition | VariantLabels | undefined;
+	transition?: TargetAndTransition | undefined;
+	viewport?: object | undefined;
+}
+
+export default function WhatWeAre(props: WhatWeAreProps){
 
 	const t = useTranslations('WhatWeAre')
 
 	return(
-		<div id="about-us" className='what-we-are'>
+		<motion.div
+			id="about-us"
+			className="what-we-are"
+			initial={props.initial}
+			whileInView={props.whileInView}
+			transition={props.transition}
+			viewport={props.viewport}
+		>
 			<div className='item first'>
 				<span className="number">01.</span>
 				<div className="icons">
@@ -47,8 +62,8 @@ export default function WhatWeAre(){
 						<LeftTwoIcon8/>
 						<RightTwoIcon7/>
 						<LeftTwoIcon9/>
+						<BallTwoIcon/>
 					</div>
-					<BallTwoIcon/>
 				</div>
 				<p>{t("description-two")}</p>
 			</div>
@@ -62,6 +77,6 @@ export default function WhatWeAre(){
 				</div>
 				<p>{t("description-three")}</p>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
