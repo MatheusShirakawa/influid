@@ -21,7 +21,6 @@ type Props = {
 
 export default function Home({ params }: Props) {
 	const { locale } = use(params)
-	console.log(navigator.language)
 
 	// Enable static rendering
 	setRequestLocale(locale)
