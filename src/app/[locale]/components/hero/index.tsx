@@ -13,6 +13,7 @@ interface HeroProps {
 	whileInView?: TargetAndTransition | VariantLabels | undefined;
 	transition?: TargetAndTransition | undefined;
 	viewport?: object | undefined;
+	scrollY?: number | undefined;
 }
 
 export default function Hero(props:HeroProps){
@@ -35,7 +36,7 @@ export default function Hero(props:HeroProps){
 				</video>
 			<div className='main-block'>
 				<Header locale={props.locale}/>
-				<div className='main-content'>
+				<div className='main-content' data-scroll={(props.scrollY ?? 0) > 480 && true}>
 					<FirstContent/>
 					<Split/>
 				</div>

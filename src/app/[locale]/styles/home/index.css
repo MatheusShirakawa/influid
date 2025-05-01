@@ -2,22 +2,25 @@
 	syntax: '<integer>';
 	initial-value: 0;
 	inherits: false;
-  }
-  .counter {
-	transition: --from 1s;
+}
+.counter {
+	transition: --from .3s;
 	counter-reset: int var(--from);
-	animation: counter var(--time, 1000) infinite ease-in-out;
-  }
+}
 
-  .counter::after {
+.main-content[data-scroll="true"] .counter{
+	animation: counter var(--time, 400) ease-in-out forwards;
+}
+
+.counter::after {
 	content: counter(int);
-  }
+}
 
-  @keyframes counter {
+@keyframes counter {
 	to {
-	  --from: var(--to, 100);
+		--from: var(--to, 100);
 	}
-  }
+}
 
 
 /* toggle */
@@ -98,17 +101,24 @@
 	}
 
 	.first-content-page{
-		@apply relative;
+		@apply relative h-screen flex justify-center items-center flex-col;
 	}
 
 	.line-absolute{
 		content: '';
-		@apply absolute top-[-156px] right-0 left-0 mx-auto w-[2px] rounded-full h-0 ease-in-out duration-300 z-[3] opacity-30;
+		@apply absolute top-[30px] right-0 left-0 mx-auto w-[2px] rounded-full h-0 ease-in-out duration-300 z-[3] opacity-30;
 		background: linear-gradient(
 			130deg,
 			rgba(0, 255, 153, 1) 0%,
 			rgba(0, 96, 255, 1) 100%
 		);
+	}
+
+	.first-content-page > .line-absolute{
+		animation: height100 3s ease-in-out forwards;
+	}
+
+	.main-content[data-scroll="true"] .line-absolute{
 		animation: height100 3s ease-in-out forwards;
 	}
 
@@ -177,12 +187,13 @@ main {
 		linear-gradient(0deg, #0060ff33, #0060ff33);
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
 	/* background-size: 100% 100%; */
 }
 
 
 main .first-content-page .block-scroll-down{
-	@apply relative h-[96px] mt-[80px] mb-[150px];
+	@apply relative h-[96px] mt-[80px] w-[36px];
 }
 
 main .first-content-page a.scroll-down{
@@ -211,101 +222,13 @@ main .first-content-page h1::after {
 
 main .main-content {
 	/* max-w-[1137px] */
-	@apply max-w-[1250px] mx-auto mt-[218px];
+	@apply max-w-[1250px] mx-auto;
 }
 
 
 .number-absolute {
 	@apply text-[#234394] absolute top-[-189px] bottom-[initial] right-[-78px] z-[1] text-[300px] leading-normal font-bold opacity-10 m-auto;
 }
-
-main .split {
-	@apply relative z-[2]
-}
-
-main .split .left {
-	@apply z-10;
-}
-
-main .split .number-absolute {
-	@apply top-[-225px] left-[40px] bottom-[52px] right-[initial] text-[300px] z-[0];
-}
-
-main .split .content-split {
-	@apply flex justify-center relative items-center
-}
-
-main .split .content-split .left{
-	@apply w-[50%] px-14;
-}
-
-main .split .content-split .right{
-	@apply w-[50%] px-14 text-base mt-6;
-}
-
-main .split .content-split .left .line-numbers{
-	@apply flex flex-row justify-between items-center;
-}
-
-main .split .content-split .left .line-numbers .line{
-	@apply flex flex-col justify-end items-end  max-w-[105px];
-}
-
-main .split .content-split .left .line-numbers .line:nth-child(3){
-	@apply max-w-[99px];
-}
-
-main .split .content-split-last{
-	@apply flex flex-row justify-center items-start;
-}
-
-main .split .content-split-last .left{
-	@apply w-[50%] pr-14 relative;
-}
-
-main .split .content-split-last .right{
-	@apply w-[50%] pl-14 text-base mt-6;
-}
-
-main .split .content-split-last .scroll-down{
-	@apply items-center text-center flex flex-row gap-2 text-[#0060FF] cursor-pointer border border-[#0060FF] rounded-lg font-bold text-base leading-16 h-16 justify-center max-w-[222px] hover:bg-[#0060FF] hover:text-white ease-in-out duration-300 mt-6;
-}
-
-main .split .content-split-last .scroll-down svg{
-	stroke:#0060FF;
-	stroke-width: 10px;
-	@apply w-5 h-5 font-bold duration-300 ease-in-out;
-}
-
-main .split .content-split-last .scroll-down:hover svg{
-	stroke:#fff;
-	@apply rotate-45;
-}
-
-
-
-
-
-
-
-/* main .split .content-split .left .line-numbers .line:nth-child(1){
-	@apply min-w-[118px];
-} */
-/*
-
-main .split .content-split .left .line-numbers .line:nth-child(3){
-	@apply min-w-[118px];
-} */
-
-main .split .content-split .left .line-numbers .line p{
-	@apply text-xs text-[#BACAF5] text-right;
-}
-
-main .split .content-split .left .line-numbers .content-number{
-	@apply  flex flex-row gap-2 font-bold justify-end;
-}
-
-
 
 
 .typewrite > .wrap {
@@ -341,20 +264,21 @@ main .split .content-split .left .line-numbers .content-number{
 }
 
 .what-we-are .item p {
-	@apply text-[#1B1F26B8] leading-normal;
+	@apply text-[#1B1F26B8] leading-normal ease-in-out duration-300;
 }
 
 .what-we-are .item .number {
 	@apply text-[#6F91E6];
 }
 
-.what-we-are .item:not(.second) .icons{
-	@apply relative max-w-[111px] mr-auto w-[111px] pb-[51.9%];
+.what-we-are .item .icons{
+	@apply relative max-w-[111px] mr-auto w-[111px];
 }
 
+/*
 .what-we-are .item:not(.second) .icons svg {
 	@apply absolute m-auto;
-}
+} */
 
 /* first */
 
@@ -396,7 +320,8 @@ main .split .content-split .left .line-numbers .content-number{
 }
 
 .what-we-are .item.first .icons .bottom{
-	@apply absolute m-auto bottom-0 left-0 right-0 duration-300 ease-in-out pb-[100%];
+	@apply flex flex-row items-center justify-between gap-1;
+	/* @apply absolute m-auto bottom-0 left-0 right-0 duration-300 ease-in-out; */
 	transform: translateX(0px) translateY(0px);
 	transform-origin:0;
 }
@@ -410,7 +335,7 @@ main .split .content-split .left .line-numbers .content-number{
 }
 
 .what-we-are .item.first .icons > svg:nth-child(1){
-	@apply duration-300 ease-in-out;
+	@apply duration-300 ease-in-out flex items-center justify-center mx-auto;
 }
 
  .what-we-are .item.first:hover .icons > svg:nth-child(1) {
@@ -428,11 +353,11 @@ main .split .content-split .left .line-numbers .content-number{
 	}
 
 	5%{
-		transform: translateY(-30px);
+		transform: translateY(-40px);
 	}
 
 	100%{
-		transform: translateY(-30px);
+		transform: translateY(-40px);
 	}
 
 }
@@ -586,6 +511,13 @@ main .split .content-split .left .line-numbers .content-number{
 /* second */
 
 /* third */
+.what-we-are .item.third .icons{
+	@apply flex flex-col items-center justify-start gap-1;
+}
+
+.what-we-are .item.third .icons .top{
+	@apply flex flex-row items-center justify-between gap-1;
+}
 
 .what-we-are .item.third .icons svg:nth-child(1) {
 	@apply top-0 left-0;
@@ -643,6 +575,78 @@ main .split .content-split .left .line-numbers .content-number{
 
 /* split */
 
+
+main .split {
+	@apply relative z-[2] pt-[200px];
+}
+
+main .split .left {
+	@apply z-10;
+}
+
+main .split .number-absolute {
+	@apply top-[-225px] left-[40px] bottom-[52px] right-[initial] text-[300px] z-[0];
+}
+
+main .split .content-split {
+	@apply flex justify-center relative items-center
+}
+
+main .split .content-split .left{
+	@apply w-[50%] px-14;
+}
+
+main .split .content-split .right{
+	@apply w-[50%] px-14 text-base mt-6;
+}
+
+main .split .content-split .left .line-numbers{
+	@apply flex flex-row justify-between items-center;
+}
+
+main .split .content-split .left .line-numbers .line{
+	@apply flex flex-col justify-end items-end  max-w-[105px];
+}
+
+main .split .content-split .left .line-numbers .line:nth-child(3){
+	@apply max-w-[99px];
+}
+
+main .split .content-split-last{
+	@apply flex flex-row justify-center items-start;
+}
+
+main .split .content-split-last .left{
+	@apply w-[50%] pr-14 relative;
+}
+
+main .split .content-split-last .right{
+	@apply w-[50%] pl-14 text-base mt-6;
+}
+
+main .split .content-split-last .scroll-down{
+	@apply items-center text-center flex flex-row gap-2 text-[#0060FF] cursor-pointer border border-[#0060FF] rounded-lg font-bold text-base leading-16 h-16 justify-center max-w-[222px] hover:bg-[#0060FF] hover:text-white ease-in-out duration-300 mt-6;
+}
+
+main .split .content-split-last .scroll-down svg{
+	stroke:#0060FF;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold duration-300 ease-in-out;
+}
+
+main .split .content-split-last .scroll-down:hover svg{
+	stroke:#fff;
+	@apply rotate-45;
+}
+
+main .split .content-split .left .line-numbers .line p{
+	@apply text-xs text-[#BACAF5] text-right;
+}
+
+main .split .content-split .left .line-numbers .content-number{
+	@apply  flex flex-row gap-2 font-bold justify-end;
+}
+
 .split {
 	@apply relative w-full;
 	/* @apply pb-[220px]; */
@@ -660,7 +664,7 @@ main .split .content-split .left .line-numbers .content-number{
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-0 right-0 left-0 mx-auto w-[2px] h-[100%] z-[1] opacity-30;
+	@apply absolute top-[200px] right-0 left-0 mx-auto w-[2px] h-[100%] z-[1] opacity-30;
 	animation: splitHeight 3s ease-in-out forwards;
 }
 
@@ -701,8 +705,30 @@ main .split .content-split .left .line-numbers .content-number{
 .our-projects .arrow-right-content::before{
 	content: '';
 	background: linear-gradient(130deg, rgba(0, 255, 153, 1) 0%, rgba(0, 96, 255, 1) 100%);
-	@apply absolute top-0 left-0 right-0 bottom-0 m-auto w-full h-[2px] z-[1] opacity-30;
+	@apply absolute top-0 bottom-0 m-auto w-0 h-[2px] z-[1] opacity-30;
 }
+
+.our-projects[data-scroll="true"] .arrow-right-content::before{
+	animation: widthLineProjects 3s ease-in-out forwards;
+}
+
+@keyframes widthLineProjects{
+	0%{
+		width: 0;
+		left:0;
+	}
+
+	50%{
+		width: 0;
+	}
+
+	100%{
+		width: 100%;
+		right:0;
+	}
+}
+
+
 
 .our-projects .arrow-right-content .arrows > div{
 	@apply w-9 h-9 rounded-full flex items-center ease-in-out duration-300 justify-center font-bold text-[#001758] cursor-pointer absolute top-0 bottom-0 m-auto z-[2];
@@ -737,10 +763,6 @@ main .split .content-split .left .line-numbers .content-number{
 .our-projects .arrow-right-content .arrow-right:hover{
 	@apply pl-[80px] ;
 }
-
-
-
-
 
 .our-projects .content-slide {
 	@apply h-[950px] relative;
@@ -864,10 +886,6 @@ main .split .content-split .left .line-numbers .content-number{
 } */
 
 
-
-
-
-
 .our-projects .develop .title span {
 	@apply text-[#253C77];
 }
@@ -895,7 +913,25 @@ main .split .content-split .left .line-numbers .content-number{
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-[-13%] right-[34%] m-auto block w-[1px] h-full z-[2];
+	@apply absolute top-[-12%] right-[34%] m-auto block w-[1px] h-full z-[2] ease-in-out duration-300;
+}
+
+.parallax[data-scroll="true"]::before{
+	animation: parallaxLineHeight 3s forwards ease-in-out;
+}
+
+@keyframes parallaxLineHeight{
+	0%{
+		height: 0;
+	}
+
+	50%{
+		height: 0;
+	}
+
+	100%{
+		height: 100%;
+	}
 }
 
 .parallax > .item {
@@ -1009,14 +1045,19 @@ main .split .content-split .left .line-numbers .content-number{
 	@apply opacity-100;
 }
 
-.parallax .bottom .our-clients:before {
+.parallax .bottom .our-clients::before {
 	content: "";
 	background: linear-gradient(
 		130deg,
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute bottom-0 left-0 mr-auto w-[93%] h-[2px] opacity-30;
+	@apply absolute bottom-0 left-0 mr-auto w-0 h-[2px] opacity-30;
+
+}
+
+.parallax .bottom .our-clients[data-scroll="true"]::before{
+	animation: parallaxLineWidth 1s ease-in-out forwards;
 }
 
 .parallax .bottom .contact .number-absolute {
@@ -1073,14 +1114,32 @@ main .split .content-split .left .line-numbers .content-number{
 	@apply pb-[60px];
 }
 
-.footer:before {
+.footer::before{
 	content: "";
 	background: linear-gradient(
 		130deg,
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-0 right-0 ml-auto w-[93%] h-[2px] opacity-30;
+	@apply absolute top-0 right-0 ml-auto w-0 h-[2px] opacity-30;
+}
+
+.footer[data-scroll="true"]::before{
+	animation: parallaxLineWidth 3s ease-in-out forwards;
+}
+
+@keyframes parallaxLineWidth{
+	0%{
+		width: 0;
+	}
+
+	50%{
+		width: 0;
+	}
+
+	100%{
+		width: 93%;
+	}
 }
 
 /* footer */

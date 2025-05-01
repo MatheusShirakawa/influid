@@ -18,12 +18,16 @@ import { scrollDown } from '../../utils/helpers'
 
 import { ArrowUp } from '@phosphor-icons/react'
 
-export default function Footer(){
+interface FooterProps {
+	scrollY?: number | undefined;
+}
+
+export default function Footer(props:FooterProps){
 
 	const t = useTranslations('Footer')
 
 	return(
-		<footer id="footer" className='footer'>
+		<footer id="footer" className='footer'  data-scroll={(props.scrollY ?? 0) > 7500 && true}>
 			<div className='container-footer relative max-w-[1452px] mx-auto px-4'>
 
 				<div className='block-arrow-up'>

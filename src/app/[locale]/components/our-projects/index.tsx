@@ -29,6 +29,7 @@ interface OurProjectsProps {
 	whileInView?: TargetAndTransition | VariantLabels | undefined;
 	transition?: TargetAndTransition | undefined;
 	viewport?: object | undefined;
+	scrollY?: number | undefined;
 }
 
 export default function OurProjects(props: OurProjectsProps) {
@@ -44,6 +45,7 @@ export default function OurProjects(props: OurProjectsProps) {
 			whileInView={props.whileInView}
 			transition={props.transition}
 			viewport={props.viewport}
+			data-scroll={(props.scrollY ?? 0) > 1799 && true}
 		>
 			<div className="content-slide">
 				<div className='line-info'>

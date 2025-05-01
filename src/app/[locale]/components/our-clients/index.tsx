@@ -22,12 +22,17 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 
 
-export default function OurClients(){
+interface OurClientsProps {
+	scrollY?: number | undefined;
+}
+
+
+export default function OurClients(props:OurClientsProps){
 
 	const t = useTranslations('OurClients')
 
 	return(
-		<div className='our-clients'>
+		<div className='our-clients' data-scroll={(props.scrollY ?? 0) > 6500 && true}>
 			<h2 className='title text-[64px] text-center font-bold text-[#03F2F2]'>
 				{t('title-one')} <span className='text-white'>{t('title-two')}</span>.
 			</h2>

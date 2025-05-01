@@ -13,7 +13,6 @@ import Logo from '/public/logo.svg'
 import Image from 'next/image'
 
 export default function Header({ locale }: { locale: string | undefined }) {
-
 	const router = useRouter()
 	const [showHeader, setShowHeader] = useState(false)
 	const [isPending, startTransition] = useTransition()
@@ -26,7 +25,6 @@ export default function Header({ locale }: { locale: string | undefined }) {
 			setShowHeader(true)
 		},3000)
 	},[])
-
 
 	function handleChangeLanguage(e: React.ChangeEvent<HTMLInputElement>){
 		const { checked } = e.target

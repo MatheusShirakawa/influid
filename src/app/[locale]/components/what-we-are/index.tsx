@@ -70,8 +70,10 @@ export default function WhatWeAre(props: WhatWeAreProps){
 			<div className='item third'>
 				<span className="number">03.</span>
 				<div className="icons">
-					<LeftThreeIcon />
-					<RightThreeIcon/>
+					<div className='top'>
+						<LeftThreeIcon />
+						<RightThreeIcon/>
+					</div>
 					<BallThreeIcon />
 					<BottomThreeIcon/>
 				</div>
