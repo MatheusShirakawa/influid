@@ -665,16 +665,14 @@ main .split .content-split .left .line-numbers .content-number{
 		rgba(0, 96, 255, 1) 100%
 	);
 	@apply absolute top-[200px] right-0 left-0 mx-auto w-[2px] h-[100%] z-[1] opacity-30;
-	animation: splitHeight 3s ease-in-out forwards;
 }
 
+.main-content[data-scroll="true"] .split:before{
+	animation: splitHeight 2s ease-in-out forwards;
+}
 
 @keyframes splitHeight{
 	0%{
-		height: 0;
-	}
-
-	50%{
 		height: 0;
 	}
 
@@ -727,8 +725,6 @@ main .split .content-split .left .line-numbers .content-number{
 		right:0;
 	}
 }
-
-
 
 .our-projects .arrow-right-content .arrows > div{
 	@apply w-9 h-9 rounded-full flex items-center ease-in-out duration-300 justify-center font-bold text-[#001758] cursor-pointer absolute top-0 bottom-0 m-auto z-[2];
@@ -925,10 +921,6 @@ main .split .content-split .left .line-numbers .content-number{
 		height: 0;
 	}
 
-	50%{
-		height: 0;
-	}
-
 	100%{
 		height: 100%;
 	}
@@ -1057,7 +1049,7 @@ main .split .content-split .left .line-numbers .content-number{
 }
 
 .parallax .bottom .our-clients[data-scroll="true"]::before{
-	animation: parallaxLineWidth 1s ease-in-out forwards;
+	animation: parallaxLineWidth 2s ease-in-out forwards;
 }
 
 .parallax .bottom .contact .number-absolute {
@@ -1125,15 +1117,11 @@ main .split .content-split .left .line-numbers .content-number{
 }
 
 .footer[data-scroll="true"]::before{
-	animation: parallaxLineWidth 3s ease-in-out forwards;
+	animation: parallaxLineWidth 2s ease-in-out forwards;
 }
 
 @keyframes parallaxLineWidth{
 	0%{
-		width: 0;
-	}
-
-	50%{
 		width: 0;
 	}
 
