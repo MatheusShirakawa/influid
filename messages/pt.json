@@ -68,11 +68,17 @@
 			"name":"seu nome",
 			"email":"seu melhor e-mail",
 			"message":"digite sua mensagem",
-			"send":"enviar"
-		},
-		"success":"Sua mensagem foi enviada com sucesso, entraremos em contato o mais breve possível.",
-		"error":"Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
-		"empty":"Por favor, preencha todos os campos."
+			"send":"enviar",
+			"errorFields":{
+				"name":"Por favor, preencha seu nome.",
+				"email":"Por favor, preencha seu e-mail.",
+				"email-format":"Por favor, preencha um e-mail válido.",
+				"message":"Por favor, preencha sua mensagem."
+			},
+			"success":"Sua mensagem foi enviada com sucesso, entraremos em contato o mais breve possível.",
+			"error":"Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+			"empty":"Por favor, preencha todos os campos."
+		}
 	},
 	"Footer":{
 		"what-is":"Influid é um estúdio de design focado em criar produtos digitais incríveis.",

@@ -27,7 +27,7 @@ export default function Footer(props:FooterProps){
 	const t = useTranslations('Footer')
 
 	return(
-		<footer id="footer" className='footer'  data-scroll={(props.scrollY ?? 0) > 7500 && true}>
+		<footer id="footer" className='footer'  data-scroll={(props.scrollY ?? 0) > 7300 && true}>
 			<div className='container-footer relative max-w-[1452px] mx-auto px-4'>
 
 				<div className='block-arrow-up'>

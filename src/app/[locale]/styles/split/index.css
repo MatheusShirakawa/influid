@@ -1,0 +1,133 @@
+/* split */
+
+.split {
+	@apply relative z-[2] pt-[220px];
+}
+
+.split .left {
+	@apply z-10;
+}
+
+.split .number-absolute {
+	@apply top-[-225px] left-[40px] bottom-[52px] right-[initial] text-[300px] z-[0];
+}
+
+.split .content-split {
+	@apply flex justify-center relative items-center
+}
+
+.split .content-split .left{
+	@apply w-[50%] px-14;
+}
+
+.split .content-split .right{
+	@apply w-[50%] px-14 text-base mt-6;
+}
+
+.split .content-split .left .line-numbers{
+	@apply flex flex-row justify-between items-center;
+}
+
+.split .content-split .left .line-numbers .line{
+	@apply flex flex-col justify-end items-end  max-w-[105px];
+}
+
+.split .content-split .left .line-numbers .line:nth-child(3){
+	@apply max-w-[99px];
+}
+
+.split .content-split-last{
+	@apply flex flex-row justify-center items-start;
+}
+
+.split .content-split-last .left{
+	@apply w-[50%] pr-14 relative;
+}
+
+.split .content-split-last .right{
+	@apply w-[50%] pl-14 text-base mt-6;
+}
+
+.split .content-split-last .scroll-down{
+	@apply items-center text-center flex flex-row gap-2 text-[#0060FF] cursor-pointer border border-[#0060FF] rounded-lg font-bold text-base leading-16 h-16 justify-center max-w-[222px] hover:bg-[#0060FF] hover:text-white ease-in-out duration-300 mt-6;
+}
+
+.split .content-split-last .scroll-down svg{
+	stroke:#0060FF;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold duration-300 ease-in-out;
+}
+
+.split .content-split-last .scroll-down:hover svg{
+	stroke:#fff;
+	@apply rotate-45;
+}
+
+.split .content-split .left .line-numbers .line p{
+	@apply text-xs text-[#BACAF5] text-right;
+}
+
+.split .content-split .left .line-numbers .content-number{
+	@apply  flex flex-row gap-2 font-bold justify-end;
+}
+
+.split {
+	@apply relative w-full;
+	/* @apply pb-[220px]; */
+}
+
+.split .content-split,
+.split .content-split-last{
+	@apply pb-[180px];
+}
+
+.split:before {
+	content: "";
+	background: linear-gradient(
+		130deg,
+		rgba(0, 255, 153, 1) 0%,
+		rgba(0, 96, 255, 1) 100%
+	);
+	@apply absolute top-[220px] right-0 left-0 mx-auto w-[2px] h-[0] z-[1] opacity-30;
+}
+
+.main-content[data-scroll="true"] .split:before{
+	animation: splitHeight 2s ease-in-out forwards;
+}
+
+@keyframes splitHeight{
+	0%{
+		height: 0;
+	}
+
+	100%{
+		bottom: 0;
+		height: 100%;
+	}
+}
+
+/* split */
+
+@property --from {
+	syntax: '<integer>';
+	initial-value: 0;
+	inherits: false;
+}
+.counter {
+	transition: --from .3s;
+	counter-reset: int var(--from);
+}
+
+.main-content[data-scroll="true"] .counter{
+	animation: counter var(--time, 400) ease-in-out forwards;
+}
+
+.counter::after {
+	content: counter(int);
+}
+
+@keyframes counter {
+	to {
+		--from: var(--to, 100);
+	}
+}

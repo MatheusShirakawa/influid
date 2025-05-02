@@ -1,0 +1,119 @@
+/* bottom */
+
+.parallax .bottom {
+	background: url("/bg-bottom.png") no-repeat center;
+	background-size: cover;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.parallax .bottom .our-clients {
+	@apply relative pt-[200px] pb-6;
+}
+
+.parallax .bottom .our-clients .block-arrow-right-client{
+	@apply relative;
+}
+
+.parallax .bottom .our-clients .arrow-right-client{
+	@apply flex cursor-pointer bg-[#0060FF] w-9 h-9 px-4 rounded-full items-center mt-[140px] justify-center ml-auto mr-[133px] ease-in-out duration-300 relative text-white m-auto;
+}
+
+
+.parallax .bottom .our-clients .arrow-right-client svg{
+	stroke:#fff;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold absolute top-0 bottom-0 right-[9px] m-auto z-10;
+}
+
+.parallax .bottom .our-clients .arrow-right-client:hover{
+	@apply pl-[60px];
+}
+
+.parallax .bottom .our-clients .list-clients img {
+	@apply opacity-40 ease-in-out duration-300 block mx-auto;
+}
+
+.parallax .bottom .our-clients .list-clients img:hover {
+	@apply opacity-100;
+}
+
+.parallax .bottom .our-clients::before {
+	content: "";
+	background: linear-gradient(
+		130deg,
+		rgba(0, 255, 153, 1) 0%,
+		rgba(0, 96, 255, 1) 100%
+	);
+	@apply absolute bottom-0 left-0 mr-auto w-0 h-[2px] opacity-30;
+
+}
+
+.parallax .bottom .our-clients[data-scroll="true"]::before{
+	animation: parallaxLineWidth 2s ease-in-out forwards;
+}
+
+.parallax .bottom .contact .number-absolute {
+	@apply top-[-150px] right-[85px] left-0 bottom-0 text-center block;
+}
+
+.parallax .bottom .contact label {
+	@apply w-full block relative;
+}
+
+.parallax .bottom .contact label input {
+	outline: 0;
+	border: 0;
+	@apply relative h-[44px] leading-[44px] pr-4 border-b border-b-[rgba(255,255,255,0.4)] block w-full;
+}
+
+.parallax .bottom .contact label input+.border-focus::before{
+	content: '';
+	@apply absolute block right-[initial] bottom-[0] left-0 w-[0] h-[1px] duration-400 ease-in-out z-[2];
+	background: linear-gradient(
+		130deg,
+		rgba(0, 255, 153, 1) 0%,
+		rgba(0, 96, 255, 1) 100%
+	);
+}
+
+.parallax .bottom .contact label[data-error="true"] input+.border-focus::before{
+	background:#fb2c36;
+}
+
+.parallax .bottom .contact label[data-error="true"] input+.border-focus::before,
+.parallax .bottom .contact label[data-active="true"] input+.border-focus::before,
+.parallax .bottom .contact label input:focus+.border-focus::before{
+	@apply w-full right-0;
+}
+
+.parallax .bottom .contact label input ~ .absolute-placeholder{
+	@apply absolute top-0 left-0 text-[#BACAF5] opacity-40 text-base leading-[44px] duration-300 ease-in-out;
+}
+
+.parallax .bottom .contact label[data-active="true"] input ~ .absolute-placeholder,
+.parallax .bottom .contact label input:focus ~ .absolute-placeholder{
+	@apply text-sm top-[-24px] text-[#00FF99] opacity-100;
+}
+
+.parallax .bottom .contact label[data-error="true"] input ~ .absolute-placeholder{
+	@apply text-sm top-[-24px] text-red-500 opacity-100;
+}
+
+.parallax .bottom .contact button {
+	@apply w-full rounded-lg bg-[#00FF99] text-[#001758] text-base items-center font-bold h-16 leading-16 hover:bg-[#03F2F2] ease-in-out duration-300 cursor-pointer mt-6 flex flex-row justify-center gap-2;
+}
+
+.parallax .bottom .contact button svg{
+	stroke: #001758;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold duration-300 ease-in-out;
+}
+
+.parallax .bottom .contact button:hover svg{
+	@apply rotate-[-45deg];
+}
+
+/* bottom */

@@ -1,0 +1,100 @@
+/* main */
+
+main {
+	@apply relative;
+}
+
+.main-block {
+	/* background: linear-gradient(130deg,rgba(0, 96, 255, 1) 0%, rgba(0, 23, 88, 1) 30%); */
+	background: linear-gradient(
+			134deg,
+			#0060ff4d,
+			#00ff991a 9.76%,
+			#03f2f200 24.46%
+		),
+		linear-gradient(167deg, transparent -40.18%, #000 91.72%),
+		linear-gradient(0deg, #001758e6, #001758e6),
+		linear-gradient(0deg, #0060ff33, #0060ff33);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	/* background-size: 100% 100%; */
+}
+
+.first-content-page{
+	@apply relative h-screen flex justify-center items-center flex-col;
+}
+
+.line-absolute{
+	content: '';
+	@apply absolute top-[30px] right-0 left-0 mx-auto w-[2px] rounded-full h-0 ease-in-out duration-300 z-[3] opacity-30;
+	background: linear-gradient(
+		130deg,
+		rgba(0, 255, 153, 1) 0%,
+		rgba(0, 96, 255, 1) 100%
+	);
+}
+
+.first-content-page > .line-absolute{
+	animation: height100 3s ease-in-out forwards;
+}
+
+.main-content[data-scroll="true"] .line-absolute{
+	animation: height100 3s ease-in-out forwards;
+}
+
+.first-content-page .block-scroll-down{
+	@apply relative h-[96px] mt-[80px] w-[36px];
+}
+
+.first-content-page a.scroll-down{
+	@apply absolute inset-0 rounded-full bg-[#0060FF] text-white cursor-pointer flex justify-center items-center w-[36px] max-h-[36px] hover:pt-[50px] pt-[15px] pb-[15px] mx-auto;
+	transition: padding 0.3s ease-in-out;
+}
+
+.first-content-page a.scroll-down svg{
+	stroke:#fff;
+	stroke-width: 10px;
+}
+
+.first-content-page h1 {
+	@apply relative;
+}
+
+.first-content-page h1::before {
+	content: "in.flu.id 2.0";
+	@apply -rotate-90 absolute h-10 left-[-160px] top-0 bottom-0 m-auto text-base text-[#1890FF66] font-normal opacity-40;
+}
+
+.first-content-page h1::after {
+	content: "01.25";
+	@apply -rotate-90 absolute h-10 right-[-160px] top-0 bottom-0 m-auto text-base text-[#1890FF66] font-normal opacity-40;
+}
+
+.main-content {
+	/* max-w-[1137px] */
+	@apply max-w-[1250px] mx-auto;
+}
+
+.number-absolute {
+	@apply text-[#234394] absolute top-[-189px] bottom-[initial] right-[-78px] z-[1] text-[300px] leading-normal font-bold opacity-10 m-auto;
+}
+
+.typewrite > .wrap {
+	@apply relative h-[179px];
+}
+
+.typewrite > .wrap::after {
+	content: "";
+	@apply w-full h-[80%] m-auto border-r-6 border-r-white block absolute top-0 bottom-0 right-[-4px];
+	animation: cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+	50% {
+		border-color: transparent;
+	}
+}
+
+/* main */
+

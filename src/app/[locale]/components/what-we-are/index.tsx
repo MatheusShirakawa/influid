@@ -43,41 +43,47 @@ export default function WhatWeAre(props: WhatWeAreProps){
 		>
 			<div className='item first'>
 				<span className="number">01.</span>
-				<div className="icons">
-					<BallOneIcon />
-					<div className='bottom'>
-						<LeftOneIcon />
-						<RightOneIcon />
+				<div className='content'>
+					<div className="icons">
+						<BallOneIcon />
+						<div className='bottom'>
+							<LeftOneIcon />
+							<RightOneIcon />
+						</div>
 					</div>
+					<p>{t("description-one")}</p>
 				</div>
-				<p>{t("description-one")}</p>
 			</div>
 
 			<div className='item second'>
 				<span className="number">02.</span>
-				<div className="icons">
-					<div className='full'>
-						<LeftTwoIcon2/>
-						<RightTwoIcon6/>
-						<LeftTwoIcon8/>
-						<RightTwoIcon7/>
-						<LeftTwoIcon9/>
-						<BallTwoIcon/>
+				<div className='content'>
+					<div className="icons">
+						<div className='full'>
+							<LeftTwoIcon2/>
+							<RightTwoIcon6/>
+							<LeftTwoIcon8/>
+							<RightTwoIcon7/>
+							<LeftTwoIcon9/>
+							<BallTwoIcon/>
+						</div>
 					</div>
+					<p>{t("description-two")}</p>
 				</div>
-				<p>{t("description-two")}</p>
 			</div>
 			<div className='item third'>
 				<span className="number">03.</span>
-				<div className="icons">
-					<div className='top'>
-						<LeftThreeIcon />
-						<RightThreeIcon/>
+				<div className='content'>
+					<div className="icons">
+						<div className='top'>
+							<LeftThreeIcon />
+							<RightThreeIcon/>
+						</div>
+						<BallThreeIcon />
+						<BottomThreeIcon/>
 					</div>
-					<BallThreeIcon />
-					<BottomThreeIcon/>
+					<p>{t("description-three")}</p>
 				</div>
-				<p>{t("description-three")}</p>
 			</div>
 		</motion.div>
 	)

@@ -1,0 +1,212 @@
+
+/* our-projects */
+
+.our-projects {
+	padding: 68px 0 0 0;
+	background: linear-gradient(177deg, #010d20 71.06%, #0060ff 157.64%);
+	overflow: hidden
+}
+
+.our-projects .arrow-right-content{
+	@apply  ml-auto w-[850px] relative;
+}
+
+.our-projects .arrow-right-content .arrows{
+	@apply flex flex-row items-end justify-end gap-8 bg-[#040c1f] max-w-[150px] relative z-[1] pr-10 pb-[36px];
+}
+
+.our-projects .arrow-right-content::before{
+	content: '';
+	background: linear-gradient(130deg, rgba(0, 255, 153, 1) 0%, rgba(0, 96, 255, 1) 100%);
+	@apply absolute top-0 bottom-0 m-auto w-0 h-[2px] z-[1] opacity-30;
+}
+
+.our-projects[data-scroll="true"] .arrow-right-content::before{
+	animation: widthLineProjects 3s ease-in-out forwards;
+}
+
+@keyframes widthLineProjects{
+	0%{
+		width: 0;
+		left:0;
+	}
+
+	50%{
+		width: 0;
+	}
+
+	100%{
+		width: 100%;
+		right:0;
+	}
+}
+
+.our-projects .arrow-right-content .arrows > div{
+	@apply w-9 h-9 rounded-full flex items-center ease-in-out duration-300 justify-center font-bold text-[#001758] cursor-pointer absolute top-0 bottom-0 m-auto z-[2];
+}
+
+.our-projects .arrow-right-content .arrows > div svg{
+	stroke-width: 10px;
+	stroke:#001758;
+	position: absolute;
+}
+
+.our-projects .arrow-right-content .arrow-left svg{
+	right: 9px;
+}
+
+.our-projects .arrow-right-content .arrow-left{
+	@apply bg-[#03F2F2] left-0;
+}
+
+.our-projects .arrow-right-content .arrow-left:hover{
+	@apply pr-[80px];
+}
+
+.our-projects .arrow-right-content .arrow-right{
+	@apply bg-[#00FF99] right-[20px];
+}
+
+.our-projects .arrow-right-content .arrow-right svg{
+	left: 9px;
+}
+
+.our-projects .arrow-right-content .arrow-right:hover{
+	@apply pl-[80px] ;
+}
+
+.our-projects .content-slide {
+	@apply h-[950px] relative;
+}
+
+.our-projects .line-info {
+	@apply flex flex-row items-center gap-6 pl-[120px];
+}
+
+.our-projects .line-info span {
+	@apply px-8 py-2 text-base font-normal inline-block rounded-full border text-center opacity-40;
+}
+
+.our-projects .line-info span:nth-child(1) {
+	@apply text-[#01E8A3] border-[#01E8A3];
+}
+
+.our-projects .line-info span:nth-child(2) {
+	@apply text-[#00CCCC] border-[#00CCCC];
+}
+
+.our-projects .line-info span:nth-child(3) {
+	@apply text-[#1890FF] border-[#1890FF];
+}
+
+.our-projects .title {
+	@apply text-[280px] text-[#0060FF] font-bold block left-[-70px] relative z-[1];
+	line-height: 120%;
+}
+
+.our-projects .title[data-language="pt"] {
+	@apply left-0;
+}
+
+.our-projects .line-banners {
+	@apply flex flex-row items-center gap-8 relative z-10 left-[100px] pt-[90px] overflow-hidden;
+}
+
+.our-projects .line-banners .banner{
+	@apply relative;
+}
+
+.our-projects .line-banners .banner .info-image-top{
+	@apply absolute top-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4 z-[1];
+}
+
+.our-projects .line-banners .banner .info-image-top span{
+	@apply rounded-full px-6 py-2 text-[#8FFFFF] border border-[#8FFFFF];
+}
+
+.our-projects .line-banners .banner .info-image-bottom{
+	@apply absolute bottom-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4 z-[1];
+}
+
+.our-projects .line-banners .banner .info-image-bottom span{
+	@apply rounded-full px-6 py-2 text-[#EBFBFF] border border-[#EBFBFF] opacity-40;
+}
+
+/* .our-projects .line-banners::before{
+	content: ''
+
+} */
+
+.our-projects .number-absolute {
+	@apply top-[-93px] right-[84px];
+}
+
+.our-projects .line-banners .banner .image{
+	@apply overflow-hidden relative z-[0];
+}
+
+.our-projects .line-banners .banner .image img {
+	@apply block w-full ease-in-out duration-330 ;
+}
+
+.our-projects .line-banners .banner .image:hover img {
+	@apply scale-125;
+}
+
+.our-projects .develop .number-absolute {
+	@apply text-[#BACAF5] absolute m-auto top-[-35px] left-[-30px] z-[1] text-[300px] leading-normal font-bold opacity-40;
+}
+
+.our-projects .develop {
+	@apply bg-white flex flex-row justify-between items-start w-full relative pb-[159px] pt-[483px] mt-[-230px];
+}
+
+.our-projects .develop .title {
+	@apply text-[64px] leading-[70px] text-[#0060FF] font-bold block pb-[55px] pr-4;
+}
+
+.our-projects .develop a {
+	@apply text-[#0060FF] border-2 border-[#0060FF] rounded-lg font-bold flex items-center max-w-[180px] ml-auto h-16 leading-16 text-center gap-2 justify-center ease-in-out duration-300 cursor-pointer z-[2] relative hover:bg-[#0060FF] hover:border-[#0060FF] hover:text-white;
+}
+
+.our-projects .develop a svg{
+	stroke: #0060FF;
+	stroke-width: 10px;
+	@apply w-5 h-5 font-bold duration-300 ease-in-out;
+}
+
+.our-projects .develop a:hover svg{
+	stroke:#fff;
+	@apply rotate-45;
+}
+
+/* .custom-hover{
+	place-content: center;
+	--c: #0060FF;
+	background:
+	  linear-gradient(90deg,#fff 50%,var(--c) 0) calc(100% - var(--_p,0%))/200% 100%,
+	  linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) 100% no-repeat;
+	-webkit-background-clip: text,padding-box;
+			background-clip: text,padding-box;
+	transition: 0.7s;
+}
+
+.custom-hover:hover{
+	--_p: 100%;
+	color: #fff !important;
+} */
+
+
+.our-projects .develop .title span {
+	@apply text-[#253C77];
+}
+
+.our-projects .develop .left {
+	@apply ml-[95px];
+}
+
+.our-projects .develop .right {
+	@apply text-[#253C77] text-base mr-[222px] max-w-[351px];
+}
+
+/* our-projects */

@@ -1,0 +1,98 @@
+/* parallax */
+
+.parallax {
+	@apply relative w-full;
+}
+
+.parallax::before{
+	content: '';
+	background: linear-gradient(
+		130deg,
+		rgba(0, 255, 153, 1) 0%,
+		rgba(0, 96, 255, 1) 100%
+	);
+	@apply absolute top-[-12%] right-[34%] m-auto block w-[1px] h-full z-[2] ease-in-out duration-300;
+}
+
+.parallax[data-scroll="true"]::before{
+	animation: parallaxLineHeight 3s forwards ease-in-out;
+}
+
+@keyframes parallaxLineHeight{
+	0%{
+		height: 0;
+	}
+
+	100%{
+		height: 100%;
+	}
+}
+
+.parallax > .item {
+	@apply sticky pl-[95px] pr-[105px] pt-[62px] flex flex-row items-start justify-between;
+}
+
+.parallax .our-clients {
+	@apply sticky top-0 w-full;
+}
+
+.parallax .our-clients  .swiper-wrapper{
+	@apply items-center;
+}
+
+.parallax > .item .right {
+	@apply text-[#EBFBFF] text-base font-normal leading-normal max-w-[478px];
+}
+
+.parallax > .item .left {
+	@apply flex items-start flex-row;
+}
+
+.parallax > .item span {
+	@apply text-2xl font-bold text-[#004D2E] text-left block;
+}
+
+.parallax > .item.applications span {
+	@apply text-[#004D2EB2];
+}
+
+.parallax > .item.applications .right {
+	@apply text-[#000000B2];
+}
+
+.parallax > .item.applications h2 {
+	@apply text-[#000000B2];
+}
+
+.parallax > .item.branding span {
+	@apply text-[#AFFFDF];
+}
+
+.parallax .item.branding h2 {
+	@apply text-[#AFFFDF];
+}
+
+.parallax > .item.branding .right {
+	@apply text-[#AFFFDF];
+}
+
+.parallax > .item h2 {
+	@apply text-[154px] font-bold text-white text-left pl-10 block leading-[initial] mt-[-29px];
+}
+
+.parallax > .item.websites {
+	@apply top-0 h-screen bg-[#0060FF];
+}
+
+.parallax > .item.applications {
+	/* h-[969px] */
+	@apply top-[240px] h-screen bg-[#00FF99];
+}
+
+.parallax > .item.branding {
+	/* 419px */
+	/* h-[756px] */
+	@apply top-[520px] h-[400px] bg-[#021078];
+}
+
+/* parallax */

@@ -109,7 +109,16 @@
 }
 
 @import "tailwindcss";
-@import "./home/index.css";
+
+@import "./main";
+@import "./header";
+@import "./what-we-are";
+@import "./split";
+@import "./our-projects";
+@import "./parallax";
+@import "./bottom";
+@import "./footer";
+
 
 body {
 	color: #fff;
