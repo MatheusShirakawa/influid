@@ -20,19 +20,19 @@ export default function Contact(){
 		const errors: Partial<Record<keyof FormValues, string>> = {}
 
 		if (!values.name) {
-			errors.name = t("form.error.name")
+			errors.name = t("form.errorFields.name")
 		}
 
 		if (!values.email) {
-			errors.email = t("form.error.email")
+			errors.email = t("form.errorFields.email")
 		}
 
 		if(validateEmail(values.email) == false){
-			errors.email = t("form.error.email-invalid")
+			errors.email = t("form.errorFields.email-invalid")
 		}
 
 		if (!values.message) {
-			errors.message = t("form.error.message")
+			errors.message = t("form.errorFields.message")
 		}
 
 		return errors

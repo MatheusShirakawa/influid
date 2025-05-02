@@ -66,7 +66,7 @@ export default function HomeContent({ props }: { props: { locale: string } }) {
 				scrollY={scrollY}
 			/>
 
-			<div id="parallax" className='parallax' data-scroll={(scrollY ?? 0) > 3800 && true}>
+			<div id="parallax" className='parallax' data-scroll={(scrollY ?? 0) > 3500 && true}>
 				<Parallax/>
 				<div className='bottom'>
 					<OurClients
