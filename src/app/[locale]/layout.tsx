@@ -36,6 +36,15 @@ export default async function Layout({ children, params }: Props) {
 
 	return (
 		<html className="h-full" lang={locale}>
+			<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content="Next.js + Next-Intl + Tailwind CSS" />
+				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/favicon.png" />
+				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+			</head>
 			<body>
 				<NextIntlClientProvider>
 					{children}
