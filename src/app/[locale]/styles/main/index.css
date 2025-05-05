@@ -58,7 +58,7 @@ main {
 }
 
 .first-content-page h1 {
-	@apply relative;
+	@apply relative justify-center items-center text-center text-[128px] leading-normal font-bold;
 }
 
 .first-content-page h1::before {
@@ -73,7 +73,7 @@ main {
 
 .main-content {
 	/* max-w-[1137px] */
-	@apply max-w-[1250px] mx-auto;
+	@apply max-w-[1260px] mx-auto;
 }
 
 .number-absolute {
@@ -93,6 +93,25 @@ main {
 @keyframes cursor {
 	50% {
 		border-color: transparent;
+	}
+}
+
+@media (max-width:1340px){
+	.first-content-page h1 {
+		@apply text-[106px] leading-relaxed;
+	}
+}
+
+
+@media (max-width:1140px){
+	.first-content-page h1 {
+		@apply text-[96px] leading-relaxed;
+	}
+}
+
+@media (max-width:1024px){
+	.first-content-page h1 {
+		@apply text-[72px] leading-relaxed;
 	}
 }
 

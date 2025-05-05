@@ -33,7 +33,7 @@
 }
 
 .split .content-split .left .line-numbers .line{
-	@apply flex flex-col justify-end items-end  max-w-[105px];
+	@apply flex flex-col justify-end items-end max-w-[105px];
 }
 
 .split .content-split .left .line-numbers .line:nth-child(3){
@@ -111,6 +111,19 @@
 }
 
 /* split */
+
+@media (max-width:1140px){
+	.split .content-split-last .left h2{
+		@apply text-[48px] leading-[120%];
+	}
+}
+
+@media (max-width:1024px){
+	.split .content-split .left h2{
+		@apply text-[40px] leading-[120%];
+	}
+}
+
 
 @property --from {
 	syntax: '<integer>';

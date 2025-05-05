@@ -25,9 +25,9 @@ export default function FirstContent(){
 				influid design studio
 			</span>
 
-			<h1 className='justify-center items-center text-center text-[128px] leading-normal font-bold relative'>
+			<h1 className="title">
 				<span className='number-absolute'>01</span>
-				<span className='text-[#00ff99] block relative z-10'>{t("title")}</span>
+				<span className='text-[#00ff99] block relative z-[2]'>{t("title")}</span>
 				<div className='mt-[-40px] flex justify-center flex-row items-end'>
 					<div className="dinamic-texts text-center text-white">
 						<Typewriter toRotate={strings} period={1000} />

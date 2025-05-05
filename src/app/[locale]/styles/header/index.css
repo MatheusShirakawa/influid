@@ -2,7 +2,11 @@
 /* header */
 
 .header{
-	@apply relative;
+	@apply relative pt-[47px];
+}
+
+.header .header-content{
+	@apply px-4;
 }
 
 .header .header-content[data-show="true"] nav ul li{
@@ -10,7 +14,11 @@
 }
 
 .header nav{
-	@apply relative right-[-12px]
+	@apply relative right-[-20px]
+}
+
+.header nav ul{
+	@apply flex flex-row justify-center items-center gap-[71px];
 }
 
 .header nav ul li:not(.logo){
@@ -26,8 +34,87 @@
 } */
 
 .header .change-lang {
-	@apply absolute top-0 right-0 bottom-0 m-auto h-6;
+	@apply h-6 z-10;
 }
+
+.header .menu-mobile{
+	@apply block relative cursor-pointer min-w-[22px] opacity-0;
+}
+
+.header .menu-mobile .line{
+	height: 2px;
+	background: #00FF99;
+	width: 22px;
+	margin-bottom: 6px;
+	-webkit-transition: ease-out .2s;
+	-o-transition: ease-out .2s;
+	transition: ease-out .2s;
+	transform-origin: left;
+}
+
+.header .menu-mobile .line:nth-child(3){
+	margin-bottom: 0;
+}
+
+.header .menu-mobile[data-active="true"] .line:nth-child(1){
+	transform: rotate(45deg);
+	width:22px;
+}
+
+.header .menu-mobile[data-active="true"] .line:nth-child(2){
+	width: 0;
+}
+
+.header .menu-mobile[data-active="true"] .line:nth-child(3){
+	transform: rotate(-45deg);
+	width: 22px;
+}
+
+.header .logo-mobile{
+	@apply hidden;
+}
+
+@media (max-width:1024px){
+
+	.header{
+		@apply pt-[35px];
+	}
+
+	.header .menu-mobile{
+		@apply opacity-100 z-[11] cursor-pointer;
+	}
+
+	.header .logo-mobile{
+		@apply block relative z-20 right-[-16px];
+	}
+
+	.header nav{
+		@apply absolute top-[-46px] left-[-1000px] ease-in-out duration-300 w-full bg-[#000C1E] z-10 flex flex-col justify-center items-center py-4 pt-[159px] opacity-0 invisible;
+	}
+
+	.header nav[data-active="true"]{
+		@apply left-0 opacity-100 visible;
+	}
+
+	.header nav ul {
+		@apply flex-col gap-10 w-full pl-[50px] items-start justify-start h-screen;
+	}
+
+	.header nav ul li{
+		@apply w-full block;
+	}
+
+	.header nav ul li a{
+		@apply font-bold block w-full;
+	}
+
+	.header nav ul .logo{
+		@apply hidden;
+	}
+}
+
+
+
 
 @keyframes height100{
 	0%{

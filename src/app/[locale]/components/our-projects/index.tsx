@@ -54,25 +54,25 @@ export default function OurProjects(props: OurProjectsProps) {
 			img:'/iphone1.png',
 			name:'Project 1',
 			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoBottom:['app', 'genAI']
 		},
 		{
 			img:'/iphone1.png',
 			name:'Project 1',
 			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoBottom:['app', 'genAI']
 		},
 		{
 			img:'/iphone1.png',
 			name:'Project 1',
 			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoBottom:['app','genAI']
 		},
 		{
 			img:'/iphone1.png',
 			name:'Project 1',
 			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoBottom:['app', 'genAI']
 		},
 	]
 
@@ -80,26 +80,26 @@ export default function OurProjects(props: OurProjectsProps) {
 		{
 			img:'/iphone2.png',
 			name:'Project 2',
-			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
 		},
 		{
 			img:'/iphone2.png',
 			name:'Project 2',
 			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoBottom:['app','web app']
 		},
 		{
 			img:'/iphone2.png',
 			name:'Project 2',
-			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app',]
 		},
 		{
 			img:'/iphone2.png',
 			name:'Project 2',
-			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
 		},
 	]
 
@@ -107,26 +107,26 @@ export default function OurProjects(props: OurProjectsProps) {
 		{
 			img:'/iphone3.png',
 			name:'Project 3',
-			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoTop:['en-us','pt-br'],
+			infoBottom:['web app','genAI']
 		},
 		{
 			img:'/iphone3.png',
 			name:'Project 3',
-			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoTop:['en-us','pt-br'],
+			infoBottom:['web app','genAI']
 		},
 		{
 			img:'/iphone3.png',
 			name:'Project 3',
-			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoTop:['en-us','pt-br'],
+			infoBottom:['web app','genAI']
 		},
 		{
 			img:'/iphone3.png',
 			name:'Project 3',
-			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'web app','genAI']
+			infoTop:['en-us','pt-br'],
+			infoBottom:['web app','genAI']
 		},
 	]
 

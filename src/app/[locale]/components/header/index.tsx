@@ -16,6 +16,7 @@ export default function Header({ locale }: { locale: string | undefined }) {
 	const router = useRouter()
 	const [showHeader, setShowHeader] = useState(false)
 	const [isPending, startTransition] = useTransition()
+	const [showMenu, setShowMenu] = useState(false)
 	const pathname = usePathname()
 	// const params = useParams()
 	const t = useTranslations('Header')
@@ -41,10 +42,26 @@ export default function Header({ locale }: { locale: string | undefined }) {
 	}
 
 	return(
-		<header id="header" className="header pt-[47px]">
-			<div className="header-content relative mx-auto max-w-[1388px]" data-show={showHeader}>
-				<nav>
-					<ul className='flex flex-row justify-center items-center gap-[71px]'>
+		<header id="header" className="header">
+			<div className="header-content flex justify-between items-center relative mx-auto max-w-[1388px]" data-show={showHeader}>
+
+				<div className='menu-mobile' data-active={showMenu} onClick={() => setShowMenu(!showMenu)}>
+					<div className='line'></div>
+					<div className='line'></div>
+					<div className='line'></div>
+				</div>
+				<div className='logo-mobile'>
+					<Link href={'#'} >
+						<Image
+							width={46}
+							height={48}
+							src={Logo}
+							alt='Influid Logo'
+						/>
+					</Link>
+				</div>
+				<nav data-active={showMenu}>
+					<ul>
 						<li>
 							<a onClick={() => scrollDown('about-us')}>
 								{t('about')}
