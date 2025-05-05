@@ -1,7 +1,11 @@
 /* split */
 
-.split {
-	@apply relative z-[2] pt-[239px];
+.split{
+	@apply relative z-[2] h-screen flex flex-col justify-end;
+}
+
+.split > div{
+	@apply relative;
 }
 
 .split .left {
@@ -81,17 +85,17 @@
 	@apply pb-[180px];
 }
 
-.split:before {
+.split > div:before {
 	content: "";
 	background: linear-gradient(
 		130deg,
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-[239px] right-0 left-0 mx-auto w-[2px] h-[0] z-[1] opacity-30;
+	@apply absolute top-[15px] right-0 left-0 mx-auto w-[2px] h-[0] z-[1] opacity-30;
 }
 
-.main-content[data-scroll="true"] .split:before{
+.main-content[data-scroll="true"] .split > div:before{
 	animation: splitHeight 2s ease-in-out forwards;
 }
 
