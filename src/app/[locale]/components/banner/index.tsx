@@ -5,11 +5,18 @@ interface BannerProps {
   name: string;
   infoTop: string[];
   infoBottom: string[];
+  handleClick?: () => void | undefined;
 }
 
-export default function Banner({ src, name, infoTop , infoBottom }: BannerProps) {
+export default function Banner({
+	src,
+	name,
+	infoTop,
+	infoBottom,
+	handleClick
+}: BannerProps) {
 	return(
-		<div className='banner'>
+		<div className='banner' onClick={() => handleClick && handleClick()}>
 			<div className="info-image-top">
 				{infoTop.map((info, index) => (
 					<span key={index}>{info}</span>

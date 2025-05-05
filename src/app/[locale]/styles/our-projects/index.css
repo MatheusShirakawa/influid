@@ -109,26 +109,42 @@
 }
 
 .our-projects .line-banners {
-	@apply flex flex-row items-center gap-8 relative z-10 left-[100px] pt-[90px] overflow-hidden;
+	@apply flex flex-row items-center gap-8 relative z-[1] left-[100px] pt-[90px] overflow-hidden;
 }
 
 .our-projects .line-banners .banner{
-	@apply relative;
+	@apply relative cursor-pointer;
 }
 
-.our-projects .line-banners .banner .info-image-top{
+.our-projects .popup + .shadow{
+	@apply fixed z-[9] w-full h-full inset-0 bg-black opacity-0 invisible duration-300 ease-in-out;
+}
+
+.our-projects .popup[data-show="true"] + .shadow{
+	@apply opacity-80 visible;
+}
+
+.our-projects .popup{
+	@apply fixed z-20 max-w-full max-h-full m-auto w-full h-[665px] inset-0 left-[5%] opacity-0 invisible duration-300 ease-in-out scale-50;
+}
+
+.our-projects .popup[data-show="true"]{
+	@apply opacity-100 visible scale-100;
+}
+
+.our-projects .banner .info-image-top{
 	@apply absolute top-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4 z-[1];
 }
 
-.our-projects .line-banners .banner .info-image-top span{
+.our-projects .banner .info-image-top span{
 	@apply rounded-full px-6 py-2 text-[#8FFFFF] border border-[#8FFFFF];
 }
 
-.our-projects .line-banners .banner .info-image-bottom{
+.our-projects .banner .info-image-bottom{
 	@apply absolute bottom-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4 z-[1];
 }
 
-.our-projects .line-banners .banner .info-image-bottom span{
+.our-projects .banner .info-image-bottom span{
 	@apply rounded-full px-6 py-2 text-[#EBFBFF] border border-[#EBFBFF] opacity-40;
 }
 

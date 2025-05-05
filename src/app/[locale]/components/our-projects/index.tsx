@@ -7,6 +7,7 @@ import { TargetAndTransition, VariantLabels } from 'framer-motion';
 
 import { ArrowDown } from "@phosphor-icons/react"
 import { useTranslations } from "next-intl"
+import { useState } from "react";
 
 import { A11y, Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -35,6 +36,12 @@ interface OurProjectsProps {
 export default function OurProjects(props: OurProjectsProps) {
 
 	const t = useTranslations('OurProjects')
+
+	const [showPopup, setShowPopup] = useState(false)
+
+	const handleClick = () => {
+		setShowPopup(!showPopup)
+	}
 
 	return(
 
@@ -71,7 +78,6 @@ export default function OurProjects(props: OurProjectsProps) {
 				<div className='line-banners'>
 					<Swiper
 						modules={[A11y, Autoplay, Navigation]}
-						// modules={[A11y, Navigation]}
 						spaceBetween={24}
 						slidesPerView={4}
 						autoplay={{ delay: 2500, disableOnInteraction: true }}
@@ -80,8 +86,6 @@ export default function OurProjects(props: OurProjectsProps) {
 							nextEl: '.arrow-right',
 							prevEl: '.arrow-left',
 						}}
-						// navigation={true}
-						// pagination={{ clickable: true }}
 						centeredSlides={false}>
 							<SwiperSlide>
 								<Banner
@@ -89,6 +93,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									name='Project 1'
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app','genAI']}
+									handleClick={handleClick}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -97,6 +102,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									name='Project 2'
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'B2B', 'genAI']}
+									handleClick={handleClick}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -105,6 +111,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									name='Project 3'
 									infoTop={['en-us']}
 									infoBottom={['app', 'web app', 'B2B', 'genAI']}
+									handleClick={handleClick}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -113,6 +120,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									name='Project 2'
 									infoTop={['pt-br']}
 									infoBottom={['app', 'web app']}
+									handleClick={handleClick}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -121,6 +129,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									name='Project 2'
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app', 'B2B']}
+									handleClick={handleClick}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -129,6 +138,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									name='Project 3'
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app', 'B2B', 'genAI']}
+									handleClick={handleClick}
 								/>
 							</SwiperSlide>
 					</Swiper>
@@ -151,6 +161,51 @@ export default function OurProjects(props: OurProjectsProps) {
 					<p>{t("develop.description")}</p>
 				</div>
 			</div>
+			<div data-show={showPopup} className="popup">
+				<div>
+					<Swiper
+						modules={[A11y, Autoplay]}
+						spaceBetween={24}
+						slidesPerView={3}
+						autoplay={{ delay: 2500, disableOnInteraction: true }}
+						loop={true}
+						centeredSlides={false}>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone2.png'}
+									name='Project 1'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app','genAI']}
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone1.png'}
+									name='Project 1'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app','genAI']}
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone1.png'}
+									name='Project 1'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app','genAI']}
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/iphone1.png'}
+									name='Project 1'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app','genAI']}
+								/>
+							</SwiperSlide>
+					</Swiper>
+				</div>
+			</div>
+			<div className="shadow" onClick={() => handleClick()}></div>
 		</motion.div>
 	)
 }
