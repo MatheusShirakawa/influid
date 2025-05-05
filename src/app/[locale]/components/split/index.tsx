@@ -17,7 +17,7 @@ export default function Split() {
 									<span className='plus text-[#00FF99] text-2xl mt-4'>+</span>
 									<span
 										className='counter number text-[54px] text-white'
-										style={{ '--from':6, '--to': 10, '--time': '6s' } as React.CSSProperties}>
+										style={{ '--from':0, '--to': 10, '--time': '1s' } as React.CSSProperties}>
 									</span>
 								</div>
 								<p>{t("years")}</p>
@@ -27,7 +27,7 @@ export default function Split() {
 									<span className='plus text-[#1890FF] text-2xl mt-4'>+</span>
 									<span
 										className='counter number text-[54px] text-white'
-										style={{ '--from': 70, '--to': 100, '--time': '6s' } as React.CSSProperties}>
+										style={{ '--from': 90, '--to': 100, '--time': '1s' } as React.CSSProperties}>
 									</span>
 								</div>
 								<p>{t("customers")}</p>
@@ -37,7 +37,7 @@ export default function Split() {
 									<span className='plus text-[#03F2F2] text-2xl mt-4'>+</span>
 									<span
 										className='counter number text-[54px] text-white'
-										style={{ '--from': 50, '--to': 80, '--time': '6s' } as React.CSSProperties}>
+										style={{ '--from': 70, '--to': 80, '--time': '1s' } as React.CSSProperties}>
 									</span>
 								</div>
 								<p>{t("brands")}</p>

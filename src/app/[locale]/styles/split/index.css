@@ -92,7 +92,7 @@
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-[15px] right-0 left-0 mx-auto w-[2px] h-[0] z-[1] opacity-30;
+	@apply absolute top-[15px] right-0 left-0 mx-auto w-[1px] h-[0] z-[1] opacity-30;
 }
 
 .main-content[data-scroll="true"] .split > div:before{

@@ -14,7 +14,7 @@
 }
 
 .header nav{
-	@apply relative right-[-20px]
+	@apply relative right-[-28px];
 }
 
 .header nav ul{

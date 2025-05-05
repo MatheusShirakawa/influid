@@ -51,25 +51,31 @@ export default function OurProjects(props: OurProjectsProps) {
 
 	const arrayOne = [
 		{
-			img:'/iphone1.png',
+			img:'/unite/00.png',
 			name:'Project 1',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app', 'genAI']
 		},
 		{
-			img:'/iphone1.png',
+			img:'/unite/01.png',
 			name:'Project 1',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app', 'genAI']
 		},
 		{
-			img:'/iphone1.png',
+			img:'/unite/02.png',
 			name:'Project 1',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app','genAI']
 		},
 		{
-			img:'/iphone1.png',
+			img:'/unite/03.png',
+			name:'Project 1',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'genAI']
+		},
+		{
+			img:'/unite/04.png',
 			name:'Project 1',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app', 'genAI']
@@ -78,53 +84,83 @@ export default function OurProjects(props: OurProjectsProps) {
 
 	const arrayTwo = [
 		{
-			img:'/iphone2.png',
-			name:'Project 2',
+			img:'/nfl/00.png',
+			name:'NFL',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app']
 		},
 		{
-			img:'/iphone2.png',
-			name:'Project 2',
+			img:'/nfl/01.png',
+			name:'NFL',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app','web app']
 		},
 		{
-			img:'/iphone2.png',
-			name:'Project 2',
+			img:'/nfl/02.png',
+			name:'NFL',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app',]
 		},
 		{
-			img:'/iphone2.png',
-			name:'Project 2',
+			img:'/nfl/03.png',
+			name:'NFL',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app',]
+		},
+		{
+			img:'/nfl/04.png',
+			name:'NFL',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
+		},
+		{
+			img:'/nfl/05.png',
+			name:'NFL',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app']
 		},
 	]
 
-	const arrayThree = [
+	const arrayFour = [
 		{
-			img:'/iphone3.png',
-			name:'Project 3',
+			img:'/read-market/01.png',
+			name:'Read Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['web app','genAI']
 		},
 		{
-			img:'/iphone3.png',
-			name:'Project 3',
+			img:'/read-market/02.png',
+			name:'Read Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['web app','genAI']
 		},
 		{
-			img:'/iphone3.png',
-			name:'Project 3',
+			img:'/read-market/03.png',
+			name:'Read Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['web app','genAI']
 		},
 		{
-			img:'/iphone3.png',
-			name:'Project 3',
+			img:'/read-market/04.png',
+			name:'Read Market',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['web app','genAI']
+		},
+		{
+			img:'/read-market/05.png',
+			name:'Read Market',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['web app','genAI']
+		},
+		{
+			img:'/read-market/06.png',
+			name:'Read Market',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['web app','genAI']
+		},
+		{
+			img:'/read-market/07.png',
+			name:'Read Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['web app','genAI']
 		},
@@ -175,48 +211,8 @@ export default function OurProjects(props: OurProjectsProps) {
 						centeredSlides={false}>
 							<SwiperSlide>
 								<Banner
-									src={'/iphone1.png'}
-									name='Project 1'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app','genAI']}
-									handleClick={handleClick}
-									arrayImgs={arrayOne}
-								/>
-							</SwiperSlide>
-							<SwiperSlide>
-								<Banner
-									src={'/iphone2.png'}
-									name='Project 2'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'B2B', 'genAI']}
-									handleClick={handleClick}
-									arrayImgs={arrayTwo}
-								/>
-							</SwiperSlide>
-							<SwiperSlide>
-								<Banner
-									src={'/iphone3.png'}
-									name='Project 3'
-									infoTop={['en-us']}
-									infoBottom={['app', 'web app', 'B2B', 'genAI']}
-									handleClick={handleClick}
-									arrayImgs={arrayThree}
-								/>
-							</SwiperSlide>
-							<SwiperSlide>
-								<Banner
-									src={'/iphone2.png'}
-									name='Project 2'
-									infoTop={['pt-br']}
-									infoBottom={['app', 'web app']}
-									handleClick={handleClick}
-									arrayImgs={arrayTwo}
-								/>
-							</SwiperSlide>
-							<SwiperSlide>
-								<Banner
-									src={'/iphone1.png'}
-									name='Project 2'
+									src={'/unite/00.png'}
+									name='Unite'
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app', 'B2B']}
 									handleClick={handleClick}
@@ -225,12 +221,52 @@ export default function OurProjects(props: OurProjectsProps) {
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
-									src={'/iphone3.png'}
-									name='Project 3'
+									src={'/nfl/00.png'}
+									name='NFL'
+									infoTop={['pt-br']}
+									infoBottom={['app', 'web app']}
+									handleClick={handleClick}
+									arrayImgs={arrayTwo}
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/read-market/01.png'}
+									name='Read market'
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app', 'B2B', 'genAI']}
 									handleClick={handleClick}
-									arrayImgs={arrayThree}
+									arrayImgs={arrayFour}
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/unite/00.png'}
+									name='Unite'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app', 'B2B']}
+									handleClick={handleClick}
+									arrayImgs={arrayOne}
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/nfl/00.png'}
+									name='NFL'
+									infoTop={['pt-br']}
+									infoBottom={['app', 'web app']}
+									handleClick={handleClick}
+									arrayImgs={arrayTwo}
+								/>
+							</SwiperSlide>
+							<SwiperSlide>
+								<Banner
+									src={'/read-market/01.png'}
+									name='Read market'
+									infoTop={['en-us', 'pt-br']}
+									infoBottom={['app', 'web app', 'B2B', 'genAI']}
+									handleClick={handleClick}
+									arrayImgs={arrayFour}
 								/>
 							</SwiperSlide>
 					</Swiper>
@@ -257,8 +293,8 @@ export default function OurProjects(props: OurProjectsProps) {
 				<div>
 					<Swiper
 						modules={[A11y, Autoplay]}
-						spaceBetween={24}
-						slidesPerView={3}
+						spaceBetween={16}
+						slidesPerView={4}
 						autoplay={{ delay: 2500, disableOnInteraction: true }}
 						loop={true}
 						centeredSlides={false}>

@@ -47,7 +47,7 @@
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute bottom-0 left-0 mr-auto w-0 h-[2px] opacity-30;
+	@apply absolute bottom-0 left-0 mr-auto w-0 h-[1px] opacity-30;
 
 }
 

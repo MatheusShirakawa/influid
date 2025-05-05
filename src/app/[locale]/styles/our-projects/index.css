@@ -18,7 +18,7 @@
 .our-projects .arrow-right-content::before{
 	content: '';
 	background: linear-gradient(130deg, rgba(0, 255, 153, 1) 0%, rgba(0, 96, 255, 1) 100%);
-	@apply absolute top-0 bottom-0 m-auto w-0 h-[2px] z-[1] opacity-30;
+	@apply absolute top-0 bottom-0 m-auto w-0 h-[1px] z-[1] opacity-30;
 }
 
 .our-projects[data-scroll="true"] .arrow-right-content::before{
@@ -121,11 +121,11 @@
 }
 
 .our-projects .popup[data-show="true"] + .shadow{
-	@apply opacity-80 visible;
+	@apply opacity-95 visible;
 }
 
 .our-projects .popup{
-	@apply fixed z-20 max-w-full max-h-full m-auto w-full h-[665px] inset-0 left-[5%] opacity-0 invisible duration-300 ease-in-out scale-50;
+	@apply fixed z-20 max-w-full max-h-full m-auto w-full h-[600px] inset-0 left-[5%] opacity-0 invisible duration-300 ease-in-out scale-50;
 }
 
 .our-projects .popup[data-show="true"]{
@@ -137,7 +137,12 @@
 }
 
 .our-projects .banner .info-image-top span{
-	@apply rounded-full px-6 py-2 text-[#8FFFFF] border border-[#8FFFFF];
+	@apply rounded-full text-xs px-[12px] py-[2px] text-[#8FFFFF] border border-[#8FFFFF];
+}
+
+.our-projects .popup .banner .info-image-top span,
+.our-projects .popup .banner .info-image-bottom span{
+	@apply hidden;
 }
 
 .our-projects .banner .info-image-bottom{
@@ -145,7 +150,7 @@
 }
 
 .our-projects .banner .info-image-bottom span{
-	@apply rounded-full px-6 py-2 text-[#EBFBFF] border border-[#EBFBFF] opacity-40;
+	@apply rounded-full text-xs px-[12px] py-[2px] text-[#EBFBFF] border border-[#EBFBFF] opacity-40;
 }
 
 /* .our-projects .line-banners::before{
@@ -160,6 +165,21 @@
 .our-projects .line-banners .banner .image{
 	@apply overflow-hidden relative z-[0];
 }
+
+.our-projects .line-banners .banner .image::before{
+	content: '';
+	background:linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 1) 100%);
+	/* background:radial-gradient(circle,transparent 0%, rgba(0, 0, 0, 1) 100%); */
+	@apply absolute top-0 bottom-0 left-0 right-0 m-auto w-full h-full z-[1] opacity-80;
+}
+
+.our-projects .line-banners .banner .image::after{
+	content: '';
+	background:linear-gradient(0deg, transparent 60%, rgba(0, 0, 0, 1) 100%);
+	/* background:radial-gradient(circle,transparent 0%, rgba(0, 0, 0, 1) 100%); */
+	@apply absolute top-0 bottom-0 left-0 right-0 m-auto w-full h-full z-[1] opacity-80;
+}
+
 
 .our-projects .line-banners .banner .image img {
 	@apply block w-full ease-in-out duration-330 ;
