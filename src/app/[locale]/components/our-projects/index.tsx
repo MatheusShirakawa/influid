@@ -21,9 +21,6 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/autoplay'
 
-
-// import { useCallback, useRef } from "react"
-
 interface OurProjectsProps {
 	locale?: string | undefined;
 	initial?: TargetAndTransition | undefined;
@@ -33,18 +30,107 @@ interface OurProjectsProps {
 	scrollY?: number | undefined;
 }
 
+interface ArrayImages {
+	img: string;
+	name: string;
+	infoTop: string[];
+	infoBottom: string[]
+}
+
 export default function OurProjects(props: OurProjectsProps) {
 
 	const t = useTranslations('OurProjects')
 
 	const [showPopup, setShowPopup] = useState(false)
+	const [arrayImages, setArrayImages] = useState<ArrayImages[]>([])
 
-	const handleClick = () => {
+	const handleClick = (array: Array<ArrayImages>) => {
 		setShowPopup(!showPopup)
+		setArrayImages(array)
 	}
 
-	return(
+	const arrayOne = [
+		{
+			img:'/iphone1.png',
+			name:'Project 1',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone1.png',
+			name:'Project 1',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone1.png',
+			name:'Project 1',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone1.png',
+			name:'Project 1',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+	]
 
+	const arrayTwo = [
+		{
+			img:'/iphone2.png',
+			name:'Project 2',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone2.png',
+			name:'Project 2',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone2.png',
+			name:'Project 2',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone2.png',
+			name:'Project 2',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+	]
+
+	const arrayThree = [
+		{
+			img:'/iphone3.png',
+			name:'Project 3',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone3.png',
+			name:'Project 3',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone3.png',
+			name:'Project 3',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+		{
+			img:'/iphone3.png',
+			name:'Project 3',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'web app','genAI']
+		},
+	]
+
+	return(
 		<motion.div
 			id="our-projects"
 			className="our-projects relative z-[1]"
@@ -94,6 +180,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app','genAI']}
 									handleClick={handleClick}
+									arrayImgs={arrayOne}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -103,6 +190,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'B2B', 'genAI']}
 									handleClick={handleClick}
+									arrayImgs={arrayTwo}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -112,6 +200,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									infoTop={['en-us']}
 									infoBottom={['app', 'web app', 'B2B', 'genAI']}
 									handleClick={handleClick}
+									arrayImgs={arrayThree}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -121,6 +210,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									infoTop={['pt-br']}
 									infoBottom={['app', 'web app']}
 									handleClick={handleClick}
+									arrayImgs={arrayTwo}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -130,6 +220,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app', 'B2B']}
 									handleClick={handleClick}
+									arrayImgs={arrayOne}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
@@ -139,6 +230,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app', 'B2B', 'genAI']}
 									handleClick={handleClick}
+									arrayImgs={arrayThree}
 								/>
 							</SwiperSlide>
 					</Swiper>
@@ -170,42 +262,20 @@ export default function OurProjects(props: OurProjectsProps) {
 						autoplay={{ delay: 2500, disableOnInteraction: true }}
 						loop={true}
 						centeredSlides={false}>
-							<SwiperSlide>
-								<Banner
-									src={'/iphone2.png'}
-									name='Project 1'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app','genAI']}
-								/>
-							</SwiperSlide>
-							<SwiperSlide>
-								<Banner
-									src={'/iphone1.png'}
-									name='Project 1'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app','genAI']}
-								/>
-							</SwiperSlide>
-							<SwiperSlide>
-								<Banner
-									src={'/iphone1.png'}
-									name='Project 1'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app','genAI']}
-								/>
-							</SwiperSlide>
-							<SwiperSlide>
-								<Banner
-									src={'/iphone1.png'}
-									name='Project 1'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app','genAI']}
-								/>
-							</SwiperSlide>
+							{arrayImages.map((item, index) => (
+								<SwiperSlide key={index}>
+									<Banner
+										src={item.img}
+										name={item.name}
+										infoTop={item.infoTop}
+										infoBottom={item.infoBottom}
+									/>
+								</SwiperSlide>
+							))}
 					</Swiper>
 				</div>
 			</div>
-			<div className="shadow" onClick={() => handleClick()}></div>
+			<div className="shadow" onClick={() => setShowPopup(false)}></div>
 		</motion.div>
 	)
 }

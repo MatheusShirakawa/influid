@@ -5,7 +5,15 @@ interface BannerProps {
   name: string;
   infoTop: string[];
   infoBottom: string[];
-  handleClick?: () => void | undefined;
+  arrayImgs?: ArrayImages[] | undefined;
+  handleClick?: (arrayImgs: ArrayImages[]) => void | undefined;
+}
+
+interface ArrayImages {
+	img: string;
+	name: string;
+	infoTop: string[];
+	infoBottom: string[]
 }
 
 export default function Banner({
@@ -13,10 +21,11 @@ export default function Banner({
 	name,
 	infoTop,
 	infoBottom,
+	arrayImgs,
 	handleClick
 }: BannerProps) {
 	return(
-		<div className='banner' onClick={() => handleClick && handleClick()}>
+		<div className='banner' onClick={() => handleClick && handleClick(arrayImgs || [])}>
 			<div className="info-image-top">
 				{infoTop.map((info, index) => (
 					<span key={index}>{info}</span>
