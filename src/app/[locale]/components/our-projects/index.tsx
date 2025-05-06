@@ -174,7 +174,7 @@ export default function OurProjects(props: OurProjectsProps) {
 			whileInView={props.whileInView}
 			transition={props.transition}
 			viewport={props.viewport}
-			data-scroll={(props.scrollY ?? 0) > 1799 && true}
+			data-scroll={(props.scrollY ?? 0) > 1700 && true}
 		>
 			<div className="content-slide">
 				<div className='line-info'>
@@ -293,7 +293,7 @@ export default function OurProjects(props: OurProjectsProps) {
 				<div>
 					<Swiper
 						modules={[A11y, Autoplay]}
-						spaceBetween={16}
+						spaceBetween={24}
 						slidesPerView={4}
 						autoplay={{ delay: 2500, disableOnInteraction: true }}
 						loop={true}
@@ -305,6 +305,7 @@ export default function OurProjects(props: OurProjectsProps) {
 										name={item.name}
 										infoTop={item.infoTop}
 										infoBottom={item.infoBottom}
+										hasInfoTexts={false}
 									/>
 								</SwiperSlide>
 							))}

@@ -99,13 +99,28 @@
 	@apply text-[#1890FF] border-[#1890FF];
 }
 
-.our-projects .title {
+.our-projects h2.title {
 	@apply text-[280px] text-[#0060FF] font-bold block left-[-70px] relative z-[1];
 	line-height: 120%;
 }
 
-.our-projects .title[data-language="pt"] {
+.our-projects h2.title[data-language="pt"] {
 	@apply left-0;
+}
+
+
+@keyframes titleProjects {
+	0%{
+		transform: translateX(-1200px);
+	}
+
+	100%{
+		transform: translateY(0);
+	}
+}
+
+.our-projects[data-scroll="true"] h2.title {
+	animation: titleProjects 3s ease-in-out forwards;
 }
 
 .our-projects .line-banners {
@@ -145,6 +160,10 @@
 	@apply hidden;
 }
 
+.our-projects .banner .info-image-texts{
+	@apply absolute bottom-14 max-w-full left-0 px-5 right-0 m-auto w-full flex flex-col items-start gap-4 z-[1];
+}
+
 .our-projects .banner .info-image-bottom{
 	@apply absolute bottom-5 left-5 right-0 m-auto w-full flex flex-row items-start gap-4 z-[1];
 }
@@ -152,11 +171,6 @@
 .our-projects .banner .info-image-bottom span{
 	@apply rounded-full text-xs px-[12px] py-[2px] text-[#EBFBFF] border border-[#EBFBFF] opacity-40;
 }
-
-/* .our-projects .line-banners::before{
-	content: ''
-
-} */
 
 .our-projects .number-absolute {
 	@apply top-[-93px] right-[84px];
@@ -168,17 +182,16 @@
 
 .our-projects .line-banners .banner .image::before{
 	content: '';
-	background:linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 1) 100%);
+	/* background:linear-gradient(180deg, transparent 0%, #010D20 100%); */
 	/* background:radial-gradient(circle,transparent 0%, rgba(0, 0, 0, 1) 100%); */
-	@apply absolute top-0 bottom-0 left-0 right-0 m-auto w-full h-full z-[1] opacity-80;
+	@apply absolute top-0 bottom-0 left-0 right-0 m-auto w-full bg-[#010D20] h-full z-[2] opacity-80;
 }
 
-.our-projects .line-banners .banner .image::after{
+/* .our-projects .line-banners .banner .image::after{
 	content: '';
 	background:linear-gradient(0deg, transparent 60%, rgba(0, 0, 0, 1) 100%);
-	/* background:radial-gradient(circle,transparent 0%, rgba(0, 0, 0, 1) 100%); */
 	@apply absolute top-0 bottom-0 left-0 right-0 m-auto w-full h-full z-[1] opacity-80;
-}
+} */
 
 
 .our-projects .line-banners .banner .image img {

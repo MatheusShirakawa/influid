@@ -5,6 +5,7 @@ interface BannerProps {
   name: string;
   infoTop: string[];
   infoBottom: string[];
+  hasInfoTexts?: boolean;
   arrayImgs?: ArrayImages[] | undefined;
   handleClick?: (arrayImgs: ArrayImages[]) => void | undefined;
 }
@@ -21,6 +22,7 @@ export default function Banner({
 	name,
 	infoTop,
 	infoBottom,
+	hasInfoTexts = true,
 	arrayImgs,
 	handleClick
 }: BannerProps) {
@@ -40,6 +42,12 @@ export default function Banner({
 					className='img'
 				/>
 			</div>
+			{hasInfoTexts && (
+				<div className="info-image-texts">
+					<h3 className="name">{name}</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni veniam quam</p>
+				</div>
+			)}
 			<div className='info-image-bottom'>
 				{infoBottom.map((info, index) => (
 					<span key={index}>{info}</span>
