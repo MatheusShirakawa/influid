@@ -124,7 +124,6 @@
 	}
 }
 
-
 @property --from {
 	syntax: '<integer>';
 	initial-value: 0;
@@ -146,5 +145,85 @@
 @keyframes counter {
 	to {
 		--from: var(--to, 100);
+	}
+}
+
+@media (max-width:980px){
+
+	.split .content-split-last .left,
+	.split .content-split .left{
+		@apply pl-0 w-[60%];
+	}
+
+	.split .number-absolute{
+		@apply text-[200px];
+	}
+
+	.split .content-split-last .right,
+	.split .content-split .right{
+		@apply w-[40%];
+	}
+
+	.split > div:before{
+		@apply right-[-20%];
+	}
+}
+
+@media (max-width:767px){
+
+	.counter.number{
+		@apply text-[36px];
+	}
+
+	.split .content-split-last,
+	.split .content-split{
+		@apply flex-col justify-center pb-[100px];
+	}
+
+	.split .content-split .left .line-numbers{
+		@apply justify-center gap-8;
+	}
+
+	.split > div:before{
+		@apply hidden;
+	}
+
+	.split .number-absolute{
+		@apply text-center right-0 left-0 text-[150px] top-[-140px];
+	}
+
+	.split .content-split-last .left h2{
+		@apply text-center text-[40px];
+	}
+
+	.split .content-split-last .left{
+		@apply px-6;
+	}
+
+	.split .content-split .left{
+		@apply px-6;
+	}
+
+	.split .content-split-last .right{
+		@apply text-center flex justify-center items-center flex-col px-10;
+	}
+
+	.split .content-split-last .scroll-down{
+		@apply w-full max-w-[201px] text-sm;
+	}
+
+	.split .content-split-last > div,
+	.split .content-split > div{
+		@apply !w-full
+	}
+
+	.split .content-split .right{
+		@apply hidden;
+	}
+}
+
+@media (max-width:500px){
+	.split .content-split-last .left h2{
+		@apply text-center text-[36px];
 	}
 }

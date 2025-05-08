@@ -55,6 +55,10 @@
 	animation: parallaxLineWidth 2s ease-in-out forwards;
 }
 
+.parallax .bottom .contact {
+	@apply relative max-w-[1452px] mx-auto;
+}
+
 .parallax .bottom .contact .number-absolute {
 	@apply top-[-150px] right-[85px] left-0 bottom-0 text-center block;
 }
@@ -114,6 +118,13 @@
 
 .parallax .bottom .contact button:hover svg{
 	@apply rotate-[-45deg];
+}
+
+
+@media (max-width: 1480px){
+	.parallax .bottom .contact{
+		@apply max-w-[1193px];
+	}
 }
 
 /* bottom */

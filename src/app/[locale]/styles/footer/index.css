@@ -1,44 +1,50 @@
 
 /* footer */
 
-.footer {
-	@apply pt-8 pb-[80px] relative;
+/* block arrow up */
+
+.block-arrow-up{
+	@apply absolute bottom-4 left-0 duration-300 ease-in-out z-10;
 }
 
-.footer .block-arrow-up{
-	@apply absolute top-[-120px] left-[-96px] duration-300 ease-in-out ;
+.block-arrow-up:hover .arrow-up{
+	@apply pb-[60px];
 }
 
-.footer .arrow-up{
+.block-arrow-up .arrow-up{
 	stroke:#fff;
 	stroke-width: 10px;
 	@apply flex relative cursor-pointer bg-[#0060FF] w-9 h-9 max-h-9 py-4 rounded-full items-center justify-center ease-in-out duration-300 text-white;
 }
 
-.footer .arrow-up svg{
+.block-arrow-up .arrow-up svg{
 	@apply w-5 h-5 font-bold absolute inset-0 top-[7px] bottom-[initial] mx-auto z-1;
 }
 
-.footer .block-arrow-up:hover{
-	@apply top-[-120px];
+/* block arrow up */
+
+.footer {
+	@apply pt-8 pb-[80px] relative overflow-hidden;
 }
 
-.footer .block-arrow-up:hover .arrow-up{
-	@apply pb-[60px];
+.footer .container-footer{
+	@apply relative max-w-[1452px] mx-auto px-4;
 }
 
-.footer::before{
+.footer .container-footer::before{
 	content: "";
 	background: linear-gradient(
 		130deg,
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-0 right-0 ml-auto w-0 h-[1px] opacity-30;
+	@apply absolute -top-8 left-0 ml-auto w-0 h-[1px] opacity-30 max-w-[1670px];
 }
 
-.footer[data-scroll="true"]::before{
-	animation: parallaxLineWidth 2s ease-in-out forwards;
+@media (min-width:1660px){
+	.footer[data-scroll="true"] .container-footer::before{
+		animation: parallaxLineWidthDesktop 2s ease-in-out forwards;
+	}
 }
 
 @keyframes parallaxLineWidth{
@@ -50,5 +56,82 @@
 		width: 93%;
 	}
 }
+
+
+
+@keyframes parallaxLineWidthDesktop{
+	0%{
+		width: 0;
+	}
+
+	100%{
+		width: 100vw;
+	}
+}
+
+@keyframes parallaxLineWidthMobile{
+	0%{
+		width: 0;
+	}
+
+	100%{
+		width: 100vw;
+	}
+}
+
+@media (max-width:1659px){
+	.block-arrow-up{
+		@apply left-0;
+	}
+
+	.footer[data-scroll="true"] .container-footer::before{
+		overflow: hidden;
+		animation: parallaxLineWidthMobile 2s ease-in-out forwards;
+	}
+}
+
+
+@media (max-width: 1480px){
+
+	.block-arrow-up{
+		@apply left-[30px];
+	}
+
+	.footer .container-footer::before{
+		@apply ml-[30px];
+	}
+
+	.footer .container-footer{
+		@apply max-w-[1193px] px-[30px];
+	}
+}
+
+
+@media (max-width:980px){
+
+	.footer .footer-content{
+		@apply flex-wrap gap-y-14;
+	}
+
+	.footer .footer-content .item{
+		@apply w-1/2 max-w-full;
+	}
+
+	.footer .footer-content .item:nth-child(1),
+	.footer .footer-content .item:nth-child(3){
+		padding-right: 60px;
+	}
+	.footer .footer-content .item:nth-child(2),
+	.footer .footer-content .item:nth-child(4){
+		padding-left: 60px;
+	}
+}
+
+@media (max-width:620px){
+	.footer .footer-content .item{
+		@apply w-full max-w-full !p-0;
+	}
+}
+
 
 /* footer */

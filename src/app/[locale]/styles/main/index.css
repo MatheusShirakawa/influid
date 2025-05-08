@@ -25,6 +25,10 @@ main {
 	@apply relative h-screen flex justify-center items-center flex-col;
 }
 
+.first-content-page .mobile-text{
+	@apply hidden;
+}
+
 .line-absolute{
 	content: '';
 	@apply absolute top-[30px] right-0 left-0 mx-auto w-[2px] rounded-full h-0 ease-in-out duration-300 z-[3] opacity-30;
@@ -45,6 +49,10 @@ main {
 
 .first-content-page .block-scroll-down{
 	@apply relative h-[96px] mt-[80px] w-[36px];
+}
+
+.first-content-page .design-mini-title{
+	@apply rounded-full border border-[#1890ff] max-w-[212px] mx-auto text-[#1890ff] text-center px-6 py-[5px] block;
 }
 
 .first-content-page a.scroll-down{
@@ -105,13 +113,62 @@ main {
 
 @media (max-width:1140px){
 	.first-content-page h1 {
-		@apply text-[96px] leading-relaxed;
+		@apply text-[96px];
 	}
 }
 
 @media (max-width:1024px){
 	.first-content-page h1 {
-		@apply text-[72px] leading-relaxed;
+		@apply text-[72px];
+	}
+
+	.first-content-page .design-mini-title{
+		@apply opacity-40;
+	}
+}
+
+@media (max-width:980px){
+	.number-absolute{
+		@apply text-[200px]
+	}
+
+	.first-content-page h1::before{
+		@apply left-[-20px] top-[initial];
+	}
+
+	.first-content-page h1::after{
+		@apply right-[-20px] top-[initial];
+	}
+
+	.first-content-page .number-absolute{
+		@apply top-[-120px] right-0;
+	}
+
+	.first-content-page .mobile-text{
+		@apply block text-center text-white max-w-[278px] mx-auto;
+	}
+
+}
+
+@media (max-width:767px){
+	.first-content-page h1 {
+		@apply text-[62px] leading-[130px] pb-[20px];
+	}
+
+	.number-absolute{
+		@apply text-[150px]
+	}
+}
+
+@media (max-width:500px){
+	.first-content-page h1 {
+		@apply text-[52px] leading-[120px];
+	}
+}
+
+@media (max-width:500px){
+	.first-content-page h1 {
+		@apply text-[42px] leading-[90px];
 	}
 }
 

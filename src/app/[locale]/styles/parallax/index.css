@@ -4,6 +4,10 @@
 	@apply relative w-full;
 }
 
+.parallax > .item {
+	@apply overflow-hidden;
+}
+
 .parallax::before{
 	content: '';
 	background: linear-gradient(

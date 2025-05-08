@@ -10,6 +10,8 @@ import { useTranslations } from "next-intl"
 
 export default function FirstContent(){
 	const t = useTranslations('FirstContent')
+	const split = useTranslations('Split')
+
 	const strings = [
 		t("strings.websites"),
 		t("strings.apps"),
@@ -21,7 +23,7 @@ export default function FirstContent(){
 	return(
 		<div className='first-content-page'>
 			<div className="line-absolute"></div>
-			<span className='rounded-full border border-[#1890ff] max-w-[212px] mx-auto text-[#1890ff] text-center px-6 py-[5px] block'>
+			<span className='design-mini-title'>
 				influid design studio
 			</span>
 
@@ -35,6 +37,10 @@ export default function FirstContent(){
 					<span className='text-[#00ff99]'>.</span>
 				</div>
 			</h1>
+
+			<div className="mobile-text">
+				<p><strong>Influid</strong> {split("description")}</p>
+			</div>
 
 			<div className='block-scroll-down mx-auto'>
 				<a onClick={() => scrollDown('split')} className='scroll-down'>
