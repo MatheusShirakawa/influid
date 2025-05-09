@@ -145,7 +145,7 @@ main {
 	}
 
 	.first-content-page .mobile-text{
-		@apply block text-center text-white max-w-[278px] mx-auto;
+		@apply block text-center text-white max-w-[290px] mx-auto;
 	}
 
 }
@@ -167,8 +167,16 @@ main {
 }
 
 @media (max-width:500px){
+	.first-content-page h1::before{
+		@apply left-0;
+	}
+
+	.first-content-page h1::after{
+		@apply right-0;
+	}
+
 	.first-content-page h1 {
-		@apply text-[42px] leading-[90px];
+		@apply text-[42px] leading-[90px] w-full;
 	}
 }
 
