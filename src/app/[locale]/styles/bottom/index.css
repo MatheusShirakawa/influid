@@ -13,12 +13,16 @@
 	@apply relative pt-[200px] pb-6;
 }
 
+.parallax .bottom .our-clients .title{
+	@apply text-[64px] text-center font-bold text-[#03F2F2];
+}
+
 .parallax .bottom .our-clients .block-arrow-right-client{
 	@apply relative;
 }
 
 .parallax .bottom .our-clients .arrow-right-client{
-	@apply flex cursor-pointer bg-[#0060FF] w-9 h-9 px-4 rounded-full items-center mt-[140px] justify-center ml-auto mr-[133px] ease-in-out duration-300 relative text-white m-auto;
+	@apply flex cursor-pointer bg-[#0060FF] w-9 h-9 px-4 rounded-full items-center justify-center ml-auto mr-[133px] ease-in-out duration-300 relative text-white m-auto;
 }
 
 
@@ -124,6 +128,10 @@
 	@apply rotate-[-45deg];
 }
 
+.parallax .bottom .list-clients{
+	@apply my-[100px] flex gap-14 flex-row justify-between items-center;
+}
+
 
 @media (max-width: 1480px){
 	.parallax .bottom .contact{
@@ -132,8 +140,17 @@
 }
 
 @media (max-width:1100px){
+	.parallax .bottom .our-clients .title,
 	.parallax .bottom .contact h2.title{
 		@apply text-[96px];
+	}
+
+	.parallax .bottom .our-clients{
+		@apply pt-[110px];
+	}
+
+	.parallax .bottom .list-clients{
+		@apply my-[100px]
 	}
 
 	.parallax .bottom .contact .number-absolute{
@@ -142,6 +159,18 @@
 }
 
 @media (max-width:767px){
+
+	.parallax .bottom .our-clients{
+		@apply pt-[100px];
+	}
+
+	.parallax .bottom .list-clients{
+		@apply my-[60px]
+	}
+
+	.parallax .bottom .our-clients .arrow-right-client{
+		@apply mr-[5%];
+	}
 
 	.parallax .bottom .contact{
 		@apply px-[30px];
@@ -159,6 +188,7 @@
 		@apply top-[-80px] right-0 left-0;
 	}
 
+	.parallax .bottom .our-clients .title,
 	.parallax .bottom .contact h2.title{
 		@apply text-[72px];
 	}
@@ -170,12 +200,24 @@
 
 @media (max-width:550px){
 
+	.parallax .bottom .our-clients{
+		@apply pt-[80px];
+	}
+
+	.parallax .bottom .our-clients .title,
 	.parallax .bottom .contact h2.title{
 		@apply text-[48px];
 	}
 
 	.parallax .bottom .contact .number-absolute{
 		@apply top-[-120px];
+	}
+}
+
+@media (max-width:390px){
+	.parallax .bottom .our-clients .title,
+	.parallax .bottom .contact h2.title{
+		@apply text-[36px];
 	}
 }
 

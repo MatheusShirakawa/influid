@@ -207,7 +207,7 @@
 }
 
 .our-projects .develop {
-	@apply bg-white flex flex-row justify-between items-start w-full relative pb-[159px] pt-[483px] mt-[-230px];
+	@apply bg-white flex flex-row justify-between items-start w-full relative pb-[159px] pt-[483px] mt-[-230px] pr-[222px];
 }
 
 .our-projects .develop .title {
@@ -255,7 +255,12 @@
 }
 
 .our-projects .develop .right {
-	@apply text-[#253C77] text-base mr-[222px] max-w-[351px];
+	@apply text-[#253C77] text-base max-w-[351px];
+}
+
+
+@media (max-width: 1480px){
+
 }
 
 /* our-projects */

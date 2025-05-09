@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl"
 
-export default function Parallax(){
+export default function Parallax({ locale }: { locale: string }) {
 
 	const t = useTranslations('Parallax')
 
@@ -21,6 +21,9 @@ export default function Parallax(){
 				<div className='left'>
 					<span>02.</span>
 					<h2 className="title">{t("applications")}</h2>
+					<h2 className="title mobile" data-language={locale == 'pt'}>applica ções</h2>
+					<h2 className="title mobile" data-language={locale == 'en'}>applica tions</h2>
+					<h2 className="title mobile-final">apps</h2>
 				</div>
 				<div className='right'>
 					{t("applications-description")}

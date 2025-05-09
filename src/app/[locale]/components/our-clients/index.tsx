@@ -33,14 +33,36 @@ export default function OurClients(props:OurClientsProps){
 
 	return(
 		<div className='our-clients' data-scroll={(props.scrollY ?? 0) > 6500 && true}>
-			<h2 className='title text-[64px] text-center font-bold text-[#03F2F2]'>
+			<h2 className='title'>
 				{t('title-one')} <span className='text-white'>{t('title-two')}</span>.
 			</h2>
-			<div className='list-clients mt-[100px] flex gap-14 flex-row justify-between items-center'>
+			<div className='list-clients'>
 				<Swiper
 					modules={[Autoplay, A11y, Navigation ]}
 					spaceBetween={60}
 					slidesPerView={6}
+					breakpoints={{
+						320: {
+							slidesPerView: 2,
+							spaceBetween: 20,
+						},
+						450: {
+							slidesPerView: 2,
+							spaceBetween: 20,
+						},
+						640: {
+						  slidesPerView: 3,
+						  spaceBetween: 30,
+						},
+						768: {
+						  slidesPerView: 4,
+						  spaceBetween: 40,
+						},
+						1024: {
+						  slidesPerView: 6,
+						  spaceBetween: 60,
+						},
+					  }}
 					autoplay={{ delay: 2500, disableOnInteraction: true }}
 					loop={true}
 					navigation={{

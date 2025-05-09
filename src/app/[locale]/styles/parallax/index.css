@@ -99,4 +99,206 @@
 	@apply top-[520px] h-[400px] bg-[#021078];
 }
 
+.parallax > .item .title.mobile-final,
+.parallax > .item .title.mobile{
+	@apply hidden;
+}
+
+@media (max-width:1830px){
+	.parallax::before{
+		@apply right-[32%];
+	}
+
+	.parallax > .item h2{
+		@apply text-[128px];
+	}
+
+	.parallax > .item{
+		@apply pr-[60px];
+	}
+}
+
+@media (max-width:1750px){
+
+	.parallax::before{
+		@apply right-[29%];
+	}
+
+	.parallax > .item .right{
+		@apply max-w-[400px];
+	}
+}
+
+@media (max-width:1680px){
+
+	.parallax::before{
+		@apply right-[27%];
+	}
+
+	.parallax > .item .right{
+		@apply max-w-[300px];
+	}
+}
+
+@media (max-width:1400px){
+
+	.parallax::before{
+		@apply right-[35%];
+	}
+
+	.parallax > .item h2{
+		@apply text-[96px];
+	}
+
+	.parallax > .item .right{
+		@apply max-w-[350px];
+	}
+}
+
+@media (max-width:1240px){
+	.parallax::before{
+		@apply right-[33%];
+	}
+
+	.parallax > .item .right{
+		@apply max-w-[300px];
+	}
+
+	.parallax > .item.applications{
+		@apply top-[270px];
+	}
+}
+
+@media (max-width:1200px){
+
+	.parallax::before{
+		@apply right-[35%];
+	}
+
+	.parallax > .item h2{
+		@apply pl-0 pt-[20px];
+	}
+
+	.parallax > .item{
+		@apply pl-[64px];
+	}
+}
+
+@media (max-width:1140px){
+
+	.parallax > .item .title{
+		@apply max-w-[377px];
+	}
+
+	.parallax::before{
+		@apply right-[42%];
+	}
+
+	.parallax > .item.applications .title{
+		@apply hidden;
+	}
+
+	.parallax > .item .title.mobile[data-language="true"]{
+		@apply block leading-[117px];
+	}
+
+	.parallax > .item.branding{
+		@apply top-[550px];
+	}
+}
+
+@media (max-width:1024px){
+	.parallax::before{
+		@apply right-[40%];
+	}
+
+	.parallax > .item{
+		@apply pl-[40px];
+	}
+}
+
+@media (max-width:970px){
+
+	.parallax > .item h2{
+		@apply text-[72px] leading-[initial];
+	}
+
+	.parallax > .item .title.mobile[data-language="true"]{
+		@apply leading-[initial];
+	}
+
+	.parallax > .item{
+		@apply pl-[20px];
+	}
+
+	.parallax::before{
+		@apply right-[46%];
+	}
+}
+
+
+@media (max-width:860px){
+	.parallax > .item .right{
+		@apply max-w-[247px];
+	}
+
+	.parallax > .item.applications{
+		@apply top-[320px];
+	}
+}
+
+@media (max-width:790px){
+	.parallax::before{
+		@apply right-[44%];
+	}
+}
+
+@media (max-width:730px){
+	.parallax > .item .left,
+	.parallax > .item{
+		@apply flex-col justify-start;
+	}
+
+	.parallax > .item{
+		@apply pt-[50px]
+	}
+
+	.parallax > .item.applications{
+		@apply top-[350px];
+	}
+
+	.parallax > .item .right{
+		@apply max-w-[400px];
+	}
+
+	.parallax > .item.branding{
+		@apply top-[695px] h-[500px];
+	}
+
+	.parallax > .item .title.mobile{
+		@apply !hidden;
+	}
+
+	.parallax > .item .title.mobile-final{
+		@apply block;
+	}
+
+	.parallax::before{
+		@apply right-[4%];
+	}
+}
+
+@media (max-width:550px){
+	.parallax > .item h2{
+		@apply text-[54px];
+	}
+}
+
+
+@media (max-width:390px){
+	.parallax > .item .right{
+		@apply text-sm;
+	}
+}
+
 /* parallax */
