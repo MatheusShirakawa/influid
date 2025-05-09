@@ -12,6 +12,10 @@
 	@apply z-10;
 }
 
+.split .line-mobile-split{
+	@apply hidden;
+}
+
 .split .number-absolute {
 	@apply top-[-225px] left-[40px] bottom-[52px] right-[initial] text-[300px] z-[0];
 }
@@ -171,8 +175,30 @@
 
 @media (max-width:767px){
 
+	.split{
+		@apply justify-start;
+	}
+
 	.counter.number{
 		@apply text-[36px];
+	}
+
+	.split .block{
+		@apply flex flex-col justify-between items-center h-full;
+	}
+
+	.split .line-mobile-split{
+		content: "";
+		background: linear-gradient(
+			130deg,
+			rgba(0, 255, 153, 1) 0%,
+			rgba(0, 96, 255, 1) 100%
+		);
+		@apply mx-auto block w-[1px] h-[0] z-[1] opacity-30 max-h-[100px] mt-[35px];
+	}
+
+	.main-content[data-scroll="true"] .split .line-mobile-split{
+		animation: splitHeight 2s ease-in-out forwards;
 	}
 
 	.split .content-split-last,

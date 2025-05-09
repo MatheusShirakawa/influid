@@ -54,11 +54,11 @@ export default function Contact(){
 	})
 
 	return(
-		<div id="contact" className='contact '>
+		<div id="contact" className='contact'>
 			<div className='content max-w-[850px] mx-auto pb-[115px] pt-[120px]'>
 				<div className='relative'>
 					<span className='number-absolute'>05</span>
-					<h2 className='title text-[128px] text-[#00FF99] font-bold text-center relative z-10'>
+					<h2 className='title'>
 						{t("title-one")} <span className='text-white'>{t("title-two")}</span>.
 					</h2>
 				</div>

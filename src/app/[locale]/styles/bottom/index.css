@@ -59,6 +59,10 @@
 	@apply relative max-w-[1452px] mx-auto;
 }
 
+.parallax .bottom .contact h2.title{
+	@apply text-[128px] text-[#00FF99] font-bold text-center relative z-10;
+}
+
 .parallax .bottom .contact .number-absolute {
 	@apply top-[-150px] right-[85px] left-0 bottom-0 text-center block;
 }
@@ -70,7 +74,7 @@
 .parallax .bottom .contact label input {
 	outline: 0;
 	border: 0;
-	@apply relative h-[44px] leading-[44px] pr-4 border-b border-b-[rgba(255,255,255,0.4)] block w-full;
+	@apply relative h-[44px] leading-[44px] pr-4 border-b border-b-[rgba(255,255,255,0.1)] block w-full;
 }
 
 .parallax .bottom .contact label input+.border-focus::before{
@@ -124,6 +128,54 @@
 @media (max-width: 1480px){
 	.parallax .bottom .contact{
 		@apply max-w-[1193px];
+	}
+}
+
+@media (max-width:1100px){
+	.parallax .bottom .contact h2.title{
+		@apply text-[96px];
+	}
+
+	.parallax .bottom .contact .number-absolute{
+		@apply top-[-100px] right-0 left-0;
+	}
+}
+
+@media (max-width:767px){
+
+	.parallax .bottom .contact{
+		@apply px-[30px];
+	}
+
+	.parallax .bottom .contact button{
+		@apply h-[48px] leading-[48px] text-sm;
+	}
+
+	.parallax .bottom .contact .contact-form{
+		@apply px-0;
+	}
+
+	.parallax .bottom .contact .number-absolute{
+		@apply top-[-80px] right-0 left-0;
+	}
+
+	.parallax .bottom .contact h2.title{
+		@apply text-[72px];
+	}
+
+	.parallax .bottom .contact .contact-form p{
+		@apply max-w-[468px] mx-auto;
+	}
+}
+
+@media (max-width:550px){
+
+	.parallax .bottom .contact h2.title{
+		@apply text-[48px];
+	}
+
+	.parallax .bottom .contact .number-absolute{
+		@apply top-[-120px];
 	}
 }
 

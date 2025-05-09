@@ -8,7 +8,8 @@ export default function Split() {
 	const t = useTranslations('Split')
 	return(
 		<div id="split" className='split'>
-			<div className="">
+			<div className="block">
+				<div className="line-mobile-split"></div>
 				<div className='content-split'>
 					<div className='left'>
 						<div className='line-numbers'>

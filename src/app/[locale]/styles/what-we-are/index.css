@@ -181,9 +181,18 @@
 	@apply relative max-w-[111px] mr-auto w-[111px] duration-300 ease-in-out;
 }
 
-.what-we-are .item.second:hover .icons .full svg:last-child{
-	animation: changePosition 4s forwards ease-in-out;
-	animation-delay: 1s;
+@media (min-width:551px){
+	.what-we-are .item.second:hover .icons .full svg:last-child{
+		animation: changePosition 4s forwards ease-in-out;
+		animation-delay: 1s;
+	}
+}
+
+@media (max-width:550px){
+	.what-we-are .item.second:hover .icons .full svg:last-child{
+		animation: changePositionMobile 4s forwards ease-in-out;
+		animation-delay: 1s;
+	}
 }
 
 @keyframes changePosition{
@@ -204,6 +213,24 @@
 	}
 }
 
+@keyframes changePositionMobile{
+	0% {
+		transform: translate(0);
+	}
+	10% {
+		transform: translate(-72px, -73px);
+	}
+	30% {
+		transform: translate(-72px, -73px);
+	}
+	40% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
 /* second */
 
 /* third */
@@ -215,52 +242,22 @@
 	@apply flex flex-row items-center justify-between gap-1;
 }
 
-.what-we-are .item.third .icons svg:nth-child(1) {
-	@apply top-0 left-0;
-}
-
-.what-we-are .item.third .icons svg:nth-child(2) {
-	@apply top-0 right-0;
-}
-
-.what-we-are .item.third .icons svg:nth-child(3) {
-	@apply top-0 bottom-0 right-0 left-0;
-}
-
-.what-we-are .item.third .icons svg:nth-child(4) {
-	@apply bottom-0 left-0 right-0;
-}
-
-.what-we-are .item.third:hover .icons .top{
-	animation: svgTopUp 4s forwards ease-in-out;
-	animation-delay: 1s;
-}
-
 .what-we-are .item.third:hover .icons > svg:nth-child(2){
 	animation: showHide 4s forwards ease-in-out;
 	animation-delay: 1s;
 }
 
-.what-we-are .item.third:hover .icons > svg:nth-child(3){
-	animation:svgBottomUp 4s forwards ease-in-out;
-	animation-delay: 1s;
+@media (min-width:551px){
+	.what-we-are .item.third:hover .icons > svg:nth-child(3){
+		animation:svgBottomUp 4s forwards ease-in-out;
+		animation-delay: 1s;
+	}
 }
 
-@keyframes svgTopUp{
-	0% {
-		transform: translateY(0);
-	}
-	10% {
-		transform: translateY(0);
-	}
-	30% {
-		transform: translateY(0);
-	}
-	40% {
-		transform: translateY(0px);
-	}
-	100% {
-		transform: translateY(0px);
+@media (max-width:550px){
+	.what-we-are .item.third:hover .icons > svg:nth-child(3){
+		animation:svgBottomUpMobile 4s forwards ease-in-out;
+		animation-delay: 1s;
 	}
 }
 
@@ -304,6 +301,24 @@
 	}
 }
 
+@keyframes svgBottomUpMobile{
+	0% {
+		transform: translateY(0);
+	}
+	5% {
+		transform: translateY(-38px);
+	}
+	30% {
+		transform: translateY(-38px);
+	}
+	40% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
 /* third */
 
 @media (max-width:1650px){
@@ -336,7 +351,49 @@
 	.what-we-are .item.second::after{
 		@apply h-[2px] w-full bottom-0 top-[initial] left-0 right-0;
 	}
+}
 
+@media (max-width:550px){
+	.what-we-are .item{
+		@apply px-[25px] py-[60px];
+	}
+
+	.what-we-are .item.first .icons > svg:nth-child(1){
+		@apply w-[33px] h-[33px];
+	}
+
+	.what-we-are .item.first .icons .bottom svg:nth-child(1),
+	.what-we-are .item.first .icons .bottom svg:nth-child(2){
+		@apply w-[33px] h-[65px];
+	}
+
+	.what-we-are .item.second .icons .full svg{
+		@apply w-[33px] h-[33px];
+	}
+
+	.what-we-are .item.second .icons .full{
+		@apply w-[70px];
+	}
+
+	.what-we-are .item.third .icons .top svg{
+		@apply w-[33px] h-[33px];
+	}
+
+	.what-we-are .item.third .icons svg:nth-child(2){
+		@apply w-[33px] h-[33px];
+	}
+
+	.what-we-are .item.third .icons svg:nth-child(3){
+		@apply h-[36px] w-[70px];
+	}
+
+	.what-we-are .item .icons{
+		@apply w-[65px];
+	}
+
+	.what-we-are .item .content{
+		@apply flex-col;
+	}
 }
 
 /* what we are */
