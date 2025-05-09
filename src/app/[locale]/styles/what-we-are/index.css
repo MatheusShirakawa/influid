@@ -355,7 +355,19 @@
 
 @media (max-width:550px){
 	.what-we-are .item{
-		@apply px-[25px] py-[60px];
+		@apply px-[25px] py-[60px] flex-col relative;
+	}
+
+	.what-we-are .item .icons{
+		@apply left-[35px];
+	}
+
+	.what-we-are .item .number{
+		@apply absolute left-[25px] top-[60px];
+	}
+
+	.what-we-are .item .content p{
+		@apply max-w-full;
 	}
 
 	.what-we-are .item.first .icons > svg:nth-child(1){

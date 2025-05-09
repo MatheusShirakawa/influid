@@ -160,7 +160,7 @@ main {
 	}
 }
 
-@media (max-width:500px){
+@media (max-width:550px){
 	.first-content-page h1 {
 		@apply text-[52px] leading-[120px];
 	}

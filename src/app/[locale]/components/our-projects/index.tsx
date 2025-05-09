@@ -169,7 +169,7 @@ export default function OurProjects(props: OurProjectsProps) {
 	return(
 		<motion.div
 			id="our-projects"
-			className="our-projects relative z-[1]"
+			className="our-projects"
 			initial={props.initial}
 			whileInView={props.whileInView}
 			transition={props.transition}
@@ -204,6 +204,30 @@ export default function OurProjects(props: OurProjectsProps) {
 						slidesPerView={4}
 						autoplay={{ delay: 2500, disableOnInteraction: true }}
 						loop={true}
+						breakpoints={{
+							0: {
+								slidesPerView: 1,
+								spaceBetween: 20,
+								centeredSlides:true,
+							},
+							320: {
+								slidesPerView: 1,
+								spaceBetween: 20,
+								centeredSlides:true,
+							},
+							768: {
+							  slidesPerView: 2,
+							  spaceBetween: 40,
+							},
+							1024: {
+							  slidesPerView: 3,
+							  spaceBetween: 24,
+							},
+							1400: {
+							  slidesPerView: 4,
+							  spaceBetween: 24,
+							},
+						}}
 						navigation={{
 							nextEl: '.arrow-right',
 							prevEl: '.arrow-left',
@@ -280,13 +304,17 @@ export default function OurProjects(props: OurProjectsProps) {
 						{t("develop.title-one")} <br/>
 						<span>{t("develop.title-two")}</span>.
 					</h2>
-					<a onClick={() => scrollDown('contact')} className="custom-hover">
+					<a onClick={() => scrollDown('contact')} className="custom-hover desktop">
 						<span>{t("develop.link")}</span>
 						<ArrowDown className="w-5 h-5"/>
 					</a>
 				</div>
 				<div className='right'>
 					<p>{t("develop.description")}</p>
+					<a onClick={() => scrollDown('contact')} className="custom-hover mobile">
+						<span>{t("develop.link")}</span>
+						<ArrowDown className="w-5 h-5"/>
+					</a>
 				</div>
 			</div>
 			<div data-show={showPopup} className="popup">
@@ -294,6 +322,31 @@ export default function OurProjects(props: OurProjectsProps) {
 					<Swiper
 						modules={[A11y, Autoplay]}
 						spaceBetween={24}
+						breakpoints={{
+							0: {
+								slidesPerView: 1,
+								spaceBetween: 20,
+								centeredSlides:true,
+							},
+							320: {
+								slidesPerView: 1,
+								spaceBetween: 20,
+								centeredSlides:true,
+							},
+							768: {
+							  slidesPerView: 2,
+							  spaceBetween: 40,
+							  centeredSlides:true,
+							},
+							1024: {
+							  slidesPerView: 3,
+							  spaceBetween: 24,
+							},
+							1400: {
+							  slidesPerView: 4,
+							  spaceBetween: 24,
+							},
+						}}
 						slidesPerView={4}
 						autoplay={{ delay: 2500, disableOnInteraction: true }}
 						loop={true}

@@ -224,7 +224,7 @@
 	}
 
 	.parallax > .item .title.mobile[data-language="true"]{
-		@apply leading-[initial];
+		@apply leading-[80px];
 	}
 
 	.parallax > .item{
@@ -235,7 +235,6 @@
 		@apply right-[46%];
 	}
 }
-
 
 @media (max-width:860px){
 	.parallax > .item .right{
@@ -291,6 +290,22 @@
 @media (max-width:550px){
 	.parallax > .item h2{
 		@apply text-[54px];
+	}
+
+	.parallax > .item{
+		@apply pt-[30px];
+	}
+
+	.parallax > .item.applications{
+		@apply top-[310px];
+	}
+
+	.parallax > .item.branding{
+		@apply top-[575px];
+	}
+
+	.parallax > .item .right{
+		@apply text-sm;
 	}
 }
 
