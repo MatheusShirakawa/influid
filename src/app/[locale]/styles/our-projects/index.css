@@ -129,7 +129,7 @@
 	}
 }
 
-.our-projects[data-scroll="true"] h2.title {
+.our-projects[data-scroll="true"] .content-slide h2.title {
 	animation: titleProjects 3s ease-in-out forwards;
 }
 
@@ -217,7 +217,7 @@
 }
 
 .our-projects .develop {
-	@apply bg-white flex flex-row justify-between items-start w-full relative pb-[159px] pt-[483px] mt-[-230px] pr-[222px];
+	@apply bg-white flex flex-row justify-between items-start w-full relative pb-[159px] pt-[483px] mt-[-230px] pr-[222px] z-[0];
 }
 
 .our-projects .develop .title {
@@ -293,7 +293,7 @@
 @media (max-width:1680px){
 
 	.our-projects .develop{
-		@apply pr-[60px];
+		@apply pr-[60px] pt-[380px];
 	}
 
 	.our-projects .develop .right{
@@ -302,6 +302,11 @@
 }
 
 @media (max-width:1550px){
+
+	.our-projects .develop{
+		@apply pt-[280px];
+	}
+
 	.our-projects h2.title{
 		@apply text-[160px] left-[-35px];
 	}

@@ -15,7 +15,7 @@
 		rgba(0, 255, 153, 1) 0%,
 		rgba(0, 96, 255, 1) 100%
 	);
-	@apply absolute top-[-12%] right-[34%] m-auto block w-[1px] h-0 z-[2] ease-in-out duration-300;
+	@apply absolute top-[-12%] right-[34%] m-auto block w-[1px] h-0 z-[5] ease-in-out duration-300;
 }
 
 .parallax[data-scroll="true"]::before{

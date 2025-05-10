@@ -174,7 +174,7 @@ export default function OurProjects(props: OurProjectsProps) {
 			whileInView={props.whileInView}
 			transition={props.transition}
 			viewport={props.viewport}
-			data-scroll={(props.scrollY ?? 0) > 1700 && true}
+			data-scroll={(props.scrollY ?? 0) > 1600 && true}
 		>
 			<div className="content-slide">
 				<div className='line-info'>

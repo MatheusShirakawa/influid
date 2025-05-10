@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import LogoInfluid from '/public/logo-influid.svg'
 
+
 import {
 	WhatsappLogo,
 	MapPin,
@@ -14,6 +15,7 @@ import {
 import Linkedin from '/public/icons/linkedin.svg'
 
 import { useTranslations } from 'next-intl'
+import { useEffect, useRef, useState } from 'react'
 
 interface FooterProps {
 	scrollY?: number | undefined;
@@ -23,9 +25,35 @@ export default function Footer(props:FooterProps){
 
 	const t = useTranslations('Footer')
 
+	const [scrollPosition, setScrollPosition] = useState(0);
+	const divRef = useRef<HTMLDivElement | null>(null);
+
+	useEffect(() => {
+	  const handleScroll = () => {
+		if (divRef.current) {
+		  setScrollPosition(divRef.current.scrollTop);
+		}
+	  };
+
+	  const divElement = divRef.current;
+	  divElement?.addEventListener('scroll', handleScroll);
+
+	  return () => {
+		divElement?.removeEventListener('scroll', handleScroll);
+	  };
+	}, []);
+
+	// console.log(scrollPosition)
+
 	return(
 		<>
-			<footer id="footer" className='footer'  data-scroll={(props.scrollY ?? 0) > 7300 && true}>
+			<footer
+				ref={divRef}
+				currentScroll={scrollPosition}
+				id="footer"
+				className='footer'
+				data-scroll={(props.scrollY ?? 0) > 7300 && true}
+			>
 				<div className='container-footer'>
 
 					<div className='footer-content flex items-start justify-between'>

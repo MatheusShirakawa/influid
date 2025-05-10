@@ -19,7 +19,6 @@ export default function Input({
 	onBlur,
 	error
 }: InputProps) {
-	{console.log(error)}
 	return(
 		<div>
 			<label data-error={error != undefined && value == ''} data-active={value != ''}>
