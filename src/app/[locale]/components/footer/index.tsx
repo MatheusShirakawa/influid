@@ -15,7 +15,7 @@ import {
 import Linkedin from '/public/icons/linkedin.svg'
 
 import { useTranslations } from 'next-intl'
-import { useEffect, useRef, useState } from 'react'
+// import { useRef, useState } from 'react'
 
 interface FooterProps {
 	scrollY?: number | undefined;
@@ -25,32 +25,23 @@ export default function Footer(props:FooterProps){
 
 	const t = useTranslations('Footer')
 
-	const [scrollPosition, setScrollPosition] = useState(0);
-	const divRef = useRef<HTMLDivElement | null>(null);
+	// const [scrollPosition, setScrollPosition] = useState({ scrollTop: 0, scrollLeft: 0 });
+	// const scrollDemoRef = useRef(null);
 
-	useEffect(() => {
-	  const handleScroll = () => {
-		if (divRef.current) {
-		  setScrollPosition(divRef.current.scrollTop);
-		}
-	  };
-
-	  const divElement = divRef.current;
-	  divElement?.addEventListener('scroll', handleScroll);
-
-	  return () => {
-		divElement?.removeEventListener('scroll', handleScroll);
-	  };
-	}, []);
-
+	// const handleScroll = () => {
+	//   if (scrollDemoRef.current) {
+	// 	const { scrollTop, scrollLeft } = scrollDemoRef.current;
+	// 	setScrollPosition({ scrollTop, scrollLeft });
+	//   }
+	// };
 	// console.log(scrollPosition)
 
 	return(
 		<>
 			<footer
-				ref={divRef}
-				currentScroll={scrollPosition}
+				// ref={scrollDemoRef}
 				id="footer"
+				// onScroll={handleScroll}
 				className='footer'
 				data-scroll={(props.scrollY ?? 0) > 7300 && true}
 			>
