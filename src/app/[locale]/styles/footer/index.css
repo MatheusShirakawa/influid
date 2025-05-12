@@ -31,6 +31,14 @@
 	@apply relative max-w-[1452px] mx-auto px-4;
 }
 
+.footer .footer-content{
+	@apply flex items-start justify-center gap-[167px];
+}
+
+.footer a{
+	@apply hover:text-[#00FF99] duration-300 ease-in-out hover:opacity-100 text-[#BACAF5];
+}
+
 .footer .container-footer::before{
 	content: "";
 	background: linear-gradient(
@@ -56,7 +64,6 @@
 		width: 93%;
 	}
 }
-
 
 
 @keyframes parallaxLineWidthDesktop{

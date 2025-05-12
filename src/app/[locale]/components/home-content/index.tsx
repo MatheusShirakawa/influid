@@ -13,6 +13,7 @@ import WhatWeAre from '../what-we-are'
 
 export default function HomeContent({ props }: { props: { locale: string } }) {
 	const scrollRef = useRef(null)
+	// const scrollRefFooter = useRef(null)
 	const [scrollY, setScrollY] = useState(0)
 
 	useEffect(() => {

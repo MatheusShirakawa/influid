@@ -297,11 +297,11 @@
 	}
 
 	.parallax > .item.applications{
-		@apply top-[296px];
+		@apply top-0;
 	}
 
 	.parallax > .item.branding{
-		@apply top-[570px];
+		@apply top-0 h-screen;
 	}
 
 	.parallax > .item .right{

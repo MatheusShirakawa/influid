@@ -113,9 +113,6 @@
 	}
 }
 
-
-
-
 @keyframes height100{
 	0%{
 		height: 0;
@@ -127,7 +124,7 @@
 
 	60%{
 		bottom:0;
-		height: 116px;
+		height: 170px;
 	}
 
 	100%{

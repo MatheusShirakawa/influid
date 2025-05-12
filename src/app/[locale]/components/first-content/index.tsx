@@ -40,6 +40,12 @@ export default function FirstContent(){
 
 			<div className="mobile-text">
 				<p><strong>Influid</strong> {split("description")}</p>
+
+				<a href="#" onClick={() => scrollDown('our-projects')} className="projects-link">
+					{split("see-our-projects")}
+					<ArrowDown/>
+				</a>
+
 			</div>
 
 			<div className='block-scroll-down mx-auto'>
