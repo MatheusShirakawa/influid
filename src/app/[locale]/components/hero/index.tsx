@@ -14,9 +14,13 @@ interface HeroProps {
 	transition?: TargetAndTransition | undefined;
 	viewport?: object | undefined;
 	scrollY?: number | undefined;
+	scrollTrigger?: number | undefined;
 }
 
-export default function Hero(props:HeroProps){
+export default function Hero( props:HeroProps ){
+
+	const dataScroll = (props.scrollY ?? 0) > (props.scrollTrigger ?? 0) && true
+
 	return(
 		<motion.div
 			initial={props.initial}
@@ -36,7 +40,7 @@ export default function Hero(props:HeroProps){
 				</video>
 			<div className='main-block'>
 				<Header locale={props.locale}/>
-				<div className='main-content' data-scroll={(props.scrollY ?? 0) > 480 && true}>
+				<div className='main-content' data-scroll={dataScroll}>
 					<FirstContent/>
 					<Split/>
 				</div>

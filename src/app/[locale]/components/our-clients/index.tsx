@@ -24,15 +24,16 @@ import 'swiper/css/autoplay';
 
 interface OurClientsProps {
 	scrollY?: number | undefined;
+	scrollTrigger?: number | undefined;
 }
-
 
 export default function OurClients(props:OurClientsProps){
 
 	const t = useTranslations('OurClients')
+	const dataScroll = (props.scrollY ?? 0) > (props.scrollTrigger ?? 0) && true
 
 	return(
-		<div className='our-clients' data-scroll={(props.scrollY ?? 0) > 6500 && true}>
+		<div className='our-clients' data-scroll={dataScroll}>
 			<h2 className='title'>
 				{t('title-one')} <span className='text-white'>{t('title-two')}</span>.
 			</h2>

@@ -136,7 +136,7 @@
 	}
 
 	.parallax > .item .right{
-		@apply max-w-[300px];
+		@apply max-w-[300px] text-sm;
 	}
 }
 

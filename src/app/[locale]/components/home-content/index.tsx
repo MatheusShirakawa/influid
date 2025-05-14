@@ -13,7 +13,6 @@ import WhatWeAre from '../what-we-are'
 
 export default function HomeContent({ props }: { props: { locale: string } }) {
 	const scrollRef = useRef(null)
-	// const scrollRefFooter = useRef(null)
 	const [scrollY, setScrollY] = useState(0)
 
 	useEffect(() => {
@@ -33,6 +32,14 @@ export default function HomeContent({ props }: { props: { locale: string } }) {
 	const transition 	= { duration:1, ease:"easeOut" }
 	const viewport 		= { once:true }
 
+	const triggerHero = 0
+	const triggerProjects = 1600
+	const triggerParallax = 3500
+	const triggerClients = 6500
+	const triggerFooter = 7300
+
+	const dataScrollParallax = (scrollY ?? 0) > triggerParallax && true
+
 	return (
 		<main
 			ref={scrollRef}
@@ -47,6 +54,7 @@ export default function HomeContent({ props }: { props: { locale: string } }) {
 				transition={transition}
 				viewport={viewport}
 				scrollY={scrollY}
+				scrollTrigger={triggerHero}
 			/>
 
 			<WhatWeAre
@@ -63,17 +71,22 @@ export default function HomeContent({ props }: { props: { locale: string } }) {
 				transition={transition}
 				viewport={viewport}
 				scrollY={scrollY}
+				scrollTrigger={triggerProjects}
 			/>
 
-			<div id="parallax" className='parallax' data-scroll={(scrollY ?? 0) > 3500 && true}>
-				<Parallax locale={props.locale}/>
+			<div id="parallax" className='parallax' data-scroll={dataScrollParallax}>
+				<Parallax
+					locale={props.locale}
+				/>
 				<div className='bottom'>
 					<OurClients
 						scrollY={scrollY}
+						scrollTrigger={triggerClients}
 					/>
 					<Contact/>
 					<Footer
 						scrollY={scrollY}
+						scrollTrigger={triggerFooter}
 					/>
 				</div>
 			</div>

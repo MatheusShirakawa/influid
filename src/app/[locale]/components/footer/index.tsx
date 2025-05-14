@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import LogoInfluid from '/public/logo-influid.svg'
+import Linkedin from '/public/icons/linkedin.svg'
 
 import {
 	WhatsappLogo,
@@ -10,46 +11,26 @@ import {
 	Envelope
 } from '@phosphor-icons/react'
 
-import Linkedin from '/public/icons/linkedin.svg'
-
 import { useTranslations } from 'next-intl'
-import { useRef } from 'react'
 
 interface FooterProps {
 	scrollY?: number | undefined;
+	scrollTrigger?: number | undefined;
 	refFooter ?: React.RefObject<HTMLDivElement>;
 }
 
 export default function Footer(props:FooterProps){
 
 	const t = useTranslations('Footer')
-	const scrollRefFooter = useRef(null)
-
-	console.log(scrollRefFooter)
-	// clientHeight
-
-	// const [scrollPosition, setScrollPosition] = useState({ scrollTop: 0, scrollLeft: 0 });
-	// const scrollDemoRef = useRef(null);
-
-	// const handleScroll = () => {
-	//   if (scrollDemoRef.current) {
-	// 	const { scrollTop, scrollLeft } = scrollDemoRef.current;
-	// 	setScrollPosition({ scrollTop, scrollLeft });
-	//   }
-	// };
-	// console.log(scrollPosition)
+	const dataScroll = (props.scrollY ?? 0) > (props.scrollTrigger ?? 0) && true
 
 	return(
 		<>
 			<footer
-				ref={scrollRefFooter}
 				id="footer"
-				// onScroll={handleScroll}
 				className='footer'
-				data-scroll={(props.scrollY ?? 0) > 7300 && true}
-			>
+				data-scroll={dataScroll}>
 				<div className='container-footer'>
-
 					<div className='footer-content'>
 						<div className='item max-w-[220px]'>
 							<Link href={''}>
