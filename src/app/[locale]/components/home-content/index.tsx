@@ -10,6 +10,7 @@ import OurClients from '../our-clients'
 import Parallax from '../parallax'
 import OurProjects from '../our-projects'
 import WhatWeAre from '../what-we-are'
+// import LoadingPage from '../loading-page'
 
 export default function HomeContent({ props }: { props: { locale: string } }) {
 	const scrollRef = useRef(null)

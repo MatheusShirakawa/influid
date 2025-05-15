@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ReactNode } from 'react'
 import { routing } from '@/i18n/routing'
 import './styles/globals.css'
+import LoadingPage from './components/loading-page'
 
 type Props = {
 	children: ReactNode
@@ -46,6 +47,7 @@ export default async function Layout({ children, params }: Props) {
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 			</head>
 			<body>
+				<LoadingPage />
 				<NextIntlClientProvider>
 					{children}
 				</NextIntlClientProvider>

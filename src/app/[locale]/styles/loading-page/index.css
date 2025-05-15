@@ -1,0 +1,129 @@
+.loading-page {
+	@apply relative inset-0 z-20;
+}
+
+.loading-page::before {
+	content: "";
+	background: linear-gradient(
+		130deg,
+		rgb(0, 255, 153) 0%,
+		rgba(0, 96, 255, 1) 100%
+	);
+	@apply fixed top-0 right-0 left-0 mx-auto w-[2px] h-[0] z-[11] opacity-90;
+}
+
+.loading-page[data-value="true"]::before {
+	animation: loadedLine 2s ease-in-out forwards;
+}
+
+.loading-page[data-value="true"] .left {
+	animation: leftLoaded 2s ease-in-out forwards;
+	animation-delay: 1s;
+}
+
+.loading-page[data-value="true"] .right {
+	animation: rightLoaded 2s ease-in-out forwards;
+	animation-delay: 1s;
+}
+
+.loading-page[data-value="true"] .number {
+	animation: hideNumber 2s ease-in-out forwards;
+}
+
+.loading-page .left {
+	@apply fixed top-0 left-0 bottom-0 w-1/2 h-full bg-[#001758];
+}
+
+.loading-page .right {
+	@apply fixed top-0 right-0 bottom-0 w-1/2 h-full bg-[#001758];
+}
+
+.loading-page .number {
+	@apply fixed inset-0 flex justify-center items-center m-auto text-[150px] font-medium text-white text-center z-10;
+}
+
+.loading-page .loader-icon{
+	@apply bg-transparent fixed inset-0 flex justify-center items-center m-auto text-center duration-300 ease-in-out z-10;
+	animation: hideSpin 2s ease-in-out forwards;
+	animation-delay: 0.5s;
+}
+
+/* .loader-icon{
+	background: linear-gradient(
+		130deg,
+		rgba(0, 255, 153, 1) 0%,
+		rgba(0, 96, 255, 1) 100%
+	);
+} */
+
+@keyframes hideSpin {
+	0% {
+		opacity: 100%;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes loadedLine {
+	0% {
+		height: 0;
+	}
+	50% {
+		bottom: 0;
+		height: 100%;
+	}
+	100% {
+		opacity: 0;
+		bottom: 0;
+		height: 100%;
+	}
+}
+@keyframes leftLoaded {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-1000%);
+	}
+}
+
+@keyframes rightLoaded {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(1000%);
+	}
+}
+
+@keyframes hideNumber {
+	0% {
+		display: flex;
+	}
+	10% {
+		display: none;
+	}
+	100% {
+		display: none;
+	}
+}
+
+@keyframes spinning-circle {
+	0% {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 150.6 100.4;
+	}
+	50% {
+		stroke-dasharray: 1 250;
+	}
+	100% {
+		stroke-dashoffset: 502;
+		stroke-dasharray: 150.6 100.4;
+	}
+}
+
+.spinner__circle {
+	animation: 2s linear spinning-circle infinite;
+}

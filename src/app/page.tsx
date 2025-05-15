@@ -1,13 +1,6 @@
 import { redirect } from 'next/navigation'
 
-// This page only renders when the app is built statically (output: 'export')
-export default function RootPage() {
+export default async function RootPage() {
+	await new Promise((resolve) => setTimeout(resolve, 1000));
 	redirect('/en')
-	// const lang = navigator.language
-
-	// if(lang === 'pt-BR' || lang === 'pt') {
-	// 	redirect('/pt')
-	// }else{
-	// 	redirect('/en')
-	// }
 }
