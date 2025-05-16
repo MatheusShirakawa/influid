@@ -39,7 +39,7 @@
 }
 
 .loading-page .number {
-	@apply fixed inset-0 flex justify-center items-center m-auto text-[150px] font-medium text-white text-center z-10;
+	@apply fixed inset-0 flex justify-center items-center m-auto text-[150px] font-medium text-[#234394] opacity-60 text-center z-10;
 }
 
 .loading-page .loader-icon{

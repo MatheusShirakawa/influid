@@ -14,15 +14,18 @@ import {
 import useProgress from "../../functions/use-progress"
 
 export default function LoadingPage(){
-	const { done, value } = useProgress()
+	const { start, done, value } = useProgress()
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
+		const timerStart = setTimeout(() => {
+			start()
+		}, 500)
+		const timerDone = setTimeout(() => {
 			done()
-		}, 100)
+		}, 1000)
 
-		return () => (clearTimeout(timer));
-	},[done])
+		return () => (clearTimeout(timerStart), clearTimeout(timerDone))
+	},[])
 
 	const completeValue = useTransform(value, Math.floor).get() === 100
 

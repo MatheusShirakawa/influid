@@ -176,7 +176,7 @@
 @media (max-width:767px){
 
 	.split{
-		@apply h-full;
+		@apply h-full top-[-90px];
 	}
 
 	.counter.number{
@@ -201,9 +201,12 @@
 		animation: splitHeight 2s ease-in-out forwards;
 	}
 
-	.split .content-split-last,
+	.split .content-split-last{
+		@apply flex-col justify-center pb-[50px];
+	}
+
 	.split .content-split{
-		@apply flex-col justify-center pb-[100px];
+		@apply flex-col justify-center pb-[200px];
 	}
 
 	.split .content-split .left .line-numbers{
@@ -255,5 +258,9 @@
 
 	.split .content-split .left .line-numbers{
 		@apply gap-4;
+	}
+
+	.split .content-split-last{
+		@apply flex-col justify-center pb-0;
 	}
 }
