@@ -17,12 +17,12 @@
 }
 
 .loading-page[data-value="true"] .left {
-	animation: leftLoaded 2s ease-in-out forwards;
+	animation: leftLoaded 4s ease-in-out forwards;
 	animation-delay: 1s;
 }
 
 .loading-page[data-value="true"] .right {
-	animation: rightLoaded 2s ease-in-out forwards;
+	animation: rightLoaded 4s ease-in-out forwards;
 	animation-delay: 1s;
 }
 

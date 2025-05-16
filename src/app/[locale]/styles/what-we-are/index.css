@@ -69,7 +69,7 @@
 }
 
 .what-we-are .item.first .icons .bottom{
-	@apply flex flex-row items-center justify-between gap-1;
+	@apply flex flex-row items-center justify-between gap-[3px];
 	transform: translateX(0px) translateY(0px);
 	transform-origin:0;
 }
@@ -235,11 +235,11 @@
 
 /* third */
 .what-we-are .item.third .icons{
-	@apply flex flex-col items-center justify-start gap-1;
+	@apply flex flex-col items-center justify-start gap-[3px];
 }
 
 .what-we-are .item.third .icons .top{
-	@apply flex flex-row items-center justify-between gap-1;
+	@apply flex flex-row items-center justify-between gap-[3px];
 }
 
 .what-we-are .item.third:hover .icons > svg:nth-child(2){

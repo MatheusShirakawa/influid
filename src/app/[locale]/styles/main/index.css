@@ -102,7 +102,7 @@ main {
 }
 
 .number-absolute {
-	@apply text-[#234394] absolute top-[-189px] bottom-[initial] right-[-78px] z-[1] text-[300px] leading-normal font-bold opacity-10 m-auto;
+	@apply text-[#234394] absolute top-[-189px] bottom-[initial] right-[-78px] z-[1] text-[300px] leading-normal font-bold opacity-20 m-auto;
 }
 
 .typewrite > .wrap {
@@ -199,6 +199,10 @@ main {
 @media (max-width:550px){
 	.first-content-page h1 {
 		@apply text-[52px] leading-[120px];
+	}
+
+	.first-content-page .number-absolute{
+		@apply top-[-148px] left-0 right-0;
 	}
 }
 

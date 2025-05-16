@@ -1,11 +1,11 @@
 "use client";
 
 import {
-	// motion,
+	motion,
 	useTransform,
 } from "framer-motion"
 
-import Spin from "../../../../../public/icons/spin";
+// import Spin from "../../../../../public/icons/spin";
 
 import {
 	useEffect,
@@ -19,7 +19,7 @@ export default function LoadingPage(){
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			done()
-		}, 0)
+		}, 100)
 
 		return () => (clearTimeout(timer));
 	},[done])
@@ -30,12 +30,12 @@ export default function LoadingPage(){
 		<div className="loading-page" data-value={completeValue}>
 			<div className="left"></div>
 			<div className="right"></div>
-			{/* <div className="number hidden">
+			<div className="number hidden">
 				<motion.span>{useTransform(value, Math.floor)}</motion.span>
-			</div> */}
-			<div className="loader-icon">
-				<Spin/>
 			</div>
+			{/* <div className="loader-icon">
+				<Spin/>
+			</div> */}
 		</div>
 	)
 }

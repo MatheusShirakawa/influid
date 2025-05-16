@@ -24,7 +24,7 @@
 }
 
 .our-projects[data-scroll="true"] .arrow-right-content::before{
-	animation: widthLineProjects 3s ease-in-out forwards;
+	animation: widthLineProjects 1.5s ease-in-out forwards;
 }
 
 @keyframes widthLineProjects{
@@ -141,13 +141,13 @@
 
 @media (min-width:768px){
 	.our-projects[data-scroll="true"] .content-slide h2.title {
-		animation: titleProjectsDesktop 2s ease-in-out forwards;
+		animation: titleProjectsDesktop 1.5s ease-in-out forwards;
 	}
 }
 
 @media (max-width:767px){
 	.our-projects[data-scroll="true"] .content-slide h2.title {
-		animation: titleProjectsMobile 2s ease-in-out forwards;
+		animation: titleProjectsMobile 1.5s ease-in-out forwards;
 	}
 
 }
