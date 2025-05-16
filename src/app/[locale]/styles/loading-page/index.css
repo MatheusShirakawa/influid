@@ -31,11 +31,11 @@
 }
 
 .loading-page .left {
-	@apply fixed top-0 left-0 bottom-0 w-1/2 h-full bg-[#001758];
+	@apply fixed top-0 left-0 bottom-0 w-[50%] h-full bg-[#001758];
 }
 
 .loading-page .right {
-	@apply fixed top-0 right-0 bottom-0 w-1/2 h-full bg-[#001758];
+	@apply fixed top-0 right-0 bottom-0 w-[51%] h-full bg-[#001758];
 }
 
 .loading-page .number {
