@@ -88,7 +88,6 @@
 
 
 @media (min-width:981px){
-
 	.what-we-are .item:hover .content{
 		animation: moveUp 4s ease-in-out forwards;
 		animation-delay: 1s;
@@ -96,9 +95,68 @@
 }
 
 
-.what-we-are .item.first:hover .icons .bottom{
+/* .what-we-are .item.first:hover .icons .bottom{
 	animation: rotate 4s ease-in-out forwards;
 	animation-delay: 1s;
+} */
+
+.what-we-are .item.first:hover .icons > svg:nth-child(1){
+	animation: hideAndShow 2s ease-in-out forwards;
+	animation-delay: 1s;
+}
+
+.what-we-are .item.first:hover .icons .bottom > svg:nth-child(1){
+	animation: rightToLeft 4s ease-in-out forwards;
+	animation-delay: 1s;
+}
+
+.what-we-are .item.first:hover .icons .bottom > svg:nth-child(2){
+	animation: leftToRight 4s ease-in-out forwards;
+	animation-delay: 1s;
+}
+
+@keyframes hideAndShow{
+	0%{
+		opacity:0;
+		transform: translateY(100px);
+	}
+	5%{
+		opacity:0;
+	}
+
+	100%{
+		opacity:100%;
+		transform: translateY(0px);
+	}
+}
+
+
+@keyframes leftToRight {
+	0%{
+		transform: translateX(0px) translateY(0px);
+	}
+
+	5%{
+		transform: translateX(-55px) translateY(0px);
+	}
+
+	100%{
+		transform: translateX(-55px) translateY(0px);
+	}
+}
+
+@keyframes rightToLeft {
+	0%{
+		transform: translateX(0px) translateY(0px);
+	}
+
+	5%{
+		transform: translateX(55px) translateY(0px);
+	}
+
+	100%{
+		transform: translateX(55px) translateY(0px);
+	}
 }
 
 @keyframes moveUp {
@@ -183,6 +241,7 @@
 
 @media (min-width:551px){
 	.what-we-are .item.second:hover .icons .full svg:last-child{
+		border-radius: 99999px;
 		animation: changePosition 4s forwards ease-in-out;
 		animation-delay: 1s;
 	}
@@ -198,18 +257,36 @@
 @keyframes changePosition{
 	0% {
 		transform: translate(0);
+		box-shadow: 1px 2px 10px #bebebe;
 	}
 	10% {
 		transform: translate(-111px, -112px);
+		box-shadow: 1px 2px 10px #bebebe;
 	}
 	30% {
 		transform: translate(-111px, -112px);
+		box-shadow: 1px 2px 10px #bebebe;
 	}
-	40% {
-		transform: translateY(0px);
+	/* move */
+	60% {
+		transform: translate(-1px, -112px);
+		box-shadow: 1px 2px 10px #bebebe;
 	}
+	70%{
+		transform: translate(-1px, -56px);
+		box-shadow: 1px 2px 10px #bebebe;
+	}
+	80%{
+		transform: translate(-55px, -56px);
+		box-shadow: 1px 2px 10px #bebebe;
+	}
+	90%{
+		transform: translate(-55px, -1px);
+		box-shadow: 1px 2px 10px #bebebe;
+	}
+	/* move */
 	100% {
-		transform: translateY(0px);
+		transform: translate(0);
 	}
 }
 
