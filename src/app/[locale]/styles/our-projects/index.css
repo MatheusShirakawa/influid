@@ -563,6 +563,18 @@
 		@apply text-[58px];
 	}
 
+	.our-projects .develop h2.title{
+		@apply p-0 pt-[80px];
+	}
+
+	.our-projects .develop .number-absolute{
+		@apply top-[-50px] left-[20px] text-[150px];
+	}
+
+	.our-projects .develop .right{
+		@apply pt-4;
+	}
+
 	.our-projects .content-slide h2.title{
 		@apply left-[-7px];
 	}
@@ -577,10 +589,6 @@
 
 	.our-projects .develop{
 		@apply mt-[0] pt-[50px];
-	}
-
-	.our-projects .develop .number-absolute{
-		@apply top-[88px] left-[20px] text-[150px];
 	}
 
 	.our-projects .develop .title{
@@ -623,7 +631,7 @@
 	}
 
 	.our-projects .develop .number-absolute{
-		@apply top-[60px] left-[-10px];
+		@apply left-[-10px];
 	}
 }
 

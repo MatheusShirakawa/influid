@@ -35,7 +35,18 @@
 }
 
 .loading-page .right {
-	@apply fixed top-0 right-0 bottom-0 w-[51%] h-full bg-[#001758];
+	@apply fixed top-0 right-0 bottom-0 w-[50%] h-full bg-[#001758];
+}
+
+@media (max-width:550px){
+
+	.loading-page .left {
+		@apply w-[50%]
+	}
+
+	.loading-page .right {
+		@apply w-[51%]
+	}
 }
 
 .loading-page .number {

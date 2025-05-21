@@ -42,7 +42,7 @@ export default function Hero( props:HeroProps ){
 				<Header locale={props.locale}/>
 				<div className='main-content' data-scroll={dataScroll}>
 					<FirstContent/>
-					<Split/>
+					<Split locale={props.locale}/>
 				</div>
 			</div>
 		</motion.div>

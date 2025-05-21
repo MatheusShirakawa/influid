@@ -28,16 +28,16 @@ export default function HomeContent({ props }: { props: { locale: string } }) {
 	  }
 	}, [])
 
-	const initial 		= { opacity:0, y:100 }
-	const whileInView 	= { opacity:1, y:0 }
+	const initial 		= { opacity:0,  y:100 }
+	const whileInView 	= { opacity:1,  y:0 }
 	const transition 	= { duration:1, ease:"easeOut" }
 	const viewport 		= { once:true }
 
-	const triggerHero = 0
-	const triggerProjects = 1600
-	const triggerParallax = 3500
-	const triggerClients = 6500
-	const triggerFooter = 7300
+	const triggerHero 		= 0
+	const triggerProjects 	= 1600
+	const triggerParallax 	= 3500
+	const triggerClients 	= 6500
+	const triggerFooter 	= 7100
 
 	const dataScrollParallax = (scrollY ?? 0) > triggerParallax && true
 

@@ -263,4 +263,9 @@
 	.split .content-split-last{
 		@apply flex-col justify-center pb-0;
 	}
+
+	.split[data-language="pt"] .content-split .left .line-numbers .line,
+	.split[data-language="pt"] .content-split .left .line-numbers .line:nth-child(3){
+		@apply max-w-[115px]
+	}
 }

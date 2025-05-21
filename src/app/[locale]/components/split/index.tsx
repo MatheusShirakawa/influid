@@ -4,10 +4,14 @@ import { scrollDown } from "../../utils/helpers"
 import { ArrowDown } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
 
-export default function Split() {
+interface SplitProps {
+	locale?: string | undefined;
+}
+
+export default function Split(props: SplitProps) {
 	const t = useTranslations('Split')
 	return(
-		<div id="split" className='split'>
+		<div id="split" className='split' data-language={props.locale}>
 			<div className="block">
 				<div className="line-mobile-split"></div>
 				<div className='content-split'>
