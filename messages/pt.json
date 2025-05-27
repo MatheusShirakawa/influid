@@ -20,26 +20,26 @@
 	},
 	"Split":{
 		"years":"anos criando experiências digitais incríveis",
-		"customers":"clientes de diferentes mercados e países",
-		"brands":"marcas completas grandes projetos desenvolvidos",
-		"description":"é um estúdio de design digital focado na criação de sites, aplicativos, sistemas e experiências interativas que realmente fluem.",
-		"info-one":"nós criamos",
+		"customers":"clientes de  mercados e países diferentes",
+		"brands":"projetos completos desenvolvidos",
+		"description":"é um studio digital focado em produtos digitais como sites, apps e experiências interativas que fluem de verdade.",
+		"info-one":"a gente cria",
 		"info-two":"interação, fluidez",
 		"info-three":"e identidade",
-		"solutions":"Desenvolvemos soluções únicas para cada projeto que entregamos, mas, ao mesmo tempo, mantemos um padrão de qualidade que sempre garantimos. Essa é a nossa assinatura.",
-		"see-our-projects":"veja nossos projetos"
+		"solutions":"A gente cria soluções únicas para cada projeto e, ao mesmo, a gente tem um padrão de qualidade garantido. Essa é a nossa assinatura.",
+		"see-our-projects":"veja projetos"
 	},
 	"WhatWeAre":{
-		"description-one":"Todos os produtos digitais são feitos para proporcionar uma interação entre os usuários e as informações, tornando possível a realização dos desejos ou necessidades dos usuários por meio dos serviços ou produtos da empresa.",
-		"description-two":"Essa conexão deve ter uma boa fluência, deve acontecer sem problemas, pois o principal objetivo de uma experiência digital é sempre tornar a vida do usuário mais fácil e feliz.",
-		"description-three":"E todo esse processo deve representar a sua identidade. Seu produto digital deve ter a sua impressão digital, para promover uma relação afetiva entre seu público e sua marca."
+		"description-one":"Todo produto digital é feito para gerar uma interação entre os usuários e a informação, possibilitando a satisfação de suas necessidades e desejos por meio dos produtos e serviços das empresas",
+		"description-two":"Essa conexão deve ter boa fluidez, deve acontecer de forma suave. Isso porque o principal objetivo de uma experiência digital é sempre fazer a vida do usuário mais fácil e feliz.",
+		"description-three":"E todo esse processo deve representar sua identidade. Seu produto deve ter sua impressão digital, para promover uma relação afetiva entre seu público e sua marca."
 	},
 	"OurProjects":{
 		"develop":{
-			"title-one":"nós desenvolvemos experiências",
+			"title-one":"a gente projeta experiências",
 			"title-two":"em branding e tecnologia",
-			"link":"contate-nos",
-			"description":"Criamos soluções inovadoras com criatividade e tecnologia. Nossos serviços se concentram em sites, aplicativos e branding, transformando ideias em plataformas impressionantes e identidades poderosas que inspiram, engajam e elevam seus negócios."
+			"link":"fale com a gente",
+			"description":"Desenvolvemos soluções inovadoras com criatividade e tecnologia. Nossos principais serviços são: websites, aplicativos e branding, transformando ideias em produtos e identidades poderosas que inspiram, engajam e elevam seu negócio."
 		},
 		"projects":{
 			"title":"projetos",
@@ -50,25 +50,25 @@
 	},
 	"Parallax":{
 		"websites":"sites",
-		"websites-description":"Sites personalizados que combinam design e funcionalidade para elevar sua presença online. Criamos experiências digitais que refletem os valores e a missão da sua marca, garantindo que seu site seja visualmente atraente e eficaz para gerar engajamento e conversões.",
-		"applications":"aplicações",
-		"applications-mobile":"aplica<br/>ções",
-		"applications-description":"Aplicativos intuitivos projetados para aprimorar a experiência do usuário e atingir seus objetivos de negócios. Desenvolvemos aplicativos que simplificam processos e proporcionam uma experiência de usuário fluida, tornando seu aplicativo uma ferramenta essencial para o seu público.",
-		"branding":"marca",
-		"branding-description":"Soluções de branding poderosas que fazem sua empresa se destacar e geram confiança. Criamos identidades de marca fortes e consistentes com logotipos, paletas de cores e diretrizes visuais que comunicam os valores da sua empresa e estabelecem confiança."
+		"websites-description":"Sites que combinam design e funcionalidade para elevar sua presença digital. Criamos experiências digitais que refletem os valores e missão da sua marca, garantindo que seu site seja visualmente atraente e eficiente para gerar engajameento e conversão.",
+		"applications":"aplicativos",
+		"applications-mobile":"aplica<br/>tivos",
+		"applications-description":"Aplicativos intuitivos que otimizam a experiência do usuário e atendem aos objetivos do seu negócio. Desenvolvemos apps que simplificam processos e proporcionam uma excelente experiência ao usuário, tornando seu app uma ferramenta essencial para seu público.",
+		"branding":"branding",
+		"branding-description":"Soluções poderosas em branding que fazem seu negócio se destacar e construir confiança.A gente cria identidades e brandings fortes e consistentes, definindo logotipo, paleta de cores e visual guidelines que se comunicam com os valores da sua empresa e estabelecem autoridade."
 	},
 	"OurClients":{
 		"title-one":"nossos",
 		"title-two":"clientes"
 	},
 	"Contact":{
-		"title-one":"faça",
+		"title-one":"deixa",
 		"title-two":"fluir",
-		"description":"Preencha o formulário abaixo para nos enviar uma mensagem, teremos prazer em responder o mais breve possível.",
+		"description":"Fale com a gente: mande sua mensagem, a gente te responde rapidinho :)",
 		"form":{
 			"name":"seu nome",
 			"email":"seu melhor e-mail",
-			"message":"digite sua mensagem",
+			"message":"sua mensagem",
 			"send":"enviar",
 			"errorFields":{
 				"name":"Por favor, preencha seu nome.",
@@ -82,8 +82,8 @@
 		}
 	},
 	"Footer":{
-		"what-is":"Influid é um estúdio de design focado em criar produtos digitais incríveis.",
-		"social-title":"Confira nossas mídias sociais",
+		"what-is":"Influid é um studio digital com foco em criar produtos digitais incríveis e que fluem de verdade.",
+		"social-title":"Segue a gente nas redes",
 		"contact-title":"Canais de contato",
 		"us-address":"Localização nos EUA",
 		"br-address":"Localização BR"
