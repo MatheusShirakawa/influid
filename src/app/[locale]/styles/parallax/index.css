@@ -99,7 +99,6 @@
 	@apply top-[520px] h-[400px] bg-[#021078];
 }
 
-.parallax > .item .title.mobile-final,
 .parallax > .item .title.mobile{
 	@apply hidden;
 }
@@ -198,12 +197,12 @@
 		@apply hidden;
 	}
 
-	.parallax > .item .title.mobile[data-language="true"]{
+	.parallax > .item .title.mobile{
 		@apply block leading-[117px];
 	}
 
 	.parallax > .item.branding{
-		@apply top-[550px];
+		@apply top-[590px];
 	}
 }
 
@@ -223,7 +222,7 @@
 		@apply text-[72px] leading-[initial];
 	}
 
-	.parallax > .item .title.mobile[data-language="true"]{
+	.parallax > .item .title.mobile{
 		@apply leading-[80px];
 	}
 
@@ -275,10 +274,6 @@
 	}
 
 	.parallax > .item .title.mobile{
-		@apply !hidden;
-	}
-
-	.parallax > .item .title.mobile-final{
 		@apply block;
 	}
 

@@ -268,4 +268,8 @@
 	.split[data-language="pt"] .content-split .left .line-numbers .line:nth-child(3){
 		@apply max-w-[115px]
 	}
+
+	.split[data-language="pt"] .content-split .left .line-numbers .line:nth-child(2){
+		@apply max-w-[105px];
+	}
 }

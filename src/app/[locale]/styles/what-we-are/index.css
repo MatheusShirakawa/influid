@@ -101,17 +101,17 @@
 } */
 
 .what-we-are .item.first:hover .icons > svg:nth-child(1){
-	animation: hideAndShow 1.5s ease-in-out forwards;
+	animation: hideAndShow .5s ease-in-out forwards;
 	animation-delay: 1s;
 }
 
 .what-we-are .item.first:hover .icons .bottom > svg:nth-child(1){
-	animation: rightToLeft 3s ease-in-out forwards;
+	animation: rightToLeft 1.5s ease-in-out forwards;
 	animation-delay: 1s;
 }
 
 .what-we-are .item.first:hover .icons .bottom > svg:nth-child(2){
-	animation: leftToRight 3s ease-in-out forwards;
+	animation: leftToRight 1.5s ease-in-out forwards;
 	animation-delay: 1s;
 }
 
@@ -259,16 +259,16 @@
 		transform: translate(0);
 		box-shadow: 1px 2px 10px #bebebe;
 	}
-	10% {
+	12.5% {
 		transform: translate(-111px, -112px);
 		box-shadow: 1px 2px 10px #bebebe;
 	}
-	20% {
+	25% {
 		transform: translate(-111px, -112px);
 		box-shadow: 1px 2px 10px #bebebe;
 	}
 	/* move */
-	40% {
+	37.5% {
 		transform: translate(-1px, -112px);
 		box-shadow: 1px 2px 10px #bebebe;
 	}
@@ -276,7 +276,7 @@
 		transform: translate(-1px, -56px);
 		box-shadow: 1px 2px 10px #bebebe;
 	}
-	70%{
+	62.5%{
 		transform: translate(-55px, -56px);
 		box-shadow: 1px 2px 10px #bebebe;
 	}
@@ -285,26 +285,44 @@
 		box-shadow: 1px 2px 10px #bebebe;
 	}
 	/* move */
-	100% {
+	92.5% {
 		transform: translate(0);
 	}
 }
 
 @keyframes changePositionMobile{
-	0% {
+0% {
 		transform: translate(0);
+		box-shadow: 1px 2px 10px #bebebe;
 	}
-	10% {
-		transform: translate(-72px, -73px);
+	12.5% {
+		transform: translate(-111px, -112px);
+		box-shadow: 1px 2px 10px #bebebe;
 	}
-	30% {
-		transform: translate(-72px, -73px);
+	25% {
+		transform: translate(-111px, -112px);
+		box-shadow: 1px 2px 10px #bebebe;
 	}
-	40% {
-		transform: translateY(0px);
+	/* move */
+	37.5% {
+		transform: translate(-1px, -112px);
+		box-shadow: 1px 2px 10px #bebebe;
 	}
-	100% {
-		transform: translateY(0px);
+	50%{
+		transform: translate(-1px, -56px);
+		box-shadow: 1px 2px 10px #bebebe;
+	}
+	62.5%{
+		transform: translate(-55px, -56px);
+		box-shadow: 1px 2px 10px #bebebe;
+	}
+	80%{
+		transform: translate(-55px, -1px);
+		box-shadow: 1px 2px 10px #bebebe;
+	}
+	/* move */
+	92.5% {
+		transform: translate(0);
 	}
 }
 
