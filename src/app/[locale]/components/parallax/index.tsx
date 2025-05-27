@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl"
 
-export default function Parallax({ locale }: { locale: string }) {
+export default function Parallax() {
 
 	const t = useTranslations('Parallax')
 

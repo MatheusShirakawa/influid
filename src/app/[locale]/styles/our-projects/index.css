@@ -8,6 +8,11 @@
 	position: relative;
 	z-index: 5;
 }
+/*
+@media (max-width:2570px){
+
+} */
+
 
 .our-projects .arrow-right-content{
 	@apply mt-6 ml-auto w-[850px] relative;
@@ -292,6 +297,11 @@
 }
 
 
+@media (min-width:1920px){
+	.our-projects .develop{
+		@apply pt-[683px] mt-[-130px];
+	}
+}
 
 @media (max-width:1830px){
 	.our-projects .develop{
