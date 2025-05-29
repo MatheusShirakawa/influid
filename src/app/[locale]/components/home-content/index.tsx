@@ -76,9 +76,7 @@ export default function HomeContent({ props }: { props: { locale: string } }) {
 			/>
 
 			<div id="parallax" className='parallax' data-scroll={dataScrollParallax}>
-				<Parallax
-					locale={props.locale}
-				/>
+				<Parallax />
 				<div className='bottom'>
 					<OurClients
 						scrollY={scrollY}
