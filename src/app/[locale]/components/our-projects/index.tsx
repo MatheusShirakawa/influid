@@ -3,19 +3,15 @@
 import Banner from "../banner"
 
 import { motion } from "framer-motion"
-import { TargetAndTransition, VariantLabels } from 'framer-motion';
-
+import { TargetAndTransition, VariantLabels } from 'framer-motion'
 import { ArrowDown } from "@phosphor-icons/react"
 import { useTranslations } from "next-intl"
-import { useState } from "react";
-
+import { useState } from "react"
 import { A11y, Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-
 import { ArrowRight, ArrowLeft } from "@phosphor-icons/react"
 import { scrollDown } from "../../utils/helpers"
-
-import { ProjectContent } from "../../utils/projects";
+import { ProjectContent } from "../../utils/projects"
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -54,7 +50,7 @@ export default function OurProjects(props: OurProjectsProps) {
 
 	const dataScroll = (props.scrollY ?? 0) > (props.scrollTrigger ?? 0) && true
 
-	const { arrayOne, arrayTwo, arrayThree } = ProjectContent
+	const { arrayOne, arrayTwo, arrayThree, arrayFour, arrayFive } = ProjectContent
 
 	return(
 		<motion.div
@@ -125,62 +121,57 @@ export default function OurProjects(props: OurProjectsProps) {
 						centeredSlides={false}>
 							<SwiperSlide>
 								<Banner
-									src={'/unite/00.png'}
-									name='Unite'
+									src={'/projects/overmind/01.png'}
+									name='Overmind'
 									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app', 'B2B']}
+									infoTexts={t("desc-one")}
 									handleClick={handleClick}
 									arrayImgs={arrayOne}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
-									src={'/nfl/00.png'}
-									name='NFL'
-									infoTop={['pt-br']}
+									src={'/projects/read-market/01.png'}
+									name='Read.Market'
+									infoTop={['en-us', 'pt-br']}
 									infoBottom={['app', 'web app']}
+									infoTexts={t("desc-two")}
 									handleClick={handleClick}
 									arrayImgs={arrayTwo}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
-									src={'/read-market/01.png'}
-									name='Read market'
+									src={'/projects/draft-team/01.png'}
+									name='DraftTeam'
 									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app', 'B2B', 'genAI']}
+									infoBottom={['app', 'web app']}
+									infoTexts={t("desc-three")}
 									handleClick={handleClick}
 									arrayImgs={arrayThree}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
-									src={'/unite/00.png'}
+									src={'/projects/unite/01.png'}
 									name='Unite'
 									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app', 'B2B']}
-									handleClick={handleClick}
-									arrayImgs={arrayOne}
-								/>
-							</SwiperSlide>
-							<SwiperSlide>
-								<Banner
-									src={'/nfl/00.png'}
-									name='NFL'
-									infoTop={['pt-br']}
 									infoBottom={['app', 'web app']}
+									infoTexts={t("desc-four")}
 									handleClick={handleClick}
-									arrayImgs={arrayTwo}
+									arrayImgs={arrayFour}
 								/>
 							</SwiperSlide>
 							<SwiperSlide>
 								<Banner
-									src={'/read-market/01.png'}
-									name='Read market'
+									src={'/projects/bolanos-commercial/01.png'}
+									name='Bolanos Commercial Enterprise'
 									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app', 'B2B', 'genAI']}
+									infoBottom={['app', 'web app']}
+									infoTexts={t("desc-five")}
 									handleClick={handleClick}
-									arrayImgs={arrayThree}
+									arrayImgs={arrayFive}
 								/>
 							</SwiperSlide>
 					</Swiper>

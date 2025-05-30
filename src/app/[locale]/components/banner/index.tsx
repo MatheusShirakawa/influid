@@ -1,4 +1,4 @@
-import Image from "next/image"
+/* eslint-disable @next/next/no-img-element */
 
 interface BannerProps {
   src: string;
@@ -6,6 +6,7 @@ interface BannerProps {
   infoTop: string[];
   infoBottom: string[];
   hasInfoTexts?: boolean;
+  infoTexts?: string | undefined;
   arrayImgs?: ArrayImages[] | undefined;
   handleClick?: (arrayImgs: ArrayImages[]) => void | undefined;
 }
@@ -23,6 +24,7 @@ export default function Banner({
 	infoTop,
 	infoBottom,
 	hasInfoTexts = true,
+	infoTexts,
 	arrayImgs,
 	handleClick
 }: BannerProps) {
@@ -34,7 +36,7 @@ export default function Banner({
 				))}
 			</div>
 			<div className="image">
-				<Image
+				<img
 					src={src}
 					alt={name}
 					width={529}
@@ -45,7 +47,7 @@ export default function Banner({
 			{hasInfoTexts && (
 				<div className="info-image-texts">
 					<h3 className="name">{name}</h3>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni veniam quam</p>
+					<p>{infoTexts}</p>
 				</div>
 			)}
 			<div className='info-image-bottom'>

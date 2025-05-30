@@ -1,13 +1,20 @@
 "use client"
 
+import { Resend } from 'resend';
+
 import { validateEmail } from '../../utils/helpers'
 import { useFormik } from 'formik'
 import { ArrowDownRight } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
 import Input from '../input'
 import ScrollTop from '../scroll-top'
+import TemplateEmail from '../template-email';
 
 export default function Contact(){
+	// console.log(process.env.RESEND_API_KEY)
+	const apiKey = 're_JB7reHom_AqD9jw4GDwxTsUn5fBuDooaf'
+
+	const resend = new Resend(apiKey);
 
 	const t = useTranslations('Contact')
 
@@ -47,6 +54,12 @@ export default function Contact(){
 		},
 		onSubmit: values => {
 			console.log(values)
+			resend.emails.send({
+				from: 'onboarding@resend.dev',
+				to: 'matheus_shirakawa@outlook.com',
+				subject: 'Novo contato do site Influid',
+				react: <TemplateEmail name={values.name} email={values.email} message={values.message} />
+			});
 		},
 		validateOnChange: false,
 		validateOnBlur: false,

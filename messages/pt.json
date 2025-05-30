@@ -46,7 +46,12 @@
 			"info-one":"interação",
 			"info-two":"fluidez",
 			"info-three":"identidade"
-		}
+		},
+		"desc-one":"Incubadora de startups de IA com um método validado de criação.Transforma grandes ideias em negócios escaláveis com método, capital e talentos. Visual ousado e memorável com forte presença de marca.",
+		"desc-two":"Agente de IA para leitura e inteligência de mercado. Ajuda empresas a precificar melhor e tomar decisões com base em dados. Interface moderna, confiável e com linguagem acessível.",
+		"desc-three":"Plataforma de fantasy game com foco em campeonatos ao vivo. Design vibrante e imersivo, com informações de pontuação em tempo real. Interface clara, gamificada e intuitiva para fãs de esportes.",
+		"desc-four":"Dashboard de geração de conteúdo com IA (imagem, voz e texto). Experiência escura e elegante com foco em usabilidade e eficiência. Identidade futurista, com paleta vibrante e navegação lateral fluída.",
+		"desc-five":"Landing page para empresa de seguros voltada ao setor de transporte. Abordagem direta, confiável e com forte prova social (reviews e parcerias). Design institucional, limpo e com hierarquia visual clara."
 	},
 	"Parallax":{
 		"websites":"sites",

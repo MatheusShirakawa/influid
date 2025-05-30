@@ -2,32 +2,44 @@
 export const ProjectContent = {
 	arrayOne : [
 		{
-			img:'/unite/00.png',
-			name:'Project 1',
+			img:'/projects/overmind/01.png',
+			name:'Overmind',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app', 'genAI']
 		},
 		{
-			img:'/unite/01.png',
-			name:'Project 1',
+			img:'/projects/overmind/02.png',
+			name:'Overmind',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app', 'genAI']
 		},
 		{
-			img:'/unite/02.png',
-			name:'Project 1',
+			img:'/projects/overmind/03.png',
+			name:'Overmind',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app','genAI']
 		},
 		{
-			img:'/unite/03.png',
-			name:'Project 1',
+			img:'/projects/overmind/04.png',
+			name:'Overmind',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app', 'genAI']
 		},
 		{
-			img:'/unite/04.png',
-			name:'Project 1',
+			img:'/projects/overmind/05.png',
+			name:'Overmind',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'genAI']
+		},
+		{
+			img:'/projects/overmind/06.png',
+			name:'Overmind',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app', 'genAI']
+		},
+		{
+			img:'/projects/overmind/07.png',
+			name:'Overmind',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app', 'genAI']
 		},
@@ -35,38 +47,44 @@ export const ProjectContent = {
 
 	arrayTwo : [
 		{
-			img:'/nfl/00.png',
-			name:'NFL',
+			img:'/projects/read-market/01.png',
+			name:'Read.Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app']
 		},
 		{
-			img:'/nfl/01.png',
-			name:'NFL',
+			img:'/projects/read-market/02.png',
+			name:'Read.Market',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app','web app']
 		},
 		{
-			img:'/nfl/02.png',
-			name:'NFL',
+			img:'/projects/read-market/03.png',
+			name:'Read.Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app',]
 		},
 		{
-			img:'/nfl/03.png',
-			name:'NFL',
-			infoTop:['en-us','pt-br'],
-			infoBottom:['app','web app',]
-		},
-		{
-			img:'/nfl/04.png',
-			name:'NFL',
+			img:'/projects/read-market/04.png',
+			name:'Read.Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app']
 		},
 		{
-			img:'/nfl/05.png',
-			name:'NFL',
+			img:'/projects/read-market/05.png',
+			name:'Read.Market',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
+		},
+		{
+			img:'/projects/read-market/06.png',
+			name:'Read.Market',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
+		},
+		{
+			img:'/projects/read-market/07.png',
+			name:'Read.Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app']
 		},
@@ -74,46 +92,104 @@ export const ProjectContent = {
 
 	arrayThree: [
 		{
-			img:'/read-market/01.png',
-			name:'Read Market',
+			img:'/projects/draft-team/01.png',
+			name:'DraftTeam',
 			infoTop:['en-us','pt-br'],
-			infoBottom:['web app','genAI']
+			infoBottom:['app','web app']
 		},
 		{
-			img:'/read-market/02.png',
-			name:'Read Market',
-			infoTop:['en-us','pt-br'],
-			infoBottom:['web app','genAI']
+			img:'/projects/draft-team/02.png',
+			name:'DraftTeam',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app','web app']
 		},
 		{
-			img:'/read-market/03.png',
-			name:'Read Market',
+			img:'/projects/draft-team/03.png',
+			name:'DraftTeam',
 			infoTop:['en-us','pt-br'],
-			infoBottom:['web app','genAI']
+			infoBottom:['app','web app',]
 		},
 		{
-			img:'/read-market/04.png',
-			name:'Read Market',
+			img:'/projects/draft-team/04.png',
+			name:'DraftTeam',
 			infoTop:['en-us','pt-br'],
-			infoBottom:['web app','genAI']
+			infoBottom:['app','web app']
 		},
 		{
-			img:'/read-market/05.png',
-			name:'Read Market',
+			img:'/projects/draft-team/05.png',
+			name:'DraftTeam',
 			infoTop:['en-us','pt-br'],
-			infoBottom:['web app','genAI']
+			infoBottom:['app','web app']
 		},
 		{
-			img:'/read-market/06.png',
-			name:'Read Market',
+			img:'/projects/draft-team/06.png',
+			name:'Read.Market',
 			infoTop:['en-us','pt-br'],
-			infoBottom:['web app','genAI']
+			infoBottom:['app','web app']
+		}
+	],
+	arrayFour: [
+		{
+			img:'/projects/unite/01.png',
+			name:'Unite',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
 		},
 		{
-			img:'/read-market/07.png',
-			name:'Read Market',
-			infoTop:['en-us','pt-br'],
-			infoBottom:['web app','genAI']
+			img:'/projects/unite/02.png',
+			name:'Unite',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app','web app']
 		},
+		{
+			img:'/projects/unite/03.png',
+			name:'Unite',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app',]
+		},
+		{
+			img:'/projects/unite/04.png',
+			name:'Unite',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
+		},
+		{
+			img:'/projects/unite/05.png',
+			name:'Unite',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
+		}
+	],
+	arrayFive: [
+		{
+			img:'/projects/bolanos-commercial/01.png',
+			name:'Bolanos Commercial Enterprise',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
+		},
+		{
+			img:'/projects/bolanos-commercial/02.png',
+			name:'Bolanos Commercial Enterprise',
+			infoTop:['en-us', 'pt-br'],
+			infoBottom:['app','web app']
+		},
+		{
+			img:'/projects/bolanos-commercial/03.png',
+			name:'Bolanos Commercial Enterprise',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app',]
+		},
+		{
+			img:'/projects/bolanos-commercial/04.png',
+			name:'Bolanos Commercial Enterprise',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
+		},
+		{
+			img:'/projects/bolanos-commercial/05.png',
+			name:'Bolanos Commercial Enterprise',
+			infoTop:['en-us','pt-br'],
+			infoBottom:['app','web app']
+		}
 	]
 }

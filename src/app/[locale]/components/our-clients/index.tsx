@@ -1,26 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
-import Image from "next/image"
-import DbGroup from '/public/icons/brands/db1-group.svg'
-import Moderna from '/public/icons/brands/moderna.svg'
-import Mol from '/public/icons/brands/mol.svg'
-import Poliedro from '/public/icons/brands/poliedro.svg'
-import Sm from '/public/icons/brands/sm.svg'
-import Stanleys from '/public/icons/brands/stanleys.svg'
-
 import { ArrowRight } from "@phosphor-icons/react"
-
 import { useTranslations } from "next-intl"
-
 import { A11y, Autoplay, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/autoplay';
-
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import 'swiper/css/autoplay'
 
 interface OurClientsProps {
 	scrollY?: number | undefined;
@@ -73,90 +63,90 @@ export default function OurClients(props:OurClientsProps){
 					// pagination={{ clickable: true }}
 					centeredSlides={false}>
 						<SwiperSlide>
-							<Image
+							<img
 								width={200}
 								height={60}
-								src={DbGroup}
+								src={'/icons/brands/db1-group.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={200}
 								height={70}
-								src={Moderna}
+								src={'/icons/brands/moderna.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={200}
 								height={70}
-								src={Poliedro}
+								src={'/icons/brands/poliedro.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={200}
 								height={60}
-								src={Mol}
+								src={'/icons/brands/mol.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={100}
 								height={100}
-								src={Sm}
+								src={'/icons/brands/sm.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={156}
 								height={35}
-								src={Stanleys}
+								src={'/icons/brands/stanleys.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={200}
 								height={70}
-								src={Moderna}
+								src={'/icons/brands/moderna.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={200}
 								height={70}
-								src={Poliedro}
+								src={'/icons/brands/poliedro.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={200}
 								height={70}
-								src={Mol}
+								src={'/icons/brands/mol.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={100}
 								height={100}
-								src={Sm}
+								src={'/icons/brands/sm.svg'}
 								alt=''
 							/>
 						</SwiperSlide>
 						<SwiperSlide>
-							<Image
+							<img
 								width={156}
 								height={60}
-								src={Stanleys}
+								src={'/icons/brands/stanleys.svg'}
 								alt=''
 							/>
 						</SwiperSlide>

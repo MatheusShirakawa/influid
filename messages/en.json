@@ -46,7 +46,12 @@
 			"info-one":"interaction",
 			"info-two":"fluity",
 			"info-three":"identity"
-		}
+		},
+		"desc-one":"AI startup incubator with a validated method of creation. Transforms great ideas into scalable businesses with method, capital and talent. Bold and welcoming look with a strong brand presence.",
+		"desc-two":"AI agent for reading and market intelligence. Helps companies to price better and make decisions based on data. Modern, reliable interface with accessible language.",
+		"desc-three":"Fantasy game platform focused on live championships. Vibrant and immersive design, with real-time scoring information. Clear, gamified and intuitive interface for sports fans.",
+		"desc-four":"AI-powered content generation dashboard (image, voice, and text). Dark and elegant experience focused on usability and efficiency. Futuristic identity with vibrant palette and fluid side navigation.",
+		"desc-five":"Landing page for an insurance company focused on the transportation sector. Direct, reliable approach with strong social proof (reviews and partnerships). Institutional design, clean and with clear visual hierarchy."
 	},
 	"Parallax":{
 		"websites":"websites",

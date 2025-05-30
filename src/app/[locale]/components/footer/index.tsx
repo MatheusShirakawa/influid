@@ -1,9 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 
-import Image from 'next/image'
 import Link from 'next/link'
-import LogoInfluid from '/public/logo-influid.svg'
-import Linkedin from '/public/icons/linkedin.svg'
 
 import {
 	WhatsappLogo,
@@ -12,6 +10,8 @@ import {
 } from '@phosphor-icons/react'
 
 import { useTranslations } from 'next-intl'
+import LinkedinLogo from '../../../../../public/icons/linkedin'
+import WhatsappLogoCustom from '../../../../../public/icons/whatsapp'
 
 interface FooterProps {
 	scrollY?: number | undefined;
@@ -34,10 +34,10 @@ export default function Footer(props:FooterProps){
 					<div className='footer-content'>
 						<div className='item max-w-[220px]'>
 							<Link href={''}>
-								<Image
+								<img
 									width={193}
 									height={38}
-									src={LogoInfluid}
+									src={'/logo-influid.svg'}
 									alt='Influid Logo'
 								/>
 							</Link>
@@ -47,27 +47,24 @@ export default function Footer(props:FooterProps){
 						<div className='item max-w-[290px] flex flex-col gap-2'>
 							<span className='text-[#BACAF5] block opacity-40'>{t('social-title')}</span>
 							<div>
-								<ul className='flex flex-row gap-4'>
+								<ul className='flex flex-row items-start gap-4'>
 									<li>
 										<Link target='_blank' href={'https://www.instagram.com/influidstudio/'}>
-											<InstagramLogo className="w-6 h-6 text-[#03F2F2]"/>
+											<InstagramLogo className="w-6 h-6 text-[#03F2F2] hover:text-[#00FF99] duration-300 ease-in-out"/>
 										</Link>
 									</li>
 									<li>
 										<Link target='_blank' href={'https://www.linkedin.com/company/influid-digitalstudio/'}>
-											{/* <LinkedinLogo className="w-6 h-6 text-[#03F2F2]"/> */}
-											<Image
-												src={Linkedin}
-												alt='Linkedin Logo'
-												width={20}
-												height={20}
-												className="w-5 h-5 text-[#03F2F2]"
-											/>
+											<span className="w-5 h-5 text-[#03F2F2] hover:text-[#00FF99] inline-block duration-300 ease-in-out">
+												<LinkedinLogo />
+											</span>
 										</Link>
 									</li>
 									<li>
-										<Link href={''}>
-											<WhatsappLogo className="w-6 h-6 text-[#03F2F2]"/>
+										<Link href={''} className='w-5 h-5'>
+											<span className="w-5 h-5 text-[#03F2F2] hover:text-[#00FF99] inline-block duration-300 ease-in-out">
+												<WhatsappLogoCustom/>
+											</span>
 										</Link>
 									</li>
 								</ul>

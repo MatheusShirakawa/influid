@@ -1,16 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { useTransition} from 'react'
 import { usePathname, useRouter} from '@/i18n/navigation'
-// import { useParams } from 'next/navigation'
-// import { Locale } from 'next-intl'
 import { scrollDown } from '../../utils/helpers'
 
 import Link from 'next/link'
-import Logo from '/public/logo.svg'
-import Image from 'next/image'
+
 
 export default function Header({ locale }: { locale: string | undefined }) {
 	const router = useRouter()
@@ -52,10 +50,10 @@ export default function Header({ locale }: { locale: string | undefined }) {
 				</div>
 				<div className='logo-mobile'>
 					<Link href={'#'} >
-						<Image
+						<img
 							width={46}
 							height={48}
-							src={Logo}
+							src={'/logo.svg'}
 							alt='Influid Logo'
 						/>
 					</Link>
@@ -74,10 +72,10 @@ export default function Header({ locale }: { locale: string | undefined }) {
 						</li>
 						<li className='logo'>
 							<Link href={'#'} >
-								<Image
+								<img
 									width={46}
 									height={48}
-									src={Logo}
+									src={'/logo.svg'}
 									alt='Influid Logo'
 								/>
 							</Link>

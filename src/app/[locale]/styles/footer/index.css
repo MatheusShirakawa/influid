@@ -39,6 +39,11 @@
 	@apply hover:text-[#00FF99] duration-300 ease-in-out hover:opacity-100 text-[#BACAF5];
 }
 
+.footer .footer-content ul li a {
+	@apply block;
+}
+
+
 .footer .container-footer::before{
 	content: "";
 	background: linear-gradient(
