@@ -123,8 +123,8 @@ export default function OurProjects(props: OurProjectsProps) {
 								<Banner
 									src={'/projects/overmind/01.png'}
 									name='Overmind'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app', 'B2B']}
+									infoTop={['pt-br']}
+									infoBottom={['Landing Page', 'B2B']}
 									infoTexts={t("desc-one")}
 									handleClick={handleClick}
 									arrayImgs={arrayOne}
@@ -134,8 +134,8 @@ export default function OurProjects(props: OurProjectsProps) {
 								<Banner
 									src={'/projects/read-market/01.png'}
 									name='Read.Market'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app']}
+									infoTop={['pt-br']}
+									infoBottom={['Landing Page', 'B2B', 'genAI']}
 									infoTexts={t("desc-two")}
 									handleClick={handleClick}
 									arrayImgs={arrayTwo}
@@ -157,7 +157,7 @@ export default function OurProjects(props: OurProjectsProps) {
 									src={'/projects/unite/01.png'}
 									name='Unite'
 									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app']}
+									infoBottom={['app', 'web app','genAI']}
 									infoTexts={t("desc-four")}
 									handleClick={handleClick}
 									arrayImgs={arrayFour}
@@ -167,8 +167,8 @@ export default function OurProjects(props: OurProjectsProps) {
 								<Banner
 									src={'/projects/bolanos-commercial/01.png'}
 									name='Bolanos Commercial Enterprise'
-									infoTop={['en-us', 'pt-br']}
-									infoBottom={['app', 'web app']}
+									infoTop={['en-us']}
+									infoBottom={['B2B', 'Landing Page']}
 									infoTexts={t("desc-five")}
 									handleClick={handleClick}
 									arrayImgs={arrayFive}
