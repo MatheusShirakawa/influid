@@ -1,22 +1,20 @@
 "use client"
 
-import { Resend } from 'resend';
-
+import { useState } from 'react'
 import { validateEmail } from '../../utils/helpers'
 import { useFormik } from 'formik'
 import { ArrowDownRight } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
+
+import Spin from '../../../../../out/icons/spin'
+
 import Input from '../input'
 import ScrollTop from '../scroll-top'
-import TemplateEmail from '../template-email';
 
 export default function Contact(){
-	// console.log(process.env.RESEND_API_KEY)
-	const apiKey = 're_JB7reHom_AqD9jw4GDwxTsUn5fBuDooaf'
-
-	const resend = new Resend(apiKey);
-
 	const t = useTranslations('Contact')
+	const [responseStatus, setResponseStatus] = useState<string | null>(null)
+	const [loading, setLoading] = useState(false)
 
 	interface FormValues {
 		name: string
@@ -35,8 +33,8 @@ export default function Contact(){
 			errors.email = t("form.errorFields.email")
 		}
 
-		if(validateEmail(values.email) == false){
-			errors.email = t("form.errorFields.email-invalid")
+		if(values.email && validateEmail(values.email) == false){
+			errors.email = t("form.errorFields.email-format")
 		}
 
 		if (!values.message) {
@@ -52,14 +50,29 @@ export default function Contact(){
 			email: '',
 			message: ''
 		},
-		onSubmit: values => {
+		onSubmit: async (values) => {
 			console.log(values)
-			resend.emails.send({
-				from: 'onboarding@resend.dev',
-				to: 'matheus_shirakawa@outlook.com',
-				subject: 'Novo contato do site Influid',
-				react: <TemplateEmail name={values.name} email={values.email} message={values.message} />
-			});
+			setLoading(true)
+			try{
+				const response = await fetch('/api/mail', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify(values)
+				})
+				const { data } = await response.json()
+				console.log(data)
+				if (data) {
+					console.log(data)
+					setResponseStatus('success')
+					setLoading(false)
+					formik.resetForm()
+				}
+			} catch (error) {
+				setResponseStatus('error')
+				console.error("Error sending email:", error)
+			}
 		},
 		validateOnChange: false,
 		validateOnBlur: false,
@@ -113,16 +126,29 @@ export default function Contact(){
 						/>
 
 						<button type='submit' className=''>
-							<span>{t("form.send")}</span>
-							<ArrowDownRight className='w-5 h-5' />
+							{loading ? (
+								<div className='flex justify-center items-center w-7 h-7 text-[#00FF99]'>
+									<Spin />
+								</div>
+							): (
+								<>
+									<span>{t("form.send")}</span>
+									<ArrowDownRight className='w-5 h-5 arrow' />
+								</>
+							)}
 						</button>
-						<div className='messages rounded-lg hidden'>
-							<div className='px-6 py-2 bg-[#b9c9f4] text-[#00FF99] rounded-lg mb-4'>
-								<p className='text-sm font-bold'>{t("form.success")}</p>
-							</div>
-							<div className='px-6 py-2 bg-[#b9c9f4] text-red-500 rounded-lg'>
-								<p className='text-sm font-bold'>{t("form.error")}</p>
-							</div>
+
+						<div className='messages rounded-lg'>
+							{responseStatus === 'success' && (
+								<div className='px-6 py-2 bg-[#b9c9f4] text-[#00FF99] rounded-lg mb-4'>
+									<p className='text-sm font-bold'>{t("form.success")}</p>
+								</div>
+							)}
+							{responseStatus === 'error' && (
+								<div className='px-6 py-2 bg-[#b9c9f4] text-red-500 rounded-lg'>
+									<p className='text-sm font-bold'>{t("form.error")}</p>
+								</div>
+							)}
 						</div>
 					</form>
 				</div>
