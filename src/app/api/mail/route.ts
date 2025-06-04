@@ -54,7 +54,7 @@ const apiKey = 're_JB7reHom_AqD9jw4GDwxTsUn5fBuDooaf'
 // const resend = new Resend(process.env.RESEND_API_KEY);
 const resend = new Resend(apiKey)
 
-export async function POST(request: Request, response: Response) {
+export async function POST(request: Request) {
 	// rate limit
 	// authorization
 
@@ -66,8 +66,6 @@ export async function POST(request: Request, response: Response) {
 		subject: 'Novo contato do site Influid',
 		react: TemplateEmail({ name, email, message }),
 	});
-	console.log(data)
-	console.log(response)
 
 	if (error) {
 		return new Response(JSON.stringify({ message: "Ocorreu um erro ao enviar o e-mail" }), {
@@ -76,8 +74,10 @@ export async function POST(request: Request, response: Response) {
 		});
 	}
 
-	return new Response(JSON.stringify({ message: "Email enviado com sucesso" }), {
-		status: 200,
-		headers: { "Content-Type": "application/json" }
-	});
+	if(data){
+		return new Response(JSON.stringify({ message: "Email enviado com sucesso" }), {
+			status: 200,
+			headers: { "Content-Type": "application/json" }
+		})
+	}
 }

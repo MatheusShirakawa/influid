@@ -6,7 +6,7 @@ import { useFormik } from 'formik'
 import { ArrowDownRight } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
 
-import Spin from '../../../../../out/icons/spin'
+import Spin from '../../../../../public/icons/spin'
 
 import Input from '../input'
 import ScrollTop from '../scroll-top'
@@ -53,26 +53,26 @@ export default function Contact(){
 		onSubmit: async (values) => {
 			console.log(values)
 			setLoading(true)
-			try{
-				const response = await fetch('/api/mail', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify(values)
-				})
-				const { data } = await response.json()
-				console.log(data)
+			await fetch('/api/mail', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(values)
+			}).then(async (res) => {
+				console.log(res)
+				const data = await res.json()
 				if (data) {
 					console.log(data)
 					setResponseStatus('success')
 					setLoading(false)
 					formik.resetForm()
 				}
-			} catch (error) {
+			}).catch((error) => {
+				setLoading(false)
 				setResponseStatus('error')
 				console.error("Error sending email:", error)
-			}
+			})
 		},
 		validateOnChange: false,
 		validateOnBlur: false,
@@ -140,12 +140,12 @@ export default function Contact(){
 
 						<div className='messages rounded-lg'>
 							{responseStatus === 'success' && (
-								<div className='px-6 py-2 bg-[#b9c9f4] text-[#00FF99] rounded-lg mb-4'>
+								<div className='px-6 py-2 bg-[#060b1b] text-[#00FF99] rounded-lg mb-4'>
 									<p className='text-sm font-bold'>{t("form.success")}</p>
 								</div>
 							)}
 							{responseStatus === 'error' && (
-								<div className='px-6 py-2 bg-[#b9c9f4] text-red-500 rounded-lg'>
+								<div className='px-6 py-2 bg-[#060b1b] text-red-500 rounded-lg'>
 									<p className='text-sm font-bold'>{t("form.error")}</p>
 								</div>
 							)}
