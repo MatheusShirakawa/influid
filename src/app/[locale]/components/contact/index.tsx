@@ -1,20 +1,18 @@
 "use client"
 
-import { useState } from 'react'
+// import { useState } from 'react'
 import { validateEmail } from '../../utils/helpers'
 import { useFormik } from 'formik'
 import { ArrowDownRight } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
 
-import Spin from '../../../../../public/icons/spin'
+// import Spin from '../../../../../public/icons/spin'
 
 import Input from '../input'
 import ScrollTop from '../scroll-top'
 
 export default function Contact(){
 	const t = useTranslations('Contact')
-	const [responseStatus, setResponseStatus] = useState<string | null>(null)
-	const [loading, setLoading] = useState(false)
 
 	interface FormValues {
 		name: string
@@ -52,27 +50,10 @@ export default function Contact(){
 		},
 		onSubmit: async (values) => {
 			console.log(values)
-			setLoading(true)
-			await fetch('/api/mail', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(values)
-			}).then(async (res) => {
-				console.log(res)
-				const data = await res.json()
-				if (data) {
-					console.log(data)
-					setResponseStatus('success')
-					setLoading(false)
-					formik.resetForm()
-				}
-			}).catch((error) => {
-				setLoading(false)
-				setResponseStatus('error')
-				console.error("Error sending email:", error)
-			})
+			console.log(values.email)
+			const emailMessage = values.email ? `meu e-mail é ${values.email}` : ''
+
+			window.open(`https://wa.me/5511976981894?text=Olá, meu nome é ${values.name}, ${emailMessage}, ${values.message} e gostaria de mais informações sobre a Influid.`)
 		},
 		validateOnChange: false,
 		validateOnBlur: false,
@@ -126,19 +107,19 @@ export default function Contact(){
 						/>
 
 						<button type='submit' className=''>
-							{loading ? (
+							{/* {loading ? (
 								<div className='flex justify-center items-center w-7 h-7 text-[#00FF99]'>
 									<Spin />
 								</div>
 							): (
-								<>
+								<> */}
 									<span>{t("form.send")}</span>
 									<ArrowDownRight className='w-5 h-5 arrow' />
-								</>
-							)}
+								{/* </>
+							)} */}
 						</button>
 
-						<div className='messages rounded-lg'>
+						{/* <div className='messages rounded-lg'>
 							{responseStatus === 'success' && (
 								<div className='px-6 py-2 bg-[#060b1b] text-[#00FF99] rounded-lg mb-4'>
 									<p className='text-sm font-bold'>{t("form.success")}</p>
@@ -149,7 +130,7 @@ export default function Contact(){
 									<p className='text-sm font-bold'>{t("form.error")}</p>
 								</div>
 							)}
-						</div>
+						</div> */}
 					</form>
 				</div>
 			</div>

@@ -36,13 +36,7 @@ export const ProjectContent = {
 			name:'Overmind',
 			infoTop:['en-us', 'pt-br'],
 			infoBottom:['app', 'genAI']
-		},
-		{
-			img:'/projects/overmind/07.png',
-			name:'Overmind',
-			infoTop:['en-us', 'pt-br'],
-			infoBottom:['app', 'genAI']
-		},
+		}
 	],
 
 	arrayTwo : [
@@ -81,13 +75,7 @@ export const ProjectContent = {
 			name:'Read.Market',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app']
-		},
-		{
-			img:'/projects/read-market/07.png',
-			name:'Read.Market',
-			infoTop:['en-us','pt-br'],
-			infoBottom:['app','web app']
-		},
+		}
 	],
 
 	arrayThree: [
@@ -181,12 +169,6 @@ export const ProjectContent = {
 		},
 		{
 			img:'/projects/bolanos-commercial/04.png',
-			name:'Bolanos Commercial Enterprise',
-			infoTop:['en-us','pt-br'],
-			infoBottom:['app','web app']
-		},
-		{
-			img:'/projects/bolanos-commercial/05.png',
 			name:'Bolanos Commercial Enterprise',
 			infoTop:['en-us','pt-br'],
 			infoBottom:['app','web app']

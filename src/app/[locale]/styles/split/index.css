@@ -66,6 +66,11 @@
 	@apply w-5 h-5 font-bold duration-300 ease-in-out;
 }
 
+
+.split .content-split-last .scroll-down:hover{
+	@apply bg-[#0060FF] text-white;
+}
+
 .split .content-split-last .scroll-down:hover svg{
 	stroke:#fff;
 	@apply rotate-45;
